@@ -1,8 +1,9 @@
 // search through players and find the one with a given socket
-function findPlayerWithSocket(players, socket) {
-    //console.log(socket)
-    for (const [playerid, playerobj] of Object.entries(players)) {
-        if (playerobj.socket == socket) return playerobj
+function findUserFromSocket(users, socket) {
+    
+    for (let [_, playerobj] in Object.entries(users)) {
+        if (playerobj == null) continue
+        if (playerobj.socket.id == socket.id) return playerobj
     }
 
     console.log("Could not find player with socket: " + socket)
@@ -10,5 +11,5 @@ function findPlayerWithSocket(players, socket) {
 }
 
 module.exports = {
-    findPlayerWithSocket
+    findUserFromSocket
 }

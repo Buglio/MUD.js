@@ -21,51 +21,74 @@ const server = app.listen(PORT, function () {
 
 // Server Data
 var chat = [];
-var players = {};
+var users = {};
+var sessions = {}
 
-/*
-{
-    "as7d8a97sd" : {
-        character_name: "Asdasd",
-        character_stats: {
-            hp: 10,
-            socket: sdfdsafasdfasdf
-        }
+class Session {
+    constructor(socket) {
+        this.socket = socket
+        this.socket_id = socket.id
     }
 }
-*/
+
+class User {
+    constructor(user_id, session, character) {
+        this.user_id = user_id
+        this.session = session
+        this.character = character
+    }
+}
+
+class Character {
+    room = 'A'
+    constructor(name) {
+        this.name = name
+        this.user = null
+    }
+
+    setUser(user) {
+        this.user = user
+    }
+    
+}
 
 // Socket Setup
 const io = socket(server);
 
 io.on("connection", function (socket) {
     console.log("--> Made socket connection");
-    let player_identifier = null
+    let session = new Session(socket)
+    sessions[session.socket_id] = session
+    let user = null
 
     socket.on("disconnect", function () {
-        if (players[player_identifier] == null) return
-        chat.push(`Player ${players[player_identifier].name} disconnected.`);
+        if (user == null) return
+        chat.push(`Player ${user.name} disconnected.`);
         io.emit("chat_update", chat);
+        let id = session.socket_id
+        delete sessions.id
+        session = null
     });
 
-    socket.on("connect_player", function(playerid) {
-        player_identifier = playerid
-        if (players[playerid] == null) {
-            players[playerid] = {
-                name: "Bob",
+    socket.on("connect_player", function(user_id) {
+        user = users[user_id]
+        if (user == null) {
+            user = {
+                id: user_id,
+                name: generateRandomName(),
                 stats: {
                     health: 10,
                     strength: 3,
                     intelligence: 7,
-                },
-                socket: socket
+                }
             }
+            users[user_id] = user
         }
-        socket.emit("player_update", players[player_identifier]) // Treat this on the client as READ-ONLY
+        //socket.emit("player_update", player) // Treat this on the client as READ-ONLY
         // emit that character back to the client
         
         // else, create create a new character, then emit back to client
-        chat.push("Player " + players[player_identifier].name + " connected.");
+        chat.push("User " + user.name + " connected.");
         io.emit("chat_update", chat);
     })
 
@@ -76,5 +99,10 @@ io.on("connection", function (socket) {
     });
 });
 
-
-
+function generateRandomName() {
+    var name = '';
+    var names = ["Bob", "Joe", "Mary", "Jesse", "Spoon", "Fork", "Spork", "Noodle", "Fred", "Cyrus", "Barb", "Elle", "Justin", "Dustin", "Susie"];
+    var namesLength = names.length;
+    name = names[Math.floor(Math.random() * namesLength)];
+    return name;
+}
