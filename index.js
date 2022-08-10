@@ -1,5 +1,6 @@
 const express = require("express");
 const socket = require("socket.io");
+const utils = require("./backend/util.js")
 
 // App setup
 const PORT = process.env.PORT || 8088;
@@ -20,7 +21,7 @@ const server = app.listen(PORT, function () {
 
 // Server Data
 var chat = [];
-var players = [];
+var players = {};
 
 /*
 {
@@ -39,19 +40,33 @@ const io = socket(server);
 
 io.on("connection", function (socket) {
     console.log("--> Made socket connection");
+    let player_identifier = null
 
     socket.on("disconnect", function () {
-        chat.push("Player disconnected.");
+        if (players[player_identifier] == null) return
+        chat.push(`Player ${players[player_identifier].name} disconnected.`);
         io.emit("chat_update", chat);
     });
 
     socket.on("connect_player", function(playerid) {
-        chat.push("Player " + playerid + " connected.");
-        io.emit("chat_update", chat);
-        // check if playerid exists in data
+        player_identifier = playerid
+        if (players[playerid] == null) {
+            players[playerid] = {
+                name: "Bob",
+                stats: {
+                    health: 10,
+                    strength: 3,
+                    intelligence: 7,
+                },
+                socket: socket
+            }
+        }
+        socket.emit("player_update", players[player_identifier]) // Treat this on the client as READ-ONLY
         // emit that character back to the client
-
+        
         // else, create create a new character, then emit back to client
+        chat.push("Player " + players[player_identifier].name + " connected.");
+        io.emit("chat_update", chat);
     })
 
     socket.on("message", function(data) {
