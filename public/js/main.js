@@ -1,5 +1,3 @@
-
-    
 const socket = io();
 
 socket.on("chat_update", function (data) {
@@ -25,20 +23,8 @@ function on_connect(){
     }
     socket.emit("connect_player", localStorage.getItem("MUD_playerid"));
 }
+
+// When document loads, 
 $( document ).ready(function() {
     on_connect();
 });
-
-
-
-
-
-function makeid(n) {
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < n; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-}

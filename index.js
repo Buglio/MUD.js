@@ -8,8 +8,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-    res.render("index",{
-    })
+    res.render("index")
 });
 app.use(express.static(__dirname + '/public'));
 
@@ -29,7 +28,7 @@ var players = [];
         character_name: "Asdasd",
         character_stats: {
             hp: 10,
-            etc
+            socket: sdfdsafasdfasdf
         }
     }
 }
@@ -41,8 +40,14 @@ const io = socket(server);
 io.on("connection", function (socket) {
     console.log("--> Made socket connection");
 
+    socket.on("disconnect", function () {
+        chat.push("Player disconnected.");
+        io.emit("chat_update", chat);
+    });
+
     socket.on("connect_player", function(playerid) {
-        console.log("--> Player " + playerid + " connected.");
+        chat.push("Player " + playerid + " connected.");
+        io.emit("chat_update", chat);
         // check if playerid exists in data
         // emit that character back to the client
 
