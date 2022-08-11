@@ -1,6 +1,7 @@
 const express = require("express");
 const socket = require("socket.io");
-const utils = require("./backend/util.js")
+const utils = require("./backend/util.js");
+const objects = require("./backend/objects.js");
 
 // App setup
 const PORT = process.env.PORT || 8088;
@@ -24,39 +25,12 @@ var chat = [];
 var users = {};
 var sessions = {}
 
-class Session {
-    constructor(socket) {
-        this.socket = socket
-        this.socket_id = socket.id
-    }
-}
-
-class User {
-    constructor(user_id, session, character) {
-        this.user_id = user_id
-        this.session = session
-        this.character = character
-    }
-}
-
-class Character {
-    constructor(name) {
-        this.name = name
-        this.user = null
-    }
-
-    setUser(user) {
-        this.user = user
-    }
-    
-}
-
 // Socket Setup
 const io = socket(server);
 
 io.on("connection", function (socket) {
-    console.log("--> Made socket connection");
-    let session = new Session(socket)
+    console.log("--> Creating new Session.");
+    let session = new objects.Session(socket)
     sessions[session.socket_id] = session
     let user = null
 
@@ -71,24 +45,18 @@ io.on("connection", function (socket) {
         };
         chat.push(newchat);
         io.emit("chat_update", newchat);
+        console.log("--> Removing Session.")
         let id = session.socket_id
         delete sessions.id
         session = null
     });
 
     socket.on("connect_player", function(user_id) {
-        user = users[user_id]
+        user = users[user_id];
         if (user == null) {
-            user = {
-                id: user_id,
-                name: generateRandomName(),
-                stats: {
-                    health: 10,
-                    strength: 3,
-                    intelligence: 7,
-                }
-            }
-            users[user_id] = user
+            console.log("--> Creating new User.");
+            users[user_id] = new objects.User(user_id, "user_" + (Object.keys(users).length + 1), session);
+            user = users[user_id];
         }
         //socket.emit("player_update", player) // Treat this on the client as READ-ONLY
         // emit that character back to the client
@@ -111,11 +79,3 @@ io.on("connection", function (socket) {
         io.emit("chat_update", message);
     });
 });
-
-function generateRandomName() {
-    var name = '';
-    var names = ["Bob", "Joe", "Mary", "Jesse", "Spoon", "Fork", "Spork", "Noodle", "Fred", "Cyrus", "Barb", "Elle", "Justin", "Dustin", "Susie"];
-    var namesLength = names.length;
-    name = names[Math.floor(Math.random() * namesLength)];
-    return name;
-}

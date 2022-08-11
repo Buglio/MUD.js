@@ -9,7 +9,15 @@ function findUserFromSocket(users, socket) {
     console.log("Could not find player with socket: " + socket)
     return null
 }
+function generateRandomName() {
+    var name = '';
+    var names = ["Bob", "Joe", "Mary", "Jesse", "Spoon", "Fork", "Spork", "Noodle", "Fred", "Cyrus", "Barb", "Elle", "Justin", "Dustin", "Susie"];
+    var namesLength = names.length;
+    name = names[Math.floor(Math.random() * namesLength)];
+    return name;
+}
 
 module.exports = {
-    findUserFromSocket
+    findUserFromSocket,
+    generateRandomName
 }
