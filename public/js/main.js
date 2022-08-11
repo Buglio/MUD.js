@@ -1,6 +1,10 @@
 const socket = io();
 
-socket.on("chat_update", function (chat) {
+// local chat to browser
+var chat = [];
+
+socket.on("chat_update", function (message) {
+    chat.push(message);
     let chatbox = document.getElementById("chatbox");
     chatbox.innerHTML = "";
 
