@@ -40,7 +40,6 @@ class User {
 }
 
 class Character {
-    room = 'A'
     constructor(name) {
         this.name = name
         this.user = null

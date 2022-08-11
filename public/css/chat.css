@@ -1,6 +1,38 @@
-
+#chat_container{
+    width: 50vw;
+    height: 100vh;
+    background-color: black;
+}    
 #chatbox{
     list-style: none;
     font-family: 'Courier New', Courier, monospace;
     color: white;
+    float: bottom;
+    overflow-y: scroll;
+    width: 50vw;
+    position: absolute;
+    bottom: 30px;
+    top:0px;
+}
+#input{
+    border: none; 
+    background-color: rgba(255,255,255,0.1);
+    height: 30px;
+    width: 50vw;    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#input:focus{
+    background-color: rgba(255,255,255,0.2);
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
