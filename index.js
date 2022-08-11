@@ -62,8 +62,14 @@ io.on("connection", function (socket) {
     let user = null
 
     socket.on("disconnect", function () {
+        var today = new Date();
         if (user == null) return
-        chat.push(`Player ${user.name} disconnected.`);
+        chat.push({
+            color: "yellow",
+            body: `Player ${user.name} disconnected.`,
+            sender: "SERVER",
+            timestamp: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+        });
         io.emit("chat_update", chat);
         let id = session.socket_id
         delete sessions.id
@@ -88,13 +94,19 @@ io.on("connection", function (socket) {
         // emit that character back to the client
         
         // else, create create a new character, then emit back to client
-        chat.push("User " + user.name + " connected.");
+        var today = new Date();
+        chat.push({
+            color: "yellow",
+            body: "Player " + user.name + " connected.",
+            sender: "SERVER",
+            timestamp: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+        });
         io.emit("chat_update", chat);
     })
 
-    socket.on("message", function(data) {
-        console.log("--> Got message from socket: " + data);
-        chat.push(data);
+    socket.on("message", function(message) {
+        message.sender = user.name
+        chat.push(message);
         io.emit("chat_update", chat);
     });
 });
