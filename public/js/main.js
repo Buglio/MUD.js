@@ -18,6 +18,20 @@ socket.on("chat_update", function (message) {
     chatbox.scrollTop = chatbox.scrollHeight;
 });
 
+socket.on("look_response", (response) => {
+    chat.push(response);
+    let chatbox = document.getElementById("chatbox");
+    chatbox.innerHTML = "";
+
+    console.log("Look response received!");
+    for (x = 0; x < chat.length; x++){
+        let message = chat[x];
+        console.log(message);
+        let list_item = "<span style='color: " + chat[x].color + "'>[" + chat[x].sender + "]</span><span> (" + chat[x].timestamp + ") " + chat[x].body + "</span><br>";
+        chatbox.innerHTML += list_item;
+    }
+    chatbox.scrollTop = chatbox.scrollHeight;
+})
 
 function send_message(body){
     var today = new Date();
