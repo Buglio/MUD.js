@@ -14,3 +14,11 @@ body{
     width: 100vw;
     height: 100vh;
 }
+#controls{
+    width: 50vw;
+    height: 100vh;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>MUD.js - Man</title>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                line-height: 25px;
+            }
+            
+
+            td, th {
+                border: 1px solid #bbb;
+                text-align: left;
+                padding: 2px;
+            }
+            .inner-table td{
+                border: 0px;
+            }
+
+            .styled-row:nth-child(even) {
+                background-color: #eee;
+            }
+            .code{
+                background-color: rgba(1,1,1,0.1);
+                padding: 2px;
+                border-radius: 2px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>MUD.js Help Page</h1>
+        <table>
+            <tr class="styled-row">
+                <th>Command</th>
+                <th>Usage</th>
+                <th>Description</th>
+            </tr>
+            <tr class="styled-row">
+                <td><span class="code">say</span>, <span class="code">s</span></td>
+                <td><span class="code">say Hello World!</span></td>
+                <td>Say a string of text outloud that players near you will hear.</td>
+            </tr>
+            <tr class="styled-row">
+                <td><span class="code">look</span>, <span class="code">l</span></td>
+                <td>
+                    <table class="inner-table">
+                        <tr><td><span class="code">look</span></td></tr>
+                        <tr><td><span class="code">look object</span></td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="inner-table">
+                        <tr><td><span class="code">Look around your current room.</span></td></tr>
+                        <tr><td><span class="code">Look at [object].</span></td></tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>

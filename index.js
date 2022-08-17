@@ -12,6 +12,9 @@ app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
     res.render("index");
 });
+app.get('/man', function(req, res) {
+    res.render("man.ejs");
+});
 app.use(express.static(__dirname + '/public'));
 
 // START SERVER
@@ -32,7 +35,14 @@ var start_room = new objects.Room(
     y = 0,
     description = "This is the starting room all new adventurers are dropped into."
 );
+var second_room = new objects.Room(
+    x = 0,
+    y = 1,
+    description = "This is the second room, south of the starting room"
+);
+
 world_map.addRoom(start_room);
+world_map.addRoom(second_room);
 
 // Socket Setup
 const io = socket(server);
@@ -56,7 +66,7 @@ io.on("connection", function (socket) {
         io.emit("chat_update", newchat);
 
         // remove the user from their room
-        user.room.removeUser(user)
+        //user.room.removeUser(user)
 
         console.log("--> Removing Session.");
         let id = session.socket_id;
@@ -74,15 +84,16 @@ io.on("connection", function (socket) {
                 user_id = user_id, 
                 username = "user_" + (Object.keys(users).length + 1), 
                 session = session
-                );
-                users[user_id]= user;
-            
-            user.setRoom(start_room)
-
-            // add the user to their room
-            user.room.addUser(user)
+            );
+            user.addCharacter(new objects.Character(
+                name = "the CHARACTER"
+            ));
+            user.setRoom(world_map.getRoom(0,0));
+            users[user_id]= user;
+            user = users[user_id];
+            //add the user to their room
+            //user.room.addUser(user)
         }
-        //socket.emit("player_update", player) // Treat this on the client as READ-ONLY
         let today = new Date();
         let newchat = new objects.ChatMessage(
             color = "yellow",
@@ -92,30 +103,61 @@ io.on("connection", function (socket) {
         );
         chat.push(newchat);
         io.emit("chat_update", newchat);
+        socket.emit("user_update", users[user_id].emitUser());
     })
 
     socket.on("message", function(message_data) {
-        let body = message_data.body;
-        let command = body.replace(/ .*/,''); // gets the first word
+        let today = new Date();
+        let newchat = new objects.ChatMessage(
+            color = "darkgray",
+            body = "",
+            sender = "SERVER",
+            timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+        );
 
-        // TODO: make the command handling an actual thing
-        // TODO: only send chat updates to sockets whose characters are in the same room as the sender
-        if (command.toLowerCase() == "say") {
-            let regex = /(?<=say).+/;
-            let msg = body.match(regex);
+        switch (message_data.cmd){
+            // SAY COMMAND
+            case "say": 
+                message_data.sender = user.username;
+                chat.push(message_data);
+                io.emit("chat_update", message_data);
+                break;
+
+            // LOOK COMMAND
+            case "l":
+            case "look":
+                newchat.body = user.getCurrentCharacter().room.description;
+                newchat.sender = null;
+                io.emit("chat_update", newchat);
+                break;
             
-            message_data.body = msg;
-            message_data.sender = user.username;
-            chat.push(message_data);
-            io.emit("chat_update", message_data);
-        }
+            // MOVE SOUTH
+            /*
+            case "s":
+            case "south":
+                let souths = ["You run south", "You walk south"]
+                newchat.body = "You go south";
+                newchat.sender = null;
+                io.emit("chat_update", newchat);
 
-        else if (command.toLowerCase() == "look") {
-            message_data.body = user.room.description;
-            message_data.sender = "LOOK";
-            message_data.color = "grey";
-            socket.emit("look_response", message_data);
+                character = user.getCurrentCharacter(); //SUS
+                character.moveSouth(world_map);
+                user.setCurrentCharacter(character);
+                socket.emit("user_update", user.emitUser());
+                break;
+            */
+            // INVALID COMMAND ENTERED
+            default:
+                newchat.body = message_data.cmd + " is not a valid command.";
+                newchat.color = "red";
+                chat.push(newchat);
+                io.emit("chat_update", newchat);
         }
-        
+    });
+    socket.on("change_username", function(data) {
+        username = data[0];
+        user_id = data[1];
+        users[user_id].setUsername(username);
+        io.emit("user_update", users[user_id].emitUser());
     });
 });

@@ -9,24 +9,41 @@ class Session {
 }
 
 class User {
-    room = null // TODO: move this to character once that system is ready
     constructor(user_id, username, session) {
         this.user_id = user_id;
         this.session = session;
         this.characters = [];
+        this.current_character = null;
         this.username = username;
     }
-
-    // TODO: move this function to character once that system is ready
+    setUsername(username) {
+        this.username = username;
+    }
+    emitUser() {
+        return {
+            user_id: this.user_id,
+            characters: this.characters,
+            username: this.username
+        }
+    }
     setRoom(room) {
-        this.room = room;
+        this.characters[this.current_character]["room"] = room;
+    }
+    addCharacter(char){
+        this.characters.push(char);
+        this.current_character = this.characters.length - 1;
+    }
+    getCurrentCharacter(){
+        return this.characters[this.current_character];
+    }
+    setCurrentCharacter(char){
+        this.characters[this.current_character] = char;
     }
 }
 
 class Character {
     constructor(name) {
         this.name = name;
-        this.user = null;
         this.stats = {
             str: 15,
             con: 12,
@@ -39,29 +56,29 @@ class Character {
             max: 10,
             current: 10
         };
-        this.room = {
-            x: 0,
-            y: 0
-        };
+        this.room = null;
     }
-
-    setUser(user) {
-        this.user = user;
+    moveSouth(world){
+        this.room = world.getRoom(this.room.x, this.room.y + 1);
     }
-    
 }
 
 class World {
     constructor() {
-        this.map = [[]];
+        this.map = {};
     }
-
     addRoom(room) {
-        this.map[room.x][room.y] = room;
+        if (!this.map[room.x]){
+            this.map[room.x] = {};
+            this.map[room.x][room.y] = room;
+        }
+            
     }
-
     removeRoom(room) {
         this.map[room.x].splice(room.y, 1);
+    }
+    getRoom(x,y){
+        return this.map[x][y];
     }
 }
 
