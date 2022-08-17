@@ -51,26 +51,26 @@ io.on("connection", function (socket) {
     console.log("--> Creating new Session.");
     let session = new objects.Session(socket);
     sessions[session.socket_id] = session;
-    let user = null;
+    let user = null; // Initialize user pointer to null
 
     socket.on("disconnect", function () {
         let today = new Date();
         if (user == null) return
-        let newchat = new objects.ChatMessage(
+        let newchat = new objects.ChatMessage( // generate disconnect chat msg
             color = "yellow",
             body = `Player ${user.username} disconnected.`,
             sender = "SERVER",
             timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
         );
-        chat.push(newchat);
-        io.emit("chat_update", newchat);
+        chat.push(newchat); // push it to server chat history
+        io.emit("chat_update", newchat); // send the msg to all users
 
         // remove the user from their room
         //user.room.removeUser(user)
 
         console.log("--> Removing Session.");
-        let id = session.socket_id;
-        delete sessions.id;
+        let id = session.socket_id; // cache the id for deletion
+        delete sessions.id; // delete the id from the sessions object
         session = null;
     });
 
@@ -80,30 +80,35 @@ io.on("connection", function (socket) {
         // if no user with the given id was found, create a new one
         if (user == null) {
             console.log("--> Creating new User.")
-            user = new objects.User(
+            user = new objects.User( // create the user object
                 user_id = user_id, 
-                username = "user_" + (Object.keys(users).length + 1), 
+                username = "user_" + (Object.keys(users).length + 1),  // TODO: replace with user-defined username (with validation)
                 session = session
             );
+
+            // Create a starting character for the new user
             user.addCharacter(new objects.Character(
                 name = "the CHARACTER"
             ));
-            user.setRoom(world_map.getRoom(0,0));
-            users[user_id]= user;
-            user = users[user_id];
+            user.setRoom(world_map.getRoom(0,0)); // set the new character's current room to origin
+            users[user_id]= user; // add user to users dict
+            user = users[user_id]; // update local user pointer to reference the dict entry
+
             //add the user to their room
             //user.room.addUser(user)
         }
+
         let today = new Date();
-        let newchat = new objects.ChatMessage(
+        let newchat = new objects.ChatMessage( // generate user connected chat msg
             color = "yellow",
             body = "Player " + user.username + " connected.",
             sender = "SERVER",
             timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
         );
-        chat.push(newchat);
-        io.emit("chat_update", newchat);
-        socket.emit("user_update", users[user_id].emitUser());
+
+        chat.push(newchat); // push it to server chat history
+        io.emit("chat_update", newchat); // send the msg to all users
+        socket.emit("user_update", user.emitUser());
     })
 
     socket.on("message", function(message_data) {
@@ -155,8 +160,8 @@ io.on("connection", function (socket) {
         }
     });
     socket.on("change_username", function(data) {
-        username = data[0];
-        user_id = data[1];
+        username = data.username;
+        user_id = data.uid;
         users[user_id].setUsername(username);
         io.emit("user_update", users[user_id].emitUser());
     });

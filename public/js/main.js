@@ -42,8 +42,8 @@ function on_connect(){
 }
 
 function change_username() {
-    let uname = prompt("Please enter your new username:", "Trogdor");
-    socket.emit("change_username", [uname, localStorage.getItem("MUD_playerid")]);
+    let username = prompt("Please enter your new username:", "Trogdor");
+    socket.emit("change_username", { username: username, user_id: localStorage.getItem("MUD_playerid") });
   }
 
 // When document loads, 
