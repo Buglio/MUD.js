@@ -3,6 +3,9 @@ const socket = require("socket.io");
 const utils = require("./backend/util.js");
 const objects = require("./backend/objects.js");
 
+// Commands
+const say = require("./backend/commands/say.js");
+
 // App setup
 const PORT = process.env.PORT || 8088;
 const app = express();
@@ -106,20 +109,10 @@ io.on("connection", function (socket) {
     })
 
     socket.on("message", function(message_data) {
-        let today = new Date();
-        let newchat = new objects.ChatMessage(
-            color = "darkgray",
-            body = "",
-            sender = "SERVER",
-            timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-        );
-
         switch (message_data.cmd){
             // SAY COMMAND
             case "say": 
-                message_data.sender = user.username;
-                chat.push(message_data);
-                io.emit("chat_update", message_data);
+                say.process(message_data, user, users, chat, io)
                 break;
 
             // LOOK COMMAND

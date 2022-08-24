@@ -85,6 +85,10 @@ class Room {
         this.entities = []; // characters could be entities too...?
     }
 
+    getPos() {
+        return (this.x, this.y);
+    }
+
     *getUsers() {
         for (const user of this.users) {
             yield user;
