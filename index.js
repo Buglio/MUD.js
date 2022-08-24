@@ -24,7 +24,6 @@ const server = app.listen(PORT, function () {
 });
 
 // Server Data
-var sessions = {};
 var users = {};
 var chat = [];
 
@@ -49,8 +48,6 @@ const io = socket(server);
 
 io.on("connection", function (socket) {
     console.log("--> Creating new Session.");
-    let session = new objects.Session(socket);
-    sessions[session.socket_id] = session;
     let user = null; // Initialize user pointer to null
 
     socket.on("disconnect", function () {
@@ -69,9 +66,6 @@ io.on("connection", function (socket) {
         //user.room.removeUser(user)
 
         console.log("--> Removing Session.");
-        let id = session.socket_id; // cache the id for deletion
-        delete sessions.id; // delete the id from the sessions object
-        session = null;
     });
 
     socket.on("connect_player", function(user_id) {
@@ -83,7 +77,7 @@ io.on("connection", function (socket) {
             user = new objects.User( // create the user object
                 user_id = user_id, 
                 username = "user_" + (Object.keys(users).length + 1),  // TODO: replace with user-defined username (with validation)
-                session = session
+                socket = socket
             );
 
             // Create a starting character for the new user

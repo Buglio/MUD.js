@@ -15,8 +15,23 @@ socket.on("chat_update", function (message) {
     chatbox.scrollTop = chatbox.scrollHeight;
 });
 
+// detect if server goes down
+socket.on('disconnect', function(){
+    location.reload();
+});
+
 socket.on("user_update", function (user) {
     console.log(user);
+    let current_char = user.characters[user.current_character];
+    console.log(current_char);
+    document.getElementById('character_name').innerText = current_char.name;
+    document.getElementById('character_hp').innerText = "HP: " + current_char.hp.current + "/" + current_char.hp.max;
+    document.getElementById('character_dex').innerText = "DEX: " + current_char.stats.dex;
+    document.getElementById('character_str').innerText = "STR: " + current_char.stats.str;
+    document.getElementById('character_int').innerText = "INT: " + current_char.stats.int;
+    document.getElementById('character_wis').innerText = "WIS: " + current_char.stats.wis;
+    document.getElementById('character_con').innerText = "CON: " + current_char.stats.con;
+    document.getElementById('character_cha').innerText = "CHA: " + current_char.stats.cha;
 });
 
 function send_message(text){

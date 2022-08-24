@@ -1,17 +1,10 @@
 // TODO: should usernames only be used to login? 
 //       if so, then it should be character data that we shuffle around the world, rather than users
 
-class Session {
-    constructor(socket) {
-        this.socket = socket;
-        this.socket_id = socket.id;
-    }
-}
-
 class User {
-    constructor(user_id, username, session) {
+    constructor(user_id, username, socket) {
         this.user_id = user_id;
-        this.session = session;
+        this.socket = socket;
         this.characters = [];
         this.current_character = null;
         this.username = username;
@@ -23,6 +16,7 @@ class User {
         return {
             user_id: this.user_id,
             characters: this.characters,
+            current_character: this.current_character,
             username: this.username
         }
     }
@@ -146,7 +140,6 @@ class ChatMessage {
 }
 
 module.exports = {
-    Session,
     User,
     Character,
     ChatMessage,
