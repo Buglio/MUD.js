@@ -1,10 +1,19 @@
 const express = require("express");
 const socket = require("socket.io");
 const utils = require("./backend/util.js");
-const objects = require("./backend/objects.js");
+
+// Objects
+const _user_ = require("./backend/objects/user.js");
+const _character_ = require("./backend/objects/character.js");
+const _chat_message_ = require("./backend/objects/chatMessage.js");
 
 // Commands
 const say = require("./backend/commands/say.js");
+const look = require("./backend/commands/look.js");
+const move = require("./backend/commands/move.js");
+
+// test world
+const world = require("./backend/testWorld.js").world;
 
 // App setup
 const PORT = process.env.PORT || 8088;
@@ -30,21 +39,8 @@ const server = app.listen(PORT, function () {
 var users = {};
 var chat = [];
 
-// World Data
-var world_map = new objects.World();
-var start_room = new objects.Room(
-    x = 0,
-    y = 0,
-    description = "This is the starting room all new adventurers are dropped into."
-);
-var second_room = new objects.Room(
-    x = 0,
-    y = 1,
-    description = "This is the second room, south of the starting room"
-);
 
-world_map.addRoom(start_room);
-world_map.addRoom(second_room);
+
 
 // Socket Setup
 const io = socket(server);
@@ -56,7 +52,7 @@ io.on("connection", function (socket) {
     socket.on("disconnect", function () {
         let today = new Date();
         if (user == null) return
-        let newchat = new objects.ChatMessage( // generate disconnect chat msg
+        let newchat = new _chat_message_.ChatMessage( // generate disconnect chat msg
             color = "yellow",
             body = `Player ${user.username} disconnected.`,
             sender = "SERVER",
@@ -77,17 +73,17 @@ io.on("connection", function (socket) {
         // if no user with the given id was found, create a new one
         if (user == null) {
             console.log("--> Creating new User.")
-            user = new objects.User( // create the user object
+            user = new _user_.User( // create the user object
                 user_id = user_id, 
                 username = "user_" + (Object.keys(users).length + 1),  // TODO: replace with user-defined username (with validation)
                 socket = socket
             );
 
             // Create a starting character for the new user
-            user.addCharacter(new objects.Character(
+            user.addCharacter(new _character_.Character(
                 name = "the CHARACTER"
             ));
-            user.setRoom(world_map.getRoom(0,0)); // set the new character's current room to origin
+            user.setRoom(world.getRoom(0,0)); // set the new character's current room to origin
             users[user_id]= user; // add user to users dict
             user = users[user_id]; // update local user pointer to reference the dict entry
 
@@ -96,7 +92,7 @@ io.on("connection", function (socket) {
         }
 
         let today = new Date();
-        let newchat = new objects.ChatMessage( // generate user connected chat msg
+        let newchat = new _chat_message_.ChatMessage( // generate user connected chat msg
             color = "yellow",
             body = "Player " + user.username + " connected.",
             sender = "SERVER",
@@ -118,26 +114,15 @@ io.on("connection", function (socket) {
             // LOOK COMMAND
             case "l":
             case "look":
-                newchat.body = user.getCurrentCharacter().room.description;
-                newchat.sender = null;
-                io.emit("chat_update", newchat);
+                look.process(message_data, user, users, chat, io)
                 break;
             
-            // MOVE SOUTH
-            /*
-            case "s":
-            case "south":
-                let souths = ["You run south", "You walk south"]
-                newchat.body = "You go south";
-                newchat.sender = null;
-                io.emit("chat_update", newchat);
-
-                character = user.getCurrentCharacter(); //SUS
-                character.moveSouth(world_map);
-                user.setCurrentCharacter(character);
-                socket.emit("user_update", user.emitUser());
+            // MOVE NORTH
+            case "n":
+            case "north":
+                move.moveNorth(world, message_data, user, users, chat, io);
                 break;
-            */
+
             // INVALID COMMAND ENTERED
             default:
                 newchat.body = message_data.cmd + " is not a valid command.";
