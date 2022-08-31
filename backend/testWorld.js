@@ -27,8 +27,6 @@ second_room.items.push(shark);
 world.addRoom(start_room);
 world.addRoom(second_room);
 
-
-
 module.exports = {
     world,
 
