@@ -21,9 +21,10 @@ socket.on('disconnect', function(){
 });
 
 socket.on("user_update", function (user) {
-    console.log(user);
+    if (user.characters.length == 0) {
+
+    }
     let current_char = user.characters[user.current_character];
-    console.log(current_char);
     document.getElementById('character_name').innerText = current_char.name;
     document.getElementById('character_hp').innerText = "HP: " + current_char.hp.current + "/" + current_char.hp.max;
     document.getElementById('character_dex').innerText = "DEX: " + current_char.stats.dex;
@@ -53,7 +54,7 @@ function on_connect(){
         let new_id = makeid(12); // make random 12 char string
         localStorage.setItem("MUD_playerid", new_id)
     }
-    socket.emit("connect_player", localStorage.getItem("MUD_playerid"));
+    socket.emit("on_connect", localStorage.getItem("MUD_playerid"));
 }
 
 function change_username() {

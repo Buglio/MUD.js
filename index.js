@@ -67,7 +67,7 @@ io.on("connection", function (socket) {
         console.log("--> Removing Session.");
     });
 
-    socket.on("connect_player", function(user_id) {
+    socket.on("on_connect", function(user_id) {
         // try to find an existing user with the given id
         user = users[user_id];
         // if no user with the given id was found, create a new one
@@ -102,6 +102,10 @@ io.on("connection", function (socket) {
         chat.push(newchat); // push it to server chat history
         io.emit("chat_update", newchat); // send the msg to all users
         socket.emit("user_update", user.emitUser());
+        
+        if (user.characters.length == 0) {
+            socket.emit("no_characters")
+        }
     })
 
     socket.on("message", function(message_data) {
@@ -133,7 +137,7 @@ io.on("connection", function (socket) {
     });
     socket.on("change_username", function(data) {
         username = data.username;
-        user_id = data.uid;
+        user_id = data.user_id;
         users[user_id].setUsername(username);
         io.emit("user_update", users[user_id].emitUser());
     });
