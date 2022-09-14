@@ -49,6 +49,7 @@ io.on("connection", function (socket) {
     console.log("--> Creating new Session.");
     let user = null; // Initialize user pointer to null
 
+    // ===== ACCOUNT AND CONNECTION MANAGEMENT ===== //
     socket.on("disconnect", function () {
         let today = new Date();
         if (user == null) return
@@ -60,10 +61,6 @@ io.on("connection", function (socket) {
         );
         chat.push(newchat); // push it to server chat history
         io.emit("chat_update", newchat); // send the msg to all users
-
-        // remove the user from their room
-        //user.room.removeUser(user)
-
         console.log("--> Removing Session.");
     });
 
@@ -79,6 +76,8 @@ io.on("connection", function (socket) {
                 socket = socket
             );
 
+            /* When Character is created
+
             // Create a starting character for the new user
             user.addCharacter(new _character_.Character(
                 name = "the CHARACTER"
@@ -89,25 +88,38 @@ io.on("connection", function (socket) {
 
             //add the user to their room
             //user.room.addUser(user)
+            let today = new Date();
+            let newchat = new _chat_message_.ChatMessage( // generate user connected chat msg
+                color = "yellow",
+                body = "Player " + user.username + " connected.",
+                sender = "SERVER",
+                timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+            );
+            chat.push(newchat); // push it to server chat history
+            io.emit("chat_update", newchat); // send the msg to all users
+            */
         }
-
-        let today = new Date();
-        let newchat = new _chat_message_.ChatMessage( // generate user connected chat msg
-            color = "yellow",
-            body = "Player " + user.username + " connected.",
-            sender = "SERVER",
-            timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-        );
-
-        chat.push(newchat); // push it to server chat history
-        io.emit("chat_update", newchat); // send the msg to all users
-        socket.emit("user_update", user.emitUser());
         
+        socket.emit("user_update", user.emitUser());
         if (user.characters.length == 0) {
-            socket.emit("no_characters")
+            socket.emit("no_characters");
         }
     })
+    socket.on("change_username", function(data) {
+        username = data.username;
+        user_id = data.user_id;
+        users[user_id].setUsername(username);
+        io.emit("user_update", users[user_id].emitUser());
+    });
 
+    // ===== CHARACTER MANAGEMENT ===== //
+    socket.on("check_playername", function(charName){
+        // check if username is valid
+        // if username is bad 
+        let isValid = true; // add logic later
+        socket.emit("playername_validity", [isValid, charName]);
+    });
+    // ===== COMMANDS ===== //
     socket.on("message", function(message_data) {
         switch (message_data.cmd){
             // SAY COMMAND
@@ -134,11 +146,5 @@ io.on("connection", function (socket) {
                 chat.push(newchat);
                 io.emit("chat_update", newchat);
         }
-    });
-    socket.on("change_username", function(data) {
-        username = data.username;
-        user_id = data.user_id;
-        users[user_id].setUsername(username);
-        io.emit("user_update", users[user_id].emitUser());
     });
 });
