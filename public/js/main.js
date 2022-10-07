@@ -50,28 +50,42 @@ socket.on('disconnect', function(){
 });
 
 socket.on("user_update", function (user) {
-    console.error(user);
     if (user.characters.length == 0) { // creating a character if none exist
         create_character();
     }
-    else if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
+    else{
+        if (!character_creation_mode) {}
+        console.log('render stats')
+        let current_char = user.characters[user.current_character];
+        document.getElementById('character_name').innerText = "CHARACTER: " + current_char.name;
+
+        document.getElementById('character_hp').innerText = "HP: " + current_char.hp.current + "/" + current_char.hp.max;
+        document.getElementById('character_hp').style.width = (current_char.hp.current / current_char.hp.max * 100) + "%";
+
+        document.getElementById('character_dex').innerText = "DEX: " + current_char.stats.dex;
+        document.getElementById('character_dex').style.width = (current_char.stats.dex / 18 * 100) + "%";
+
+        document.getElementById('character_str').innerText = "STR: " + current_char.stats.str;
+        document.getElementById('character_str').style.width = (current_char.stats.str / 18 * 100) + "%";
+
+        document.getElementById('character_int').innerText = "INT: " + current_char.stats.int;
+        document.getElementById('character_int').style.width = (current_char.stats.int / 18 * 100) + "%";
+
+        document.getElementById('character_wis').innerText = "WIS: " + current_char.stats.wis;
+        document.getElementById('character_wis').style.width = (current_char.stats.wis / 18 * 100) + "%";
+
+        document.getElementById('character_con').innerText = "CON: " + current_char.stats.con;
+        document.getElementById('character_con').style.width = (current_char.stats.con / 18 * 100) + "%";
+
+        document.getElementById('character_cha').innerText = "CHA: " + current_char.stats.cha;
+        document.getElementById('character_cha').style.width = (current_char.stats.cha / 18 * 100) + "%";
+    }
+    if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
         // character created! start doing stats stuff
         character_creation_mode = false;
         document.getElementById("input").placeholder = "";
         local_chat("Character " + user.characters[user.current_character].name + " was created.");
     }
-    else{
-        let current_char = user.characters[user.current_character];
-        document.getElementById('character_name').innerText = current_char.name;
-        document.getElementById('character_hp').innerText = "HP: " + current_char.hp.current + "/" + current_char.hp.max;
-        document.getElementById('character_dex').innerText = "DEX: " + current_char.stats.dex;
-        document.getElementById('character_str').innerText = "STR: " + current_char.stats.str;
-        document.getElementById('character_int').innerText = "INT: " + current_char.stats.int;
-        document.getElementById('character_wis').innerText = "WIS: " + current_char.stats.wis;
-        document.getElementById('character_con').innerText = "CON: " + current_char.stats.con;
-        document.getElementById('character_cha').innerText = "CHA: " + current_char.stats.cha;
-    }
-    
 });
 
 function send_message(text){
@@ -112,6 +126,8 @@ $( document ).ready(function() {
 
                 document.getElementById("input").value = "";
             }else{
+                console.log("send message");
+                console.log(document.getElementById("input").value)
                 send_message(document.getElementById("input").value)
                 document.getElementById("input").value = "";
             }

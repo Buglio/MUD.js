@@ -20,16 +20,47 @@
             <button onclick="change_username()">Change Username</button>
             <button>Create Character</button>
             <br><br>
-            
-            <span id="character_name"></span><br>
-            <span id="character_hp"></span><br>
-            <span id="character_str"></span><br>
-            <span id="character_dex"></span><br>
-            <span id="character_cha"></span><br>
-            <span id="character_wis"></span><br>
-            <span id="character_int"></span><br>
-            <span id="character_con"></span><br>
-        </div>
+            <div id="character_stats">
+                <div class="block_title" id="character_name"></div>
+                <div class="bar_bg">
+                    <div class="bar" id="character_hp"></div><br>
+                </div>
+                <div class="bar_bg">
+                    <div class="bar" id="character_str"></div><br>
+                </div>
+                <div class="bar_bg">
+                    <div class="bar" id="character_dex"></div><br>
+                </div>
+                <div class="bar_bg">
+                    <div class="bar" id="character_cha"></div><br>
+                </div>
+                <div class="bar_bg">
+                    <div class="bar" id="character_wis"></div><br>
+                </div>
+                <div class="bar_bg">
+                    <div class="bar" id="character_int"></div><br>
+                </div>
+                <div class="bar_bg">
+                    <div class="bar" id="character_con"></div><br>
+                </div>
+            </div>
+            <div id="character_inventory">
+                <div class="block_title">INVENTORY</div>
+            </div>
+            <div id="character_map">
+                <div class="block_title" style="margin-top:-20px; margin-left: 0px;">MAP</div>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+                <span>####################</span>
+            </div>
+        
         <div id='modal'>
             Server is offline... Something seems to have gone wrong. Try reloading the page?
         </div>

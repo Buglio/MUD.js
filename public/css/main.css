@@ -4,6 +4,9 @@ html{
     top: 0px;
     left: 0px;
     overflow: hidden;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
 }
 body{
     margin: 0 auto;
@@ -17,10 +20,12 @@ body{
 #controls{
     width: 50vw;
     height: 100vh;
-    background-color: red;
+    background-color: black;
+    border-left: 1px solid white;
     position: absolute;
     top: 0px;
     right: 0px;
+    overflow-y:scroll;
 }
 #modal{
     background-color: rgba(255,255,255,1);
@@ -31,4 +36,46 @@ body{
     top: 0px;
     left: 0px;
     display: none;
+}
+#character_stats{
+    padding: 20px;
+    width: auto;
+    border: 1px solid white;
+    margin: 20px;
+    margin-top: 30px;
+}
+#character_inventory{
+    padding: 20px;
+    width: auto;
+    border: 1px solid white;
+    margin: 20px;
+    margin-top: 30px;
+}
+#character_map{
+    border: 1px solid white;
+    margin: 20px;
+    margin-top: 30px;
+    width: 20vw;
+    height: 18.5vw;
+    font-size: 1.6vw;
+    text-align: center;
+}
+.block_title{
+    float: left;
+    margin-top: -40px;
+    margin-left: -20px;
+    font-size: 12px;
+}
+.bar_bg{
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 2px;
+    margin-top: 5px;
+    padding: 2px;
+}
+.bar{
+    background-color: rgba(255,255,255,0.5);
+    display:inline-block;
+    border-radius: 3px;
+    padding: 2px;
+    color: black;
 }
