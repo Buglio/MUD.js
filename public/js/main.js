@@ -42,26 +42,6 @@ function create_character(){
     local_chat("You have no characters. Please enter a name to get started...");
     document.getElementById("input").placeholder = "enter a name";
 }
-// if account has no characters stored on the server side
-socket.on('no_characters', function(){
-    create_character();
-});
-
-socket.on("playername_validity", function(data){
-    let isValid = data[0];
-    let charName = data[1];
-    if (isValid){
-        // character created! start doing stats stuff
-        character_creation_mode = false;
-        document.getElementById("input").placeholder = "";
-        //socket.emit("create_character", charName);
-        local_chat("Character " + charName + " was created.");
-    }
-    else{
-        create_character()
-    }
-});
-
 // detect if server goes down
 socket.on('disconnect', function(){
     //location.reload();
@@ -70,8 +50,15 @@ socket.on('disconnect', function(){
 });
 
 socket.on("user_update", function (user) {
-    if (user.characters.length == 0) {
-
+    console.error(user);
+    if (user.characters.length == 0) { // creating a character if none exist
+        create_character();
+    }
+    else if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
+        // character created! start doing stats stuff
+        character_creation_mode = false;
+        document.getElementById("input").placeholder = "";
+        local_chat("Character " + user.characters[user.current_character].name + " was created.");
     }
     else{
         let current_char = user.characters[user.current_character];
@@ -121,7 +108,8 @@ $( document ).ready(function() {
         if (e.key === 'Enter' || e.keyCode === 13) {
             if (character_creation_mode == true){
                 let name = document.getElementById("input").value;
-                socket.emit("check_playername", name);
+                socket.emit("create_character", [name,localStorage.getItem("MUD_playerid")]);
+
                 document.getElementById("input").value = "";
             }else{
                 send_message(document.getElementById("input").value)

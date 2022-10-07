@@ -19,6 +19,9 @@ class World {
     getRoom(x,y){
         return this.map[x][y];
     }
+    getStartRoom(){
+        return this.map[0][0];
+    }
 }
 
 module.exports = {

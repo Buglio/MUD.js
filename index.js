@@ -75,7 +75,7 @@ io.on("connection", function (socket) {
                 username = "user_" + (Object.keys(users).length + 1),  // TODO: replace with user-defined username (with validation)
                 socket = socket
             );
-
+            users[user_id] = user;
             /* When Character is created
 
             // Create a starting character for the new user
@@ -101,9 +101,6 @@ io.on("connection", function (socket) {
         }
         
         socket.emit("user_update", user.emitUser());
-        if (user.characters.length == 0) {
-            socket.emit("no_characters");
-        }
     })
     socket.on("change_username", function(data) {
         username = data.username;
@@ -113,11 +110,21 @@ io.on("connection", function (socket) {
     });
 
     // ===== CHARACTER MANAGEMENT ===== //
-    socket.on("check_playername", function(charName){
-        // check if username is valid
-        // if username is bad 
-        let isValid = true; // add logic later
-        socket.emit("playername_validity", [isValid, charName]);
+    socket.on("create_character", function(data){
+        console.log(users);
+        let char_name = data[0];
+        let user_id = data[1];
+        let user = users[user_id];
+        // check if player name is valid TBD
+
+        // create character attached to user
+        let new_char = new _character_.Character(char_name)
+        new_char.room = world.getStartRoom();
+        user.characters.push(new_char);
+        console.log(user)
+        user.current_character = user.characters.length - 1;
+        
+        socket.emit("user_update", user.emitUser());
     });
     // ===== COMMANDS ===== //
     socket.on("message", function(message_data) {

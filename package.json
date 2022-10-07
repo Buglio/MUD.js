@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Porter Libby, Ryan Webb",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "nodemon": "^2.0.20",
     "socket.io": "^4.5.1"
   }
 }
