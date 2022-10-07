@@ -40,8 +40,6 @@ var users = {};
 var chat = [];
 
 
-
-
 // Socket Setup
 const io = socket(server);
 
@@ -144,6 +142,24 @@ io.on("connection", function (socket) {
             case "n":
             case "north":
                 move.moveNorth(world, message_data, user, users, chat, io);
+                break;
+            
+            // MOVE SOUTH
+            case "s":
+            case "south":
+                move.moveSouth(world, message_data, user, users, chat, io);
+                break;
+
+            // MOVE EAST
+            case "e":
+            case "east":
+                move.moveEast(world, message_data, user, users, chat, io);
+                break;
+
+            // MOVE WEST
+            case "w":
+            case "west":
+                move.moveWest(world, message_data, user, users, chat, io);
                 break;
 
             // INVALID COMMAND ENTERED

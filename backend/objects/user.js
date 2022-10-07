@@ -30,16 +30,44 @@ class User {
 
     // Movement
     moveNorth(world){
-        this.setRoom(world.getRoom(this.getRoom().x, this.getRoom().y + 1));
+        let room = world.getRoom(this.getRoom().x, this.getRoom().y + 1)  
+        if (room) {
+            this.setRoom(room);
+            return true;
+        } 
+        else { // No world coordinate there, sorry
+            return false;
+        }
     }
     moveSouth(world){
-        this.setRoom(world.getRoom(this.getRoom().x, this.getRoom().y - 1));
+        let room = world.getRoom(this.getRoom().x, this.getRoom().y - 1)  
+        if (room) {
+            this.setRoom(room);
+            return true;
+        } 
+        else { // No world coordinate there, sorry
+            return false;
+        }
     }
     moveEast(world){
-        this.setRoom(world.getRoom(this.getRoom().x + 1, this.getRoom().y));
+        let room = world.getRoom(this.getRoom().x + 1, this.getRoom().y)  
+        if (room) {
+            this.setRoom(room);
+            return true;
+        } 
+        else { // No world coordinate there, sorry
+            return false;
+        }
     }
     moveWest(world){
-        this.setRoom(world.getRoom(this.getRoom().x - 1, this.getRoom().y));
+        let room = world.getRoom(this.getRoom().x - 1, this.getRoom().y)  
+        if (room) {
+            this.setRoom(room);
+            return true;
+        } 
+        else { // No world coordinate there, sorry
+            return false;
+        }
     }
 
     // Character stuff

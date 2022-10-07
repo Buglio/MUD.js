@@ -17,7 +17,11 @@ class World {
     }
 
     getRoom(x,y){
-        return this.map[x][y];
+        if (this.map[x] && this.map[x][y]) {
+            return this.map[x][y];
+        }
+        
+        return undefined; // SUS
     }
     getStartRoom(){
         return this.map[0][0];
