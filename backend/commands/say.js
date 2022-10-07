@@ -1,5 +1,5 @@
 function process(message_data, user, users, chat, io) {
-    message_data.sender = user.username;
+    message_data.sender = user.getCurrentCharacter().name;
     chat.push(message_data);
 
     for (const username in users) {
