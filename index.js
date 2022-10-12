@@ -3,14 +3,15 @@ const socket = require("socket.io");
 const utils = require("./backend/util.js");
 
 // Objects
-const _user_ = require("./backend/objects/user.js");
-const _character_ = require("./backend/objects/character.js");
-const _chat_message_ = require("./backend/objects/chatMessage.js");
+const _user_ = require("./backend/classes/user.js");
+const _character_ = require("./backend/classes/character.js");
+const _chat_message_ = require("./backend/classes/chatMessage.js");
 
 // Commands
 const say = require("./backend/commands/say.js");
 const look = require("./backend/commands/look.js");
 const move = require("./backend/commands/move.js");
+const grab = require("./backend/commands/grab");
 
 // test world
 const world = require("./backend/testWorld.js").world;
@@ -119,7 +120,7 @@ io.on("connection", function (socket) {
         let new_char = new _character_.Character(char_name)
         new_char.room = world.getStartRoom();
         user.characters.push(new_char);
-        console.log(user)
+        console.log(new_char);
         user.current_character = user.characters.length - 1;
         
         socket.emit("user_update", user.emitUser());
@@ -160,6 +161,10 @@ io.on("connection", function (socket) {
             case "w":
             case "west":
                 move.moveWest(world, message_data, user, users, chat, io);
+                break;
+
+            case "grab":
+                grab.process(message_data, user, users, chat, io);
                 break;
 
             // INVALID COMMAND ENTERED

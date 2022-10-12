@@ -1,3 +1,5 @@
+const items_dict = require("../entities/items").dictionary;
+
 class Character {
     constructor(name) {
         this.name = name;
@@ -14,6 +16,10 @@ class Character {
             current: 10
         };
         this.room = null;
+        this.inventory = []
+
+        let item = items_dict.sword1;
+        this.inventory.push(item);
     }
 
     equipItem(item) {
@@ -25,6 +31,8 @@ class Character {
         // check weight of item against strength of character
         // if below threshold, can't hold, if barely over threshold, reduces maneuverability (can't walk?)
     }
+
+    
 }
 
 module.exports = {

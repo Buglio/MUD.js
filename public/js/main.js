@@ -44,12 +44,13 @@ function create_character(){
 }
 // detect if server goes down
 socket.on('disconnect', function(){
-    //location.reload();
+    location.reload();
     // we could use the modal here
-    document.getElementById("modal").style.display = "block";
+    //document.getElementById("modal").style.display = "block";
 });
 
 socket.on("user_update", function (user) {
+    console.log(user);
     if (user.characters.length == 0) { // creating a character if none exist
         create_character();
     }
@@ -79,6 +80,17 @@ socket.on("user_update", function (user) {
 
         document.getElementById('character_cha').innerText = "CHA: " + current_char.stats.cha;
         document.getElementById('character_cha').style.width = (current_char.stats.cha / 18 * 100) + "%";
+
+        // ######  INVENTORY STUFF #####
+        let items_container = document.getElementById('items_container');
+        for (const item of user.characters[user.current_character].inventory)
+        {    
+            let image = document.createElement("img");
+            image.src = "/sprites/"+item.sprite;
+            image.width = "32";
+            image.height = "32";
+            items_container.appendChild(image);
+        }
     }
     if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
         // character created! start doing stats stuff
