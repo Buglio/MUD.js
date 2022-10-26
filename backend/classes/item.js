@@ -1,7 +1,8 @@
 // books, arrows, swords, 
 class Item {
-    constructor(name, description, sprite, volume, weight) {
+    constructor(name, id, description, sprite, volume, weight, max_quantity) {
         this.name = name;
+        this.id = id;
         this.description = description;
         this.sprite = sprite;
 
@@ -15,6 +16,10 @@ class Item {
         this.hardness; // can wait
 
         this.is_shark = false; // IMPORTANT
+
+        // quantity control :D
+        this.current_quantity = 1;
+        this.max_quantity = max_quantity;
     }
 
     getDensity() { return this.weight / this.volume; }
