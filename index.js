@@ -110,7 +110,6 @@ io.on("connection", function (socket) {
 
     // ===== CHARACTER MANAGEMENT ===== //
     socket.on("create_character", function(data){
-        console.log(users);
         let char_name = data[0];
         let user_id = data[1];
         let user = users[user_id];
@@ -120,7 +119,6 @@ io.on("connection", function (socket) {
         let new_char = new _character_.Character(char_name)
         new_char.room = world.getStartRoom();
         user.characters.push(new_char);
-        console.log(new_char);
         user.current_character = user.characters.length - 1;
         
         socket.emit("user_update", user.emitUser());
@@ -169,6 +167,13 @@ io.on("connection", function (socket) {
 
             // INVALID COMMAND ENTERED
             default:
+                let today = new Date();
+                let newchat = new _chat_message_.ChatMessage( // generate disconnect chat msg
+                    color = "red",
+                    body = `Invalid command: ` + message_data,
+                    sender = "ERR",
+                    timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+                );
                 newchat.body = message_data.cmd + " is not a valid command.";
                 newchat.color = "red";
                 chat.push(newchat);

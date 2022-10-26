@@ -1,6 +1,7 @@
 const move_flavors = ["You run", "You walk", "You stumble", "..."]
 
 function moveNorth(world, message_data, user, users, chat, io) {
+    console.log("MOVE NORTH command");
     message_data.sender = "MOVE";
     message_data.body = move_flavors[0] + " north."
 
@@ -18,6 +19,7 @@ function moveNorth(world, message_data, user, users, chat, io) {
 }
 
 function moveSouth(world, message_data, user, users, chat, io) {
+    console.log("MOVE SOUTH command");
     message_data.sender = "MOVE";
 
     // move the user's character
@@ -34,6 +36,7 @@ function moveSouth(world, message_data, user, users, chat, io) {
 }
 
 function moveEast(world, message_data, user, users, chat, io) {
+    console.log("MOVE EAST command");
     message_data.sender = "MOVE";
 
     // move the user's character
@@ -50,6 +53,7 @@ function moveEast(world, message_data, user, users, chat, io) {
 }
 
 function moveWest(world, message_data, user, users, chat, io) {
+    console.log("MOVE WEST command");
     message_data.sender = "MOVE";
     
     // move the user's character

@@ -1,4 +1,5 @@
 function process(message_data, user, users, chat, io) {
+    console.log("LOOK command");
     let room = user.getCurrentCharacter().room
     message_data.sender = "LOOK";
     message_data.body = room.description;

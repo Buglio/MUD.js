@@ -1,4 +1,5 @@
 function process(message_data, user, users, chat, io) {
+    console.log("GRAB command");
     let room = user.getCurrentCharacter().room;
     let body = message_data.body;
 

@@ -18,8 +18,7 @@ class Character {
         this.room = null;
         this.inventory = []
 
-        let item = items_dict.sword1;
-        this.inventory.push(item);
+        this.inventory.push(items_dict.sword1);
     }
 
     equipItem(item) {

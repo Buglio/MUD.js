@@ -1,4 +1,5 @@
 function process(message_data, user, users, chat, io) {
+    console.log("SAY command");
     message_data.sender = user.getCurrentCharacter().name;
     chat.push(message_data);
 

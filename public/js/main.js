@@ -7,6 +7,7 @@ var character_creation_mode = false;
 
 // Update chat with new message from server
 socket.on("chat_update", function (message) {
+    console.log("CHAT_UPDATE");
     chat.push(message);
     let chatbox = document.getElementById("chatbox");
     chatbox.innerHTML = "";
@@ -83,13 +84,20 @@ socket.on("user_update", function (user) {
 
         // ######  INVENTORY STUFF #####
         let items_container = document.getElementById('items_container');
-        for (const item of user.characters[user.current_character].inventory)
-        {    
-            let image = document.createElement("img");
-            image.src = "/sprites/"+item.sprite;
-            image.width = "32";
-            image.height = "32";
-            items_container.appendChild(image);
+        for (let x = 0; x < 24; x++)
+        {
+            
+            let inv_slot = document.createElement("div");
+            inv_slot.className = "inv_slot"
+
+            // const item of user.characters[user.current_character].inventory
+            if (user.characters[user.current_character].inventory[x]){
+                let image = document.createElement("img");
+                image.className = "inv_item"
+                image.src = "/sprites/"+ user.characters[user.current_character].inventory[x].sprite;
+                inv_slot.appendChild(image);            
+            }
+            items_container.appendChild(inv_slot);
         }
     }
     if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
