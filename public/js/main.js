@@ -88,13 +88,23 @@ socket.on("user_update", function (user) {
         {
             
             let inv_slot = document.createElement("div");
-            inv_slot.className = "inv_slot"
+            inv_slot.className = "inv_slot";
+
+            
 
             // const item of user.characters[user.current_character].inventory
             if (user.characters[user.current_character].inventory[x]){
+                let inv_item = user.characters[user.current_character].inventory[x];
+                // quantity tag
+                if (inv_item.max_quantity > 1){
+                    let tag = document.createElement("span");
+                    tag.innerText = inv_item.current_quantity + "x";
+                    inv_slot.appendChild(tag);
+                }
+
                 let image = document.createElement("img");
                 image.className = "inv_item"
-                image.src = "/sprites/"+ user.characters[user.current_character].inventory[x].sprite;
+                image.src = "/sprites/"+ inv_item.sprite;
                 inv_slot.appendChild(image);            
             }
             items_container.appendChild(inv_slot);
