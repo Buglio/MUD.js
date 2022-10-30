@@ -1,0 +1,16 @@
+/* NAVIGATION AND LINKS */
+#nav{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+button{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(255,255,255,0);
+    color: white;
+    border: 1px dotted white;
+    padding: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(255,255,255,0.2);
+}

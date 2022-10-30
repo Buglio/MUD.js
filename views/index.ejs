@@ -1,28 +1,30 @@
 <html>
     <head>
         <title>MUD.js - Home</title>
-        
+        <!-- STYLES -->
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/inventory.css">
+        <link rel="stylesheet" href="./css/map.css">
+        <link rel="stylesheet" href="./css/nav.css">
+        <link rel="stylesheet" href="./css/stats.css">
         <link rel="stylesheet" href="./css/chat.css">
 
         <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.ico">
     </head>
     <body>
-        <!-- UI Elements -->
+        <!-- Stats (left 50%) -->
         <div id="chat_container">
             <div id="chatbox"></div>
             <span id='shell_char'>></span><input type="text" id="input">
         </div>
-        <!-- Javascript References -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
-        <script src='./js/util.js'></script>
-        <script src='./js/main.js'></script>
+
+        <!-- Stats (right 50%) -->
         <div id="controls">
-            <button onclick="change_username()">Change Username</button>
-            <button>Create Character</button>
-            <button onclick="location.href+='man';">Docs</button>
+            <div id="nav">
+                <button onclick="change_username()">[ Change Username ]</button>
+                <button>[ Create Character ]</button>
+                <button onclick="location.href+='man';"> -> Docs</button>
+            </div>
             <br><br>
             <div id="character_stats">
                 <div class="block_title" id="character_name"></div>
@@ -283,9 +285,15 @@
                     
                 </div>
             </div>
-        
+        <!-- Overlay -->
         <div id='modal'>
             Server is offline... Something seems to have gone wrong. Try reloading the page?
         </div>
+
+        <!-- Javascript References -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+        <script src='./js/util.js'></script>
+        <script src='./js/main.js'></script>
     </body>
 </html>
