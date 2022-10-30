@@ -98,6 +98,10 @@ io.on("connection", function (socket) {
             io.emit("chat_update", newchat); // send the msg to all users
             */
         }
+        else{ // adding this so that a reconnecting player with a new socket is not ignored.
+            user.socket = socket;
+            users[user_id] = user;
+        }
         
         socket.emit("user_update", user.emitUser());
     })
