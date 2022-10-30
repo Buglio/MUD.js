@@ -12,7 +12,7 @@ socket.on("chat_update", function (message) {
     let chatbox = document.getElementById("chatbox");
     chatbox.innerHTML = "";
     for (x = 0; x < chat.length; x++){
-        let list_item = "<span style='color: " + chat[x].color + "'>[" + chat[x].sender + "]</span><span> (" + chat[x].timestamp + ") " + chat[x].body + "</span><br>";
+        let list_item = "<span style='color: " + chat[x].color + "'>[" + chat[x].sender + "]</span><span style='color: rgba(255,255,255,0.4)'> (" + chat[x].timestamp + ")</span><span> " + chat[x].body + "</span><br>";
         chatbox.innerHTML += list_item;
     }
     chatbox.scrollTop = chatbox.scrollHeight;
@@ -32,7 +32,7 @@ function local_chat(body){
     let chatbox = document.getElementById("chatbox");
     chatbox.innerHTML = "";
     for (x = 0; x < chat.length; x++){
-        let list_item = "<span style='color: " + chat[x].color + "'>[" + chat[x].sender + "]</span><span> (" + chat[x].timestamp + ") " + chat[x].body + "</span><br>";
+        let list_item = "<span style='color: " + chat[x].color + "'>[" + chat[x].sender + "]</span><span style='color: rgba(255,255,255,0.4)'> (" + chat[x].timestamp + ")</span><span> " + chat[x].body + "</span><br>";
         chatbox.innerHTML += list_item;
     }
     chatbox.scrollTop = chatbox.scrollHeight;
