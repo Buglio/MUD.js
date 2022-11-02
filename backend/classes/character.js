@@ -15,6 +15,14 @@ class Character {
             max: 10,
             current: 10
         };
+        this.mp = {
+            max: 10,
+            current: 10
+        };
+        this.xp = {
+            max: 1000,
+            current: 10
+        }
         this.room = null;
         this.inventory = [];
         this.inventory_size = 24

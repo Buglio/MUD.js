@@ -35,26 +35,30 @@
             <div id="character_stats">
                 <div class="block_title" id="character_name"></div>
                 <div class="bar_bg">
-                    <div class="bar" id="character_hp"></div><br>
+                    <div class="bar" style="background-color: rgba(255, 0, 0, 0.3)" id="character_hp"></div><br>
                 </div>
                 <div class="bar_bg">
-                    <div class="bar" id="character_str"></div><br>
+                    <div class="bar" style="background-color: rgba(4, 0, 255, 0.3)" id="character_mp"></div><br>
                 </div>
                 <div class="bar_bg">
-                    <div class="bar" id="character_dex"></div><br>
+                    <div class="bar" style="background-color: rgba(217, 255, 0, 0.3)" id="character_xp"></div><br>
                 </div>
-                <div class="bar_bg">
-                    <div class="bar" id="character_cha"></div><br>
-                </div>
-                <div class="bar_bg">
-                    <div class="bar" id="character_wis"></div><br>
-                </div>
-                <div class="bar_bg">
-                    <div class="bar" id="character_int"></div><br>
-                </div>
-                <div class="bar_bg">
-                    <div class="bar" id="character_con"></div><br>
-                </div>
+                <br><br>
+                <div class='stat' id="character_str"></div>
+                <div class='stat-spacer'></div>
+                <div class='stat' id="character_dex"></div>
+                <br>
+
+                <div class='stat' id="character_cha"></div>
+                <div class='stat-spacer'></div>
+                <div class='stat' id="character_wis"></div>
+                <br>
+
+                <div class='stat' id="character_int"></div>
+                <div class='stat-spacer'></div>
+                <div class='stat' id="character_con"></div>
+                <br>
+                <br>
             </div>
             <div id="character_inventory">
                 <div class="block_title">INVENTORY</div>
@@ -300,6 +304,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
         <script src='./js/util.js'></script>
+        <script src='./js/interface.js'></script>
         <script src='./js/main.js'></script>
     </body>
 </html>

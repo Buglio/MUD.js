@@ -5,6 +5,7 @@
     border: 1px solid white;
     margin: 20px;
     margin-top: 30px;
+    white-space: nowrap;
 }
 .bar_bg{
     background-color: rgba(255,255,255,0.5);
@@ -13,9 +14,17 @@
     padding: 2px;
 }
 .bar{
-    background-color: rgba(255,255,255,0.5);
     display:inline-block;
     border-radius: 3px;
     padding: 2px;
     color: black;
+}
+.stat{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.stat-spacer{
+    display: inline-block;
+    width: 20px;
 }
