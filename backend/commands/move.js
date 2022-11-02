@@ -16,6 +16,7 @@ function moveNorth(world, message_data, user, users, chat, io) {
     
     chat.push(message_data);
     user.socket.emit("chat_update", message_data);
+    user.socket.emit("user_update", user.emitUser());
 }
 
 function moveSouth(world, message_data, user, users, chat, io) {
@@ -33,6 +34,7 @@ function moveSouth(world, message_data, user, users, chat, io) {
     
     chat.push(message_data);
     user.socket.emit("chat_update", message_data);
+    user.socket.emit("user_update", user.emitUser());
 }
 
 function moveEast(world, message_data, user, users, chat, io) {
@@ -50,6 +52,7 @@ function moveEast(world, message_data, user, users, chat, io) {
     
     chat.push(message_data);
     user.socket.emit("chat_update", message_data);
+    user.socket.emit("user_update", user.emitUser());
 }
 
 function moveWest(world, message_data, user, users, chat, io) {
@@ -67,6 +70,7 @@ function moveWest(world, message_data, user, users, chat, io) {
     
     chat.push(message_data);
     user.socket.emit("chat_update", message_data);
+    user.socket.emit("user_update", user.emitUser());
 }
 
 module.exports = {

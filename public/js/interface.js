@@ -8,7 +8,7 @@ function render_interface(current_char){
     else{
         document.getElementById("character_stats").style.display = "block";
         document.getElementById("character_inventory").style.display = "block";
-        document.getElementById("character_map").style.display = "none";
+        document.getElementById("character_map").style.display = "block";
     }
 
     // =============== STATS =============== //
@@ -28,15 +28,14 @@ function render_interface(current_char){
 
     // =============== INVENTORY =============== //
     let items_container = document.getElementById('items_container');
+    items_container.innerHTML = "";
     for (let x = 0; x < 24; x++)
     {
         let inv_slot = document.createElement("div");
         inv_slot.className = "inv_slot";
-        // const item of user.characters[user.current_character].inventory
-        if (current_char.inventory[x]){
+        if (current_char.inventory[x]){ // const item of user.characters[user.current_character].inventory
             let inv_item = current_char.inventory[x];
-            // quantity tag
-            if (inv_item.max_quantity > 1){
+            if (inv_item.max_quantity > 1){ // quantity tag
                 let tag = document.createElement("span");
                 tag.innerText = inv_item.current_quantity + "x";
                 inv_slot.appendChild(tag);
