@@ -24,6 +24,9 @@ socket.on("user_update", function (user) {
     }
     else{
         render_interface(user.characters[user.current_character]); // call render in interface.js
+        if (chat.length == 0){
+            local_chat("Reconnected to server as character " + user.characters[user.current_character].name + ".");
+        }
     }
     if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
         // character created! start doing stats stuff
