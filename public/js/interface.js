@@ -1,7 +1,17 @@
 function render_interface(current_char){
     console.log('render current state');
+    if (!current_char){
+        document.getElementById("character_stats").style.display = "none";
+        document.getElementById("character_inventory").style.display = "none";
+        document.getElementById("character_map").style.display = "none";
+    }
+    else{
+        document.getElementById("character_stats").style.display = "block";
+        document.getElementById("character_inventory").style.display = "block";
+        document.getElementById("character_map").style.display = "none";
+    }
 
-    // ######  STATS #####
+    // =============== STATS =============== //
     document.getElementById('character_name').innerText = "CHARACTER: " + current_char.name;
     document.getElementById('character_hp').innerText = "HP: " + current_char.hp.current + "/" + current_char.hp.max;
     document.getElementById('character_hp').style.width = (current_char.hp.current / current_char.hp.max * 99) + "%";
@@ -16,8 +26,7 @@ function render_interface(current_char){
     document.getElementById('character_con').innerText = "CON: " + current_char.stats.con;
     document.getElementById('character_cha').innerText = "CHA: " + current_char.stats.cha;
 
-
-    // ######  INVENTORY STUFF #####
+    // =============== INVENTORY =============== //
     let items_container = document.getElementById('items_container');
     for (let x = 0; x < 24; x++)
     {
@@ -39,5 +48,7 @@ function render_interface(current_char){
         }
         items_container.appendChild(inv_slot);
     }
+
+    // =============== MAP =============== //
 }
     

@@ -29,7 +29,7 @@ socket.on("user_update", function (user) {
         // character created! start doing stats stuff
         character_creation_mode = false;
         document.getElementById("input").placeholder = "";
-        local_chat("Character " + current_char.name + " was created.");
+        local_chat("Character " + user.characters[user.current_character].name + " was created.");
     }
 });
 
@@ -95,6 +95,7 @@ function on_connect(){
 }
 
 $( document ).ready(function() { // When document loads, set up events and keys
+    
     on_connect();
     $("#input").on('keyup', function (e) {
         if (e.key === 'Enter' || e.keyCode === 13) {

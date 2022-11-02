@@ -7,6 +7,7 @@
     height: 320px;
     
     text-align: center;
+    display: none;
 }
 #map_container{
     display: grid;
