@@ -1,12 +1,11 @@
+// =============== VARIABLE SETUP =============== //
 const socket = io();
-
-
-// local chat to browser
-var chat = [];
+var chat = []; // local chat to browser
 var character_creation_mode = false;
 
-// Update chat with new message from server
-socket.on("chat_update", function (message) {
+
+// =============== SOCKET INTERACTIONS =============== //
+socket.on("chat_update", function (message) { // Update chat with new message from server
     console.log("CHAT_UPDATE");
     chat.push(message);
     let chatbox = document.getElementById("chatbox");
@@ -18,8 +17,28 @@ socket.on("chat_update", function (message) {
     chatbox.scrollTop = chatbox.scrollHeight;
 });
 
-// update chat with new LOCAL message
-function local_chat(body){
+socket.on("user_update", function (user) {
+    console.log(user);
+    if (user.characters.length == 0) { // creating a character if none exist
+        create_character();
+    }
+    else{
+        render_interface(user.characters[user.current_character]); // call render in interface.js
+    }
+    if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
+        // character created! start doing stats stuff
+        character_creation_mode = false;
+        document.getElementById("input").placeholder = "";
+        local_chat("Character " + current_char.name + " was created.");
+    }
+});
+
+socket.on('disconnect', function(){
+    location.reload();
+});
+
+// =============== CHAT FUNCTIONS =============== //
+function local_chat(body){ // update chat with new LOCAL message
     let today = new Date();
     let message = {
         color: "red",
@@ -37,86 +56,6 @@ function local_chat(body){
     }
     chatbox.scrollTop = chatbox.scrollHeight;
 }
-function create_character(){
-    character_creation_mode = true;
-    // character creation logic goes here
-    local_chat("You have no characters. Please enter a name to get started...");
-    document.getElementById("input").placeholder = "enter a name";
-}
-// detect if server goes down
-socket.on('disconnect', function(){
-    location.reload();
-    // we could use the modal here
-    //document.getElementById("modal").style.display = "block";
-});
-
-socket.on("user_update", function (user) {
-    console.log(user);
-    if (user.characters.length == 0) { // creating a character if none exist
-        create_character();
-    }
-    else{
-        if (!character_creation_mode) {}
-        console.log('render stats')
-        let current_char = user.characters[user.current_character];
-        document.getElementById('character_name').innerText = "CHARACTER: " + current_char.name;
-
-        document.getElementById('character_hp').innerText = "HP: " + current_char.hp.current + "/" + current_char.hp.max;
-        document.getElementById('character_hp').style.width = (current_char.hp.current / current_char.hp.max * 100) + "%";
-
-        document.getElementById('character_dex').innerText = "DEX: " + current_char.stats.dex;
-        document.getElementById('character_dex').style.width = (current_char.stats.dex / 18 * 100) + "%";
-
-        document.getElementById('character_str').innerText = "STR: " + current_char.stats.str;
-        document.getElementById('character_str').style.width = (current_char.stats.str / 18 * 100) + "%";
-
-        document.getElementById('character_int').innerText = "INT: " + current_char.stats.int;
-        document.getElementById('character_int').style.width = (current_char.stats.int / 18 * 100) + "%";
-
-        document.getElementById('character_wis').innerText = "WIS: " + current_char.stats.wis;
-        document.getElementById('character_wis').style.width = (current_char.stats.wis / 18 * 100) + "%";
-
-        document.getElementById('character_con').innerText = "CON: " + current_char.stats.con;
-        document.getElementById('character_con').style.width = (current_char.stats.con / 18 * 100) + "%";
-
-        document.getElementById('character_cha').innerText = "CHA: " + current_char.stats.cha;
-        document.getElementById('character_cha').style.width = (current_char.stats.cha / 18 * 100) + "%";
-
-        // ######  INVENTORY STUFF #####
-        let items_container = document.getElementById('items_container');
-        for (let x = 0; x < 24; x++)
-        {
-            
-            let inv_slot = document.createElement("div");
-            inv_slot.className = "inv_slot";
-
-            
-
-            // const item of user.characters[user.current_character].inventory
-            if (user.characters[user.current_character].inventory[x]){
-                let inv_item = user.characters[user.current_character].inventory[x];
-                // quantity tag
-                if (inv_item.max_quantity > 1){
-                    let tag = document.createElement("span");
-                    tag.innerText = inv_item.current_quantity + "x";
-                    inv_slot.appendChild(tag);
-                }
-
-                let image = document.createElement("img");
-                image.className = "inv_item"
-                image.src = "/sprites/"+ inv_item.sprite;
-                inv_slot.appendChild(image);            
-            }
-            items_container.appendChild(inv_slot);
-        }
-    }
-    if (character_creation_mode == true && user.characters.length != 0){ // none existed, now we have created a character
-        // character created! start doing stats stuff
-        character_creation_mode = false;
-        document.getElementById("input").placeholder = "";
-        local_chat("Character " + user.characters[user.current_character].name + " was created.");
-    }
-});
 
 function send_message(text){
     let cmd = text.split(" ")[0].toLowerCase();
@@ -132,6 +71,21 @@ function send_message(text){
     socket.emit("message", data);
 }
 
+// =============== USER/CHARACTER FUNCTIONS =============== //
+function create_character(){
+    character_creation_mode = true;
+    // character creation logic goes here
+    local_chat("You have no characters. Please enter a name to get started...");
+    document.getElementById("input").placeholder = "enter a name";
+}
+
+function change_username() {
+    let username = prompt("Please enter your new username:", "Trogdor");
+    socket.emit("change_username", { username: username, user_id: localStorage.getItem("MUD_playerid") });
+}
+
+// =============== INIT/SETUP FUNCTIONS =============== //
+// RUN WHEN BROWSER STARTS
 function on_connect(){
     if (localStorage.getItem("MUD_playerid") == null){
         let new_id = makeid(12); // make random 12 char string
@@ -140,13 +94,7 @@ function on_connect(){
     socket.emit("on_connect", localStorage.getItem("MUD_playerid"));
 }
 
-function change_username() {
-    let username = prompt("Please enter your new username:", "Trogdor");
-    socket.emit("change_username", { username: username, user_id: localStorage.getItem("MUD_playerid") });
-  }
-
-// When document loads, 
-$( document ).ready(function() {
+$( document ).ready(function() { // When document loads, set up events and keys
     on_connect();
     $("#input").on('keyup', function (e) {
         if (e.key === 'Enter' || e.keyCode === 13) {
