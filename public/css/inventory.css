@@ -26,20 +26,37 @@
     position: relative;
 
 }
-.inv_item{
+.inv_img{
     height: 48px;
     width: 48px;
     margin-top: 8px;
     transition-duration: 50ms;
     cursor: pointer;
 }
-.inv_item:hover{
+.inv_tooltip{
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    top: 0px;
+    left: 64px;
+    z-index: 10;
+    padding: 10px;
+    width: auto;
+    white-space: nowrap;
+    border: 1px solid white;
+    display: none;
+    color: black;
+    text-align: left;
+}
+.inv_slot:hover .inv_img{
     margin-top:4px;
     height:56px;
     width: 56px;
     transition-duration: 50ms;
 }
-.inv_slot span{
+.inv_slot:hover .inv_tooltip{
+    display: block;
+}
+.inv_slot .inv_quantity{
     float: left;
     position: absolute;
     bottom: 0px;

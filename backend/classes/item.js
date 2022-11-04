@@ -1,7 +1,8 @@
 // books, arrows, swords, 
 class Item {
-    constructor(name, id, description, sprite, volume, weight, max_quantity) {
+    constructor(name, appearance, id, description, sprite, volume, weight, max_quantity) {
         this.name = name;
+        this.appearance = appearance;
         this.id = id;
         this.description = description;
         this.sprite = sprite;

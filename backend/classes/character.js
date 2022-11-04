@@ -25,6 +25,7 @@ class Character {
         }
         this.room = null;
         this.inventory = [];
+        this.known_items = [0, 1]; // array of known item ids
         this.inventory_size = 24
 
         this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.sword1)));

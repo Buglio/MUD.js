@@ -35,15 +35,63 @@ function render_interface(current_char){
         inv_slot.className = "inv_slot";
         if (current_char.inventory[x]){ // const item of user.characters[user.current_character].inventory
             let inv_item = current_char.inventory[x];
-            if (inv_item.max_quantity > 1){ // quantity tag
+
+            // quantity tag
+            if (inv_item.max_quantity > 1){ 
                 let tag = document.createElement("span");
+                tag.className = "inv_quantity";
                 tag.innerText = inv_item.current_quantity + "x";
                 inv_slot.appendChild(tag);
             }
+            // tooltip
+            let tooltip = document.createElement("div");
+            tooltip.className = "inv_tooltip";
+
+            
+
+            
+            if (current_char.known_items.includes(inv_item.id)){ // if item has been used
+                // name
+                let name_tooltip = document.createElement("span");
+                name_tooltip.innerText = inv_item.name;
+                name_tooltip.style.textDecoration = "underline";
+                tooltip.appendChild(name_tooltip);
+                tooltip.appendChild(document.createElement("br"));
+
+                // description
+                let desc_tooltip = document.createElement("span");
+                desc_tooltip.innerText = inv_item.description;
+                desc_tooltip.style.fontStyle = "italic";
+                tooltip.appendChild(desc_tooltip);
+                tooltip.appendChild(document.createElement("br"));
+
+                // weight
+                let weight_tooltip = document.createElement("span");
+                if (inv_item.current_quantity == 1) { weight_tooltip.innerText = inv_item.weight + "kg"; }
+                else { weight_tooltip.innerText = inv_item.weight + "kg (" + (inv_item.weight * inv_item.current_quantity) + "kg total)"; }
+                tooltip.appendChild(weight_tooltip);
+            }
+            else { // if item has not been used
+                // name
+                let name_tooltip = document.createElement("span");
+                name_tooltip.innerText = inv_item.appearance;
+                name_tooltip.style.textDecoration = "underline";
+                tooltip.appendChild(name_tooltip);
+                tooltip.appendChild(document.createElement("br"));
+
+                // state
+                let used_tooltip = document.createElement("span");
+                used_tooltip.innerText = "Unidentified Item";
+                used_tooltip.style.fontStyle = "italic";
+                tooltip.appendChild(used_tooltip);
+            }
+            inv_slot.appendChild(tooltip);
+            
+            // image
             let image = document.createElement("img");
-            image.className = "inv_item"
+            image.className = "inv_img"
             image.src = "/sprites/"+ inv_item.sprite;
-            inv_slot.appendChild(image);            
+            inv_slot.appendChild(image);
         }
         items_container.appendChild(inv_slot);
     }
