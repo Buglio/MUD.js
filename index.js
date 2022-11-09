@@ -12,6 +12,7 @@ const say = require("./backend/commands/say.js");
 const look = require("./backend/commands/look.js");
 const move = require("./backend/commands/move.js");
 const grab = require("./backend/commands/grab");
+const drop = require("./backend/commands/drop.js");
 
 // test world
 const world = require("./backend/testWorld.js").world;
@@ -167,6 +168,10 @@ io.on("connection", function (socket) {
 
             case "grab":
                 grab.process(message_data, user, users, chat, io);
+                break;
+
+            case "drop":
+                drop.process(message_data, user, users, chat, io);
                 break;
 
             // INVALID COMMAND ENTERED

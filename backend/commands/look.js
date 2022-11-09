@@ -7,7 +7,11 @@ function process(message_data, user, users, chat, io) {
         message_data.body = "There is nothing in the room.";
     }
     else {
-        message_data.body += " The room contains " + room.items[0].name;
+        message_data.body += " The room contains"
+        for (var i of room.items) {
+            message_data.body += " " + i.name + ",";
+        }
+        // TODO: make this iterate more better over items in the room
     }
     
     chat.push(message_data);
