@@ -20,10 +20,10 @@ function process(message_data, user, users, chat, io) {
                 matching_indices.push(i);
             }
         }
-        if (matching_indices.length == 0) {
+        if (matching_indices.length == 0) { // you cant drop that item because you dont have one
             message_data.body = `You have no \"${body}\" in your inventory.`;
         }
-        else if (matching_indices.length > 1) {
+        else if (matching_indices.length > 1) { // you have more than one of the item you tried to drop
             let itemToDrop = inventory[matching_indices[0]];
             message_data.body = "You dropped one "+itemToDrop.name+".";
             if (itemToDrop.current_quantity > 1) {
@@ -31,10 +31,15 @@ function process(message_data, user, users, chat, io) {
                 let droppedItem = JSON.parse(JSON.stringify(itemToDrop));
                 droppedItem.current_quantity = 1;
                 room.items.push(droppedItem);
-            } else {
+            } else {  
                 room.items.push(inventory[matching_indices[0]]);
                 inventory.splice(matching_indices[0], 1);
             }
+        }
+        else{   // you have exactly one of the item you tried to drop
+            message_data.body = "You dropped your last "+ inventory[matching_indices[0]].name +".";
+            room.items.push(inventory[matching_indices[0]]);
+            inventory.splice(matching_indices[0], 1);
         }
         // TODO: figure out this ghastly else scenario
     }
