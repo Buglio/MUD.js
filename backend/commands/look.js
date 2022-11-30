@@ -8,7 +8,6 @@ function process(message_data, user, users, chat, io) {
     }
     else {
         message_data.body += " The room contains ";
-
         let roomitems = {};
 
         for (var i of room.items) {
@@ -25,7 +24,6 @@ function process(message_data, user, users, chat, io) {
         }
         // build message more better
         for (const [key, value] of Object.entries(roomitems)) {
-            console.log(key, value);
             message_data.body += value.text + " (" + value.quantity +"), ";
         }
         message_data.body = message_data.body.slice(0, -2);
