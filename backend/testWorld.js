@@ -21,7 +21,8 @@ var second_room = new _room_.Room(
 // Items
 var shark = new _item_.Item();
 shark.name = "Shark";
-shark.description = "It's a shark! doo doo, doo doo doo doo"
+shark.visibility = 0;
+shark.description = "It's a shark! doo doo, doo doo doo doo";
 shark.is_shark = true;
 
 // sword

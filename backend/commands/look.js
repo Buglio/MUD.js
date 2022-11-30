@@ -11,7 +11,7 @@ function process(message_data, user, users, chat, io) {
         let roomitems = {};
 
         for (var i of room.items) {
-            if (i.appearance){
+            if (i.visibility){
                 if (i.id in roomitems) { // check if we already have one of that item
                     roomitems[i.id].quantity += i.current_quantity; // add quantity
                 } 
@@ -20,6 +20,9 @@ function process(message_data, user, users, chat, io) {
                         text: i.appearance,
                         quantity: i.current_quantity
                     };
+                    if (i.visibility < 0.1){            // TODO: work on this maybe?
+                        item.text = "Indeterminant Item"
+                    }
                     roomitems[i.id] = item;
                 }
             }
