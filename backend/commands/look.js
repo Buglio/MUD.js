@@ -7,11 +7,29 @@ function process(message_data, user, users, chat, io) {
         message_data.body = "There is nothing in the room.";
     }
     else {
-        message_data.body += " The room contains"
+        message_data.body += " The room contains ";
+
+        let roomitems = {};
+
         for (var i of room.items) {
-            message_data.body += " " + i.name + ",";
+            if (i.id in roomitems) { // check if we already have one of that item
+                roomitems[i.id].quantity += i.current_quantity; // add quantity
+            } 
+            else { // add new item to output dict
+                let item = {
+                    text: i.appearance,
+                    quantity: i.current_quantity
+                };
+                roomitems[i.id] = item;
+            }
         }
-        // TODO: make this iterate more better over items in the room
+        // build message more better
+        for (const [key, value] of Object.entries(roomitems)) {
+            console.log(key, value);
+            message_data.body += value.text + " (" + value.quantity +"), ";
+        }
+        message_data.body = message_data.body.slice(0, -2);
+        message_data.body += ".";
     }
     
     chat.push(message_data);
