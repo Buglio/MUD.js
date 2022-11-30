@@ -28,6 +28,7 @@ function process(message_data, user, users, chat, io) {
         }
         message_data.body = message_data.body.slice(0, -2);
         message_data.body += ".";
+        if (roomitems == {}){ message_data.body = "There is nothing in the room."; }
     }
     
     chat.push(message_data);
