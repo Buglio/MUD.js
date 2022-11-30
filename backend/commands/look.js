@@ -4,22 +4,24 @@ function process(message_data, user, users, chat, io) {
     message_data.sender = "LOOK";
     message_data.body = room.description;
     if (room.items.length == 0) {
-        message_data.body = "There is nothing in the room.";
+        message_data.body = room.description + " There is nothing in the room.";
     }
     else {
         message_data.body += " The room contains ";
         let roomitems = {};
 
         for (var i of room.items) {
-            if (i.id in roomitems) { // check if we already have one of that item
-                roomitems[i.id].quantity += i.current_quantity; // add quantity
-            } 
-            else { // add new item to output dict
-                let item = {
-                    text: i.appearance,
-                    quantity: i.current_quantity
-                };
-                roomitems[i.id] = item;
+            if (i.appearance){
+                if (i.id in roomitems) { // check if we already have one of that item
+                    roomitems[i.id].quantity += i.current_quantity; // add quantity
+                } 
+                else { // add new item to output dict
+                    let item = {
+                        text: i.appearance,
+                        quantity: i.current_quantity
+                    };
+                    roomitems[i.id] = item;
+                }
             }
         }
         // build message more better
@@ -28,7 +30,9 @@ function process(message_data, user, users, chat, io) {
         }
         message_data.body = message_data.body.slice(0, -2);
         message_data.body += ".";
-        if (roomitems == {}){ message_data.body = "There is nothing in the room."; }
+        if (Object.keys(roomitems).length === 0){ 
+            message_data.body = room.description + " There is nothing in the room?"; 
+        }
     }
     
     chat.push(message_data);
