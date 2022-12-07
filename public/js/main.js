@@ -2,23 +2,20 @@
 const socket = io();
 var chat = []; // local chat to browser
 var character_creation_mode = false;
+var username = "mudjs"; // for chat input
 
 
 // =============== SOCKET INTERACTIONS =============== //
 socket.on("chat_update", function (message) { // Update chat with new message from server
     console.log("CHAT_UPDATE");
     chat.push(message);
-    let chatbox = document.getElementById("chatbox");
-    chatbox.innerHTML = "";
-    for (x = 0; x < chat.length; x++){
-        let list_item = "<span style='color: " + chat[x].color + "'>[" + chat[x].sender + "]</span><span style='color: rgba(255,255,255,0.4)'> (" + chat[x].timestamp + ")</span><span> " + chat[x].body + "</span><br>";
-        chatbox.innerHTML += list_item;
-    }
-    chatbox.scrollTop = chatbox.scrollHeight;
+    chat_update();
 });
 
 socket.on("user_update", function (user) {
-    console.log(user);
+    if (user.characters.length != 0){ username = user.characters[user.current_character].name; }
+    
+    //username = user.characters[user.current_character].name;
     if (user.characters.length == 0) { // creating a character if none exist
         create_character();
     }
@@ -51,6 +48,9 @@ function local_chat(body){ // update chat with new LOCAL message
 
     }
     chat.push(message);
+    chat_update()
+}
+function chat_update(){
     let chatbox = document.getElementById("chatbox");
     chatbox.innerHTML = "";
     for (x = 0; x < chat.length; x++){
@@ -58,6 +58,8 @@ function local_chat(body){ // update chat with new LOCAL message
         chatbox.innerHTML += list_item;
     }
     chatbox.scrollTop = chatbox.scrollHeight;
+    chatbox.innerHTML += '<span id="prompt">'+username+':/$ </span><input onblur="this.focus()" autofocus type="text" id="input">';
+    document.getElementById("input").focus();
 }
 
 function send_message(text){
@@ -100,10 +102,12 @@ function on_connect(){
 $( document ).ready(function() { // When document loads, set up events and keys
     
     on_connect();
-    $("#input").on('keyup', function (e) {
+    $("body").on('keyup', function (e) {
         if (e.key === 'Enter' || e.keyCode === 13) {
             if (character_creation_mode == true){
                 let name = document.getElementById("input").value;
+                username = name;
+                chat_update();
                 socket.emit("create_character", [name,localStorage.getItem("MUD_playerid")]);
 
                 document.getElementById("input").value = "";

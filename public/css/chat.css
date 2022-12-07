@@ -27,24 +27,22 @@
     padding-right: 10px;
 }
 #input{
-    border: none; 
-    background-color: rgba(255,255,255,0.1);
-    height: 30px;
-    width: 50vw;    
+    background: none;  
+    border: none;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    color: white;
-    position: absolute;
-    bottom: 0px;
-    padding-left: 25px;
-    padding-right: 10px;
+    color:white;
 }
 #input:focus{
-    background-color: rgba(255,255,255,0.2);
+    background:none;
 }
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+#prompt{
+    color: green;
+    padding-left: 1px;
+    font-weight: 900;
 }

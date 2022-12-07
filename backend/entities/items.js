@@ -6,7 +6,7 @@ const dictionary = {
         appearance="Iron Sword",
         id=0,
         description="A regular old iron sword. kinda dull.",
-        sprite="sword_blue.png",
+        sprite="book_red.png",
         volume=.1,
         weight=3
     ),
