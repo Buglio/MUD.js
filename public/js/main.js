@@ -1,6 +1,8 @@
 // =============== VARIABLE SETUP =============== //
 const socket = io();
-var chat = []; // local chat to browser
+var chat_log = []; // local chat lot to browser
+var cmd_his = []; // history of all user-entered commands
+var his_pos = 0; // the index of the cmd history
 var character_creation_mode = false;
 var username = "mudjs"; // for chat input
 
@@ -8,7 +10,7 @@ var username = "mudjs"; // for chat input
 // =============== SOCKET INTERACTIONS =============== //
 socket.on("chat_update", function (message) { // Update chat with new message from server
     console.log("CHAT_UPDATE");
-    chat.push(message);
+    chat_log.push(message);
     chat_update();
 });
 
@@ -21,7 +23,7 @@ socket.on("user_update", function (user) {
     }
     else{
         render_interface(user.characters[user.current_character]); // call render in interface.js
-        if (chat.length == 0){
+        if (chat_log.length == 0){
             local_chat("Reconnected to server as character " + user.characters[user.current_character].name + ".");
         }
     }
@@ -47,14 +49,14 @@ function local_chat(body){ // update chat with new LOCAL message
         timestamp: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
 
     }
-    chat.push(message);
+    chat_log.push(message);
     chat_update()
 }
 function chat_update(){
     let chatbox = document.getElementById("chatbox");
     chatbox.innerHTML = "";
-    for (x = 0; x < chat.length; x++){
-        let list_item = "<span style='color: " + chat[x].color + "'>[" + chat[x].sender + "]</span><span style='color: rgba(255,255,255,0.4)'> (" + chat[x].timestamp + ")</span><span> " + chat[x].body + "</span><br>";
+    for (x = 0; x < chat_log.length; x++){
+        let list_item = "<span style='color: " + chat_log[x].color + "'>[" + chat_log[x].sender + "]</span><span style='color: rgba(255,255,255,0.4)'> (" + chat_log[x].timestamp + ")</span><span> " + chat_log[x].body + "</span><br>";
         chatbox.innerHTML += list_item;
     }
     chatbox.scrollTop = chatbox.scrollHeight;
@@ -102,22 +104,36 @@ function on_connect(){
 $( document ).ready(function() { // When document loads, set up events and keys
     
     on_connect();
+    let current_input = "";
     $("body").on('keyup', function (e) {
+        var input_val = document.getElementById("input").value;
         if (e.key === 'Enter' || e.keyCode === 13) {
+            his_pos = 0; // reset history position
             if (character_creation_mode == true){
-                let name = document.getElementById("input").value;
-                username = name;
+                username = input_val;
                 chat_update();
-                socket.emit("create_character", [name,localStorage.getItem("MUD_playerid")]);
-
-                document.getElementById("input").value = "";
+                socket.emit("create_character", [input_val,localStorage.getItem("MUD_playerid")]);
             }else{
-                console.log("send message");
-                console.log(document.getElementById("input").value)
-                send_message(document.getElementById("input").value)
-                document.getElementById("input").value = "";
+                send_message(input_val);
+                cmd_his.push(input_val);
             }
+            document.getElementById("input").value = "";
+        } else if (e.keyCode === 38 && his_pos > -cmd_his.length) { // arrow up key
+            if (his_pos === 0) {
+                current_input = input_val;
+            }
+            his_pos -= 1;
+            document.getElementById("input").value = cmd_his[cmd_his.length+his_pos];
             
+        } else if (e.keyCode === 40 && his_pos < 0) { // arrow down key
+            his_pos += 1;
+            if (his_pos == 0) {
+                document.getElementById("input").value = current_input
+            } else {
+                document.getElementById("input").value = cmd_his[cmd_his.length+his_pos];
+            }
         }
+        console.log(his_pos);
+        console.log(cmd_his);
     });
 });
