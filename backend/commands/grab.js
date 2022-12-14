@@ -5,7 +5,7 @@ function process(message_data, user, users, chat, io) {
 
     message_data.sender = "GRAB";
 
-    let inventory = user.getCurrentCharacter().inventory;
+    let character = user.getCurrentCharacter();
 
     if (room.items.length == 0) {
         message_data.body = "There is nothing in the room.";
@@ -13,7 +13,7 @@ function process(message_data, user, users, chat, io) {
     // otherwise if there is one item and no command arguments
     else if (room.items.length == 1 && body == "") {
         message_data.body = "You grab the "+room.items[0].name+".";
-        inventory.push(room.items.pop());
+        character.addItemToInventory(room.items.pop());
     }
     // more than one item and no argument was specified
     else if (room.items.length > 1 && body == "") {
@@ -36,12 +36,12 @@ function process(message_data, user, users, chat, io) {
             let allSameIds = matching_indices.map(i => room.items[i].id).reduce((a, b) => a == b);
             if (allSameIds) {
                 message_data.body = "You grab the "+room.items[matching_indices[0]].name+".";
-                inventory.push(room.items[matching_indices[0]]);
+                character.addItemToInventory(room.items[matching_indices[0]]);
                 room.items.splice(matching_indices[0], 1);
             }
         } else {
             message_data.body = "You grab the "+room.items[matching_indices[0]].name+".";
-            inventory.push(room.items[matching_indices[0]]);
+            character.addItemToInventory(room.items[matching_indices[0]]);
             room.items.splice(matching_indices[0], 1);
         }
     }
