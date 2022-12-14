@@ -12,27 +12,37 @@ var start_room = new _room_.Room(
     y = 0,
     description = "This is the starting room all new adventurers are dropped into."
 );
-var second_room = new _room_.Room(
+var north1 = new _room_.Room(
     x = 0,
     y = 1,
-    description = "This is the second room, north of the starting room."
+    description = "This is the second room, at coordinates 0, 1."
+);
+var north2 = new _room_.Room(
+    x = 0,
+    y = 2,
+    description = "This is the third room, at coordinates 0, 2."
+);
+var west1 = new _room_.Room(
+    x = -1,
+    y = 0,
+    description = "This is the fourth room, at coordinates -1, 0."
 );
 
-// Items
-var shark = new _item_.Item();
-shark.name = "Shark";
-shark.visibility = 0;
-shark.description = "It's a shark! doo doo, doo doo doo doo";
-shark.is_shark = true;
+start_room.items.push(items_dict.sword1);
+start_room.items.push(items_dict.potion1);
 
-// sword
-let sword1 = items_dict.sword1;
-start_room.items.push(sword1);
+north1.items.push(items_dict.shark);
+north1.items.push(items_dict.book2);
+north1.items.push(items_dict.ring1);
+north1.items.push(items_dict.potion2);
 
-second_room.items.push(shark);
+west1.items.push(items_dict.potion3);
+west1.items.push(items_dict.potion4);
 
 world.addRoom(start_room);
-world.addRoom(second_room);
+world.addRoom(north1);
+world.addRoom(north2);
+world.addRoom(west1);
 
 module.exports = {
     world,

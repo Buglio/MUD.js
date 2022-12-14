@@ -29,15 +29,15 @@ class Character {
         this.inventory_size = 24
 
         this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.sword1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
-        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.health_potion_1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
+        this.addItemToInventory(JSON.parse(JSON.stringify(items_dict.potion1)));
 
     }
     addItemToInventory(item){
