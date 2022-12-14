@@ -186,7 +186,7 @@ io.on("connection", function (socket) {
                 newchat.body = message_data.cmd + " is not a valid command.";
                 newchat.color = "red";
                 chat.push(newchat);
-                io.emit("chat_update", newchat);
+                socket.emit("chat_update", newchat);
         }
     });
 });
