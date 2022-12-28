@@ -1,11 +1,13 @@
 {
-  "name": "mud",
-  "version": "0.0.1",
+  "name": "mudjs",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "build": "npm install"
   },
   "author": "Porter Libby, Ryan Webb",
   "license": "ISC",
