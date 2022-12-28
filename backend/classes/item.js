@@ -1,6 +1,6 @@
 // books, arrows, swords, 
 class Item {
-    constructor(name, appearance, id, description, sprite, volume, weight, max_quantity, visibility = 1) {
+    constructor({name, appearance, id, description, sprite, volume, weight, is_shark = false, max_quantity = 1, visibility = 1}) {
         this.name = name;
         this.appearance = appearance;
         this.visibility = visibility;
@@ -17,7 +17,7 @@ class Item {
         this.sharpness; // can wait
         this.hardness; // can wait
 
-        this.is_shark = false; // IMPORTANT
+        this.is_shark = is_shark; // IMPORTANT
 
         // quantity control :D
         this.current_quantity = 1;
