@@ -5,6 +5,7 @@ var cmd_his = []; // history of all user-entered commands
 var his_pos = 0; // the index of the cmd history
 var character_creation_mode = false;
 var username = "mudjs"; // for chat input
+var localmap = {};
 
 
 // =============== SOCKET INTERACTIONS =============== //
@@ -15,6 +16,22 @@ socket.on("chat_update", function (message) { // Update chat with new message fr
 });
 
 socket.on("user_update", function (user) {
+    // update local map
+    if (user.characters[user.current_character]){
+        let current_room = user.characters[user.current_character].room;
+        
+        if (!localmap[current_room.x]){
+            localmap[current_room.x] = {};
+            localmap[current_room.x][current_room.y] = current_room;
+        }
+        else {
+            localmap[current_room.x][current_room.y] = current_room;
+        }
+        local_map_update(user);
+    }
+    
+    
+    
     if (user.characters.length != 0){ username = user.characters[user.current_character].name; }
     
     //username = user.characters[user.current_character].name;
@@ -38,6 +55,48 @@ socket.on("user_update", function (user) {
 socket.on('disconnect', function(){
     location.reload();
 });
+
+// =============== STATS FUNCTIONS ============== //
+
+
+// =============== MAP FUNCTIONS ================ //
+function local_map_update(user, container_size = 15, room_size = 3){
+    output = [];
+    center_xy = Math.floor(container_size / 2);
+    offset_x = 7
+    offset_y = 7
+    parent = document.getElementById("map_container");
+    for (x = 0; x < container_size; x++){
+        for (y = 0; y < container_size; y++){
+            let span = "<span style='color:rgba(255,255,255," + Math.random() * 0.1 + ");'class='map-bg'>#</span>"
+            output.push(span);
+        }
+    }
+    for (const [roomx, dictx] of Object.entries(localmap)) {
+        for (const [roomy, room] of Object.entries(dictx)) {
+            charx = user.characters[user.current_character].room.x;
+            chary = user.characters[user.current_character].room.y;
+            x_center = offset_x + ((parseInt(roomx) - charx) * 3);
+            y_center = offset_y - ((parseInt(roomy) - chary) * 3);
+
+            output[((y_center - 1) * container_size) + (x_center - 1)] = "<span class='map-room'>╔</span>"; // create room tile
+            output[((y_center - 1) * container_size) + (x_center + 0)] = "<span class='map-room'>═</span>"; // create room tile
+            output[((y_center - 1) * container_size) + (x_center + 1)] = "<span class='map-room'>╗</span>"; // create room tile
+            output[((y_center + 0) * container_size) + (x_center - 1)] = "<span class='map-room'>║</span>"; // create room tile
+            output[((y_center + 0) * container_size) + (x_center + 0)] = "<span class='map-room'> </span>"; // create room tile
+            output[((y_center + 0) * container_size) + (x_center + 1)] = "<span class='map-room'>║</span>"; // create room tile
+            output[((y_center + 1) * container_size) + (x_center - 1)] = "<span class='map-room'>╚</span>"; // create room tile
+            output[((y_center + 1) * container_size) + (x_center + 0)] = "<span class='map-room'>═</span>"; // create room tile
+            output[((y_center + 1) * container_size) + (x_center + 1)] = "<span class='map-room'>╝</span>"; // create room tile
+
+        }
+    }
+    output[offset_y * container_size + offset_x] = "<span class='map-self'>•</span>"; // create player
+
+    let coord = user.characters[user.current_character].room.x + ", " + user.characters[user.current_character].room.y;
+    document.getElementById("coord").innerHTML = coord;
+    parent.innerHTML = output.join('');
+}
 
 // =============== CHAT FUNCTIONS =============== //
 function local_chat(body){ // update chat with new LOCAL message
@@ -133,7 +192,5 @@ $( document ).ready(function() { // When document loads, set up events and keys
                 document.getElementById("input").value = cmd_his[cmd_his.length+his_pos];
             }
         }
-        console.log(his_pos);
-        console.log(cmd_his);
     });
 });

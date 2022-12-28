@@ -1,4 +1,8 @@
 /* MAP */
+#coord{
+    float: right;
+    margin-top: -20px;
+}
 #character_map{
     border: 1px solid white;
     margin: 20px;
@@ -20,4 +24,12 @@
     font-size: 22px;
     padding: 0px;
     margin: 0px;
+}
+.map-self{
+    color: red;
+}
+.map-room{
+    color:gray;
+}
+.map-bg{
 }
