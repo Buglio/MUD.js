@@ -7,9 +7,11 @@ const dictionary = {
         id=0,
         description = "It's a shark! doo doo, doo doo doo doo",
         sprite="shark.png",
-        is_shark = true,
+        volume=50,
         weight=100,
+        max_quantity=1,
         visibility = 0
+        
     ),
     sword1: new item.Item(
         name="Iron Sword",
