@@ -4,12 +4,12 @@ class Character {
     constructor(name) {
         this.name = name;
         this.stats = {
-            str: 15,
-            con: 12,
+            str: 10,
+            con: 10,
             wis: 10,
-            int: 12,
-            dex: 13,
-            cha: 16
+            int: 10,
+            dex: 10,
+            cha: 10
         };
         this.hp = {
             max: 10,
