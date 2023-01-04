@@ -18,12 +18,12 @@ body {
   font: 16px/26px "Raleway", sans-serif; }
 
 .form-wrap {
-  background-color: #fff;
+  background-color: var(--neutral);
   width: 320px;
   margin: 3em auto;
-  box-shadow: 0px 1px 8px #BEBEBE;
-  -webkit-box-shadow: 0px 1px 8px #BEBEBE;
-  -moz-box-shadow: 0px 1px 8px #BEBEBE; }
+  box-shadow: 0px 1px 8px var(--base-100);
+  -webkit-box-shadow: 0px 1px 8px var(--base-100);
+  -moz-box-shadow: 0px 1px 8px var(--base-100); }
   .form-wrap .tabs {
     overflow: hidden; }
     .form-wrap .tabs h3 {
@@ -33,11 +33,11 @@ body {
         padding: 0.5em 0;
         text-align: center;
         font-weight: 400;
-        background-color: #e6e7e8;
+        background-color: var(--base-100);
         display: block;
-        color: #666; }
+        color: rgb(0, 4, 255); }
         .form-wrap .tabs h3 a.active {
-          background-color: #fff; }
+          background-color: rgb(255, 0, 242); }
   .form-wrap .tabs-content {
     padding: 1.5em; }
     .form-wrap .tabs-content div[id$="tab-content"] {
@@ -50,7 +50,7 @@ body {
     color: inherit;
     font-family: inherit;
     padding: .8em 0 10px .8em;
-    border: 1px solid #CFCFCF;
+    border: 1px solid var(--accent);
     outline: 0;
     display: inline-block;
     margin: 0 0 .8em 0;
@@ -59,8 +59,8 @@ body {
   .form-wrap form .button {
     width: 100%;
     padding: .8em 0 10px .8em;
-    background-color: #28A55F;
-    border: none;
+    background-color: none;
+    border: 1px dotted var(--accent);
     color: #fff;
     cursor: pointer;
     text-transform: uppercase; }
