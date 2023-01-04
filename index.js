@@ -29,6 +29,9 @@ app.get('/', function(req, res) {
 app.get('/man', function(req, res) {
     res.render("man.ejs");
 });
+app.get('/auth', function(req, res) {
+    res.render("auth.ejs");
+});
 app.use(express.static(__dirname + '/public'));
 
 // START SERVER
@@ -40,7 +43,6 @@ const server = app.listen(PORT, function () {
 // Server Data
 var users = {};
 var chat = [];
-
 
 // Socket Setup
 const io = socket(server);
@@ -64,9 +66,18 @@ io.on("connection", function (socket) {
         console.log("--> Removing Session.");
     });
 
-    socket.on("on_check_auth", function(data, callback) {
-        console.log(data);
-        callback('err', 'msg');
+    socket.on("on_check_auth", function(cached_auth, callback) {
+        console.log(cached_auth);
+        var result = false;
+        var err = null;
+
+        for (let [_, value] of Object.entries(users)) {
+            if (value.checkAuthToken(cached_auth)) {
+                result = true;
+            }
+        }
+
+        callback(err, result);
     });
 
     socket.on("on_login", function(user_id) {
@@ -78,7 +89,8 @@ io.on("connection", function (socket) {
             user = new _user_.User( // create the user object
                 user_id = user_id, 
                 username = "user_" + (Object.keys(users).length + 1),  // TODO: replace with user-defined username (with validation)
-                socket = socket
+                socket = socket,
+                auth_token = "hello"
             );
             users[user_id] = user;
             /* When Character is created

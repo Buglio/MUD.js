@@ -22,7 +22,6 @@ function chat_update(){
     // The chat input
     chatbox.innerHTML += '<span id="prompt">'+username+':/$ </span>';
     const promptWidth = document.getElementById("prompt").offsetWidth + 10;
-    console.log(promptWidth);
     chatbox.innerHTML += '<input onblur="this.focus()" autofocus type="text" id="input" style="width: calc(100% - '+promptWidth+'px)">';
     document.getElementById("input").focus();
 }

@@ -71,12 +71,16 @@ function change_username() {
 
 // =============== INIT/SETUP FUNCTIONS =============== //
 // RUN WHEN BROWSER STARTS
-function on_connnect() {
+function on_connect() {
     var cached_auth = localStorage.getItem(MUDJS_AUTH_TOKEN);
+    var cached_auth = "hello!";
     if (cached_auth != null) {
-        socket.emit("on_check_auth", cached_auth, function (err, msg) {
-            console.log(err);
-            console.log(msg);
+        socket.emit("on_check_auth", cached_auth, function (err, result) {
+            console.log("success? "+result);
+
+            if (result === false) {
+                window.location = location.href+"auth";
+            }
         });
     }
     // let new_token = makeid(12); // make random 12 char string

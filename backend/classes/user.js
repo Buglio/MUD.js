@@ -1,10 +1,15 @@
 class User {
-    constructor(user_id, username, socket) {
+    constructor(user_id, username, socket, auth_token) {
         this.user_id = user_id;
         this.socket = socket;
         this.characters = [];
         this.current_character = null;
         this.username = username;
+        this.auth_token = auth_token;
+    }
+
+    checkAuthToken(auth_token) { 
+        return auth_token === this.auth_token; 
     }
 
     setUsername(username) {
