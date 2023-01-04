@@ -21,8 +21,9 @@ function chat_update(){
     chatbox.scrollTop = chatbox.scrollHeight;
     // The chat input
     chatbox.innerHTML += '<span id="prompt">'+username+':/$ </span>';
-    const promptWidth = document.getElementById("prompt").style.width
-    chatbox.innerHTML += '<input onblur="this.focus()" autofocus type="text" id="input" style="width="100% - '+promptWidth+'px ">'
+    const promptWidth = document.getElementById("prompt").offsetWidth + 10;
+    console.log(promptWidth);
+    chatbox.innerHTML += '<input onblur="this.focus()" autofocus type="text" id="input" style="width: calc(100% - '+promptWidth+'px)">';
     document.getElementById("input").focus();
 }
 
