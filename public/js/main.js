@@ -6,7 +6,7 @@ var his_pos = 0; // the index of the cmd history
 var character_creation_mode = false;
 var username = "mudjs"; // for chat input
 var localmap = {};
-
+const MUDJS_AUTH_TOKEN = "MUDJS_AUTH_TOKEN";
 
 // =============== SOCKET INTERACTIONS =============== //
 socket.on("chat_update", function (message) { // Update chat with new message from server
@@ -71,17 +71,30 @@ function change_username() {
 
 // =============== INIT/SETUP FUNCTIONS =============== //
 // RUN WHEN BROWSER STARTS
-function on_connect(){
+function on_connnect() {
+    var cached_auth = localStorage.getItem(MUDJS_AUTH_TOKEN);
+    if (cached_auth != null) {
+        socket.emit("on_check_auth", cached_auth, function (err, msg) {
+            console.log(err);
+            console.log(msg);
+        });
+    }
+    // let new_token = makeid(12); // make random 12 char string
+    // localStorage.setItem(MUDJS_AUTH_TOKEN, new_token)
+}
+
+// RUNS WHEN PLAYER LOGS IN
+function on_login(){
     if (localStorage.getItem("MUD_playerid") == null){
         let new_id = makeid(12); // make random 12 char string
         localStorage.setItem("MUD_playerid", new_id)
     }
-    socket.emit("on_connect", localStorage.getItem("MUD_playerid"));
+    socket.emit("on_login", localStorage.getItem("MUD_playerid"));
 }
 
 $( document ).ready(function() { // When document loads, set up events and keys
     
-    on_connect();
+    on_login();
     let current_input = "";
     $("body").on('keyup', function (e) {
         var input_val = document.getElementById("input").value;

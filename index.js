@@ -64,7 +64,12 @@ io.on("connection", function (socket) {
         console.log("--> Removing Session.");
     });
 
-    socket.on("on_connect", function(user_id) {
+    socket.on("on_check_auth", function(data, callback) {
+        console.log(data);
+        callback('err', 'msg');
+    });
+
+    socket.on("on_login", function(user_id) {
         // try to find an existing user with the given id
         user = users[user_id];
         // if no user with the given id was found, create a new one
