@@ -1,7 +1,7 @@
 /* CHARACTER INVENTORY */
 #character_inventory{
     width: 512px;
-    border: 1px solid white;
+    border: 1px solid var(--neutral);
     margin: 20px;
     margin-top: 30px;
     padding: 10px;
@@ -35,16 +35,16 @@
 }
 .inv_tooltip{
     position: absolute;
-    background-color: rgba(255,255,255,0.8);
+    background-color: var(--primary);
     top: 0px;
     left: 64px;
     z-index: 10;
     padding: 10px;
     width: auto;
     white-space: nowrap;
-    border: 1px solid white;
+    border: 1px solid var(--neutral);
     display: none;
-    color: black;
+    color: var(--secondary);
     text-align: left;
 }
 .inv_slot:hover .inv_img{
@@ -63,7 +63,7 @@
     left: 0px;
     padding: 5px;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: var(--neutral);
     font-size: 12px;
     font-weight: bold;
 }

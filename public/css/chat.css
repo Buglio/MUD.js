@@ -2,12 +2,12 @@
 #chat_container{
     width: 50vw;
     height: 100vh;
-    background-color: black;
+    background-color: var(--background);
 }    
 #chatbox{
     list-style: none;
     font-family: 'Courier New', Courier, monospace;
-    color: white;
+    color: var(--primary);
     float: bottom;
     overflow-y: scroll;
     width: 50vw;
@@ -20,7 +20,7 @@
     width: 50vw;    
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
-    color: white;
+    color: var(--primary);
     bottom: -5px;
     position: absolute;
     padding-left: 10px;
@@ -30,7 +30,7 @@
     background: none;  
     border: none;
     font-family: 'Courier New', Courier, monospace;
-    color:white;
+    color:var(--primary);
 }
 #input:focus{
     background:none;
@@ -42,7 +42,7 @@ button:focus {
     outline: none;
 }
 #prompt{
-    color: green;
+    color: var(--accent);
     padding-left: 1px;
     font-weight: 900;
 }

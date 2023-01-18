@@ -6,11 +6,11 @@
 button{
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(255,255,255,0);
-    color: white;
-    border: 1px dotted white;
+    color: var(--primary);
+    border: 1px dotted var(--secondary);
     padding: 5px;
     cursor: pointer;
 }
 button:hover{
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--neutral);
 }

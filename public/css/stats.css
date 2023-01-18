@@ -2,14 +2,14 @@
 #character_stats{
     padding: 10px;
     max-width: 512px;
-    border: 1px solid white;
+    border: 1px solid var(--secondary);
     margin: 20px;
     margin-top: 30px;
     white-space: nowrap;
     display: none;
 }
 .bar_bg{
-    background-color: rgba(255,255,255,0.5);
+    background-color: var(--secondary);
     border-radius: 2px;
     margin-top: 5px;
     padding: 2px;
@@ -18,7 +18,7 @@
     display:inline-block;
     border-radius: 3px;
     padding: 2px;
-    color: black;
+    color: var(--primary);
 }
 .stat{
     display: inline-block;

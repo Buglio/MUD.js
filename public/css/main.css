@@ -19,14 +19,14 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: white;
+    background-color: var(--background);
     width: 100vw;
     height: 100vh;
 }
 
 /* MODAL FOR OVERLAY */
 #modal{
-    background-color: rgba(255,255,255,1);
+    background-color: var(--primary);
     position: absolute;
     z-index: 10;
     width: 100vw;
@@ -40,8 +40,8 @@ body{
 #controls{
     width: 50vw;
     height: 100vh;
-    background-color: black;
-    border-left: 1px solid white;
+    background-color: var(--background);
+    border-left: 1px solid var(--secondary);
     position: absolute;
     top: 0px;
     right: 0px;
@@ -70,12 +70,12 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.05);
+    background: var(--neutral);
     border-radius: 10px;
     
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255,255,255,0.1);
+    background: var(--neutral);
 }
