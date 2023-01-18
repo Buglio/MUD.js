@@ -11,7 +11,7 @@ function local_map_update(user, container_size = 15, room_size = 3){
             output.push(span);
         }
     }
-    for (const [roomx, dictx] of Object.entries(localmap)) {
+    for (const [roomx, dictx] of Object.entries(GLOBAL.localmap)) {
         for (const [roomy, room] of Object.entries(dictx)) {
             charx = user.characters[user.current_character].room.x;
             chary = user.characters[user.current_character].room.y;
