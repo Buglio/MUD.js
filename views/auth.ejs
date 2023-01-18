@@ -6,28 +6,7 @@
     </head>
     <body>
         <!-- Item rain -->
-        <div class="itemrain">
-            <div><img src="./sprites/book_green.png"></div>
-            <div><img src="./sprites/book_red.png"></div>
-            <div><img src="./sprites/potion_lightgreen.png"></div>
-            <div><img src="./sprites/potion_purple.png"></div>
-            <div><img src="./sprites/potion_red.png"></div>
-            <div><img src="./sprites/potion_teal.png"></div>
-            <div><img src="./sprites/ring_gold.png"></div>
-            <div><img src="./sprites/sword_black.png"></div>
-            <div><img src="./sprites/sword_blue.png"></div>
-            <div><img src="./sprites/sword_grey.png"></div>
-            <div><img src="./sprites/book_green.png"></div>
-            <div><img src="./sprites/book_red.png"></div>
-            <div><img src="./sprites/potion_lightgreen.png"></div>
-            <div><img src="./sprites/potion_purple.png"></div>
-            <div><img src="./sprites/potion_red.png"></div>
-            <div><img src="./sprites/potion_teal.png"></div>
-            <div><img src="./sprites/ring_gold.png"></div>
-            <div><img src="./sprites/sword_black.png"></div>
-            <div><img src="./sprites/sword_blue.png"></div>
-            <div><img src="./sprites/sword_grey.png"></div>
-        </div>
+        <div id='itemrain' class="itemrain"></div>
         
 
         <div class="form-wrap">
@@ -67,7 +46,32 @@
         </div><!--.form-wrap-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
+            const item_urls = [
+            './sprites/book_green.png',
+            './sprites/book_red.png',
+            './sprites/potion_lightgreen.png',
+            './sprites/potion_purple.png',
+            './sprites/potion_red.png',
+            './sprites/potion_teal.png',
+            './sprites/ring_gold.png',
+            './sprites/sword_black.png',
+            './sprites/sword_blue.png',
+            './sprites/sword_grey.png'
+            ]
             jQuery(document).ready(function($) {
+                for (x=0;x<10;x++){
+                    let newDiv = document.createElement("div");
+                    let newImg = document.createElement("img");
+                    newImg.src = item_urls[x % item_urls.length];
+                    newImg.style.height = (32 + Math.floor(Math.random() * 32)) + "px";
+                    newDiv.style.left = Math.floor(Math.random() * 100) + "%";
+                    newDiv.style.animation = "fall 1" + Math.floor(Math.random() * 10) + "s linear infinite";
+                    newDiv.style.animationDelay = "-" + Math.floor(Math.random() * 10) +"s";
+                    newDiv.style.animationDuration = (6 + Math.floor(Math.random() * 3)) + "s";
+                    newDiv.appendChild(newImg);
+                    document.getElementById("itemrain").appendChild(newDiv);
+                }
+
                 tab = $('.tabs h3 a');
 
                 tab.on('click', function(event) {
