@@ -32,6 +32,9 @@ app.get('/man', function(req, res) {
 app.get('/auth', function(req, res) {
     res.render("auth.ejs");
 });
+app.get('/tos', function(req, res) {
+    res.render("tos.ejs");
+});
 app.use(express.static(__dirname + '/public'));
 
 // START SERVER
