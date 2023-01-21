@@ -1,3 +1,4 @@
+const runes = ["ᚠ","ᚡ","ᚢ","ᚣ","ᚤ","ᚥ","ᚦ","ᚧ","ᚨ","ᚩ","ᚪ","ᚫ","ᚬ","ᚭ","ᚮ","ᚯ","ᚰ","ᚱ","ᚲ","ᚳ","ᚴ","ᚵ","ᚶ","ᚷ","ᚸ","ᚹ","ᚺ","ᚻ","ᚼ","ᚽ","ᚾ","ᚿ","ᛀ","ᛁ","ᛂ","ᛃ","ᛄ","ᛅ","ᛆ","ᛇ","ᛈ","ᛉ","ᛊ","ᛋ","ᛌ","ᛍ","ᛎ","ᛏ","ᛐ","ᛑ","ᛒ","ᛓ","ᛔ","ᛕ","ᛖ","ᛗ","ᛘ","ᛙ","ᛚ","ᛛ","ᛜ","ᛝ","ᛞ","ᛟ","ᛠ","ᛡ","ᛢ","ᛣ","ᛤ","ᛥ","ᛦ","ᛧ","ᛨ","ᛩ","ᛪ"]
 // =============== MAP FUNCTIONS ================ //
 function local_map_update(user, container_size = 15, room_size = 3){
     output = [];
@@ -7,7 +8,8 @@ function local_map_update(user, container_size = 15, room_size = 3){
     parent = document.getElementById("map_container");
     for (x = 0; x < container_size; x++){
         for (y = 0; y < container_size; y++){
-            let span = "<span style='color:rgba(255,255,255," + Math.random() * 0.1 + ");'class='map-bg'>#</span>"
+            let runechar = runes[Math.floor(Math.random() * (runes.length - 1))]
+            let span = "<span style='color:rgba(255,255,255," + Math.random() * 0.03 + ");'class='map-bg'>"+runechar+"</span>"
             output.push(span);
         }
     }

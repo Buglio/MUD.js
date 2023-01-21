@@ -19,6 +19,7 @@
     font-size: 0px;
     grid-column-gap: 0px;
     line-height: 21.4px;
+    background-color: rgba(0,0,0,0.2);
 }
 #map_container span{
     font-size: 22px;
@@ -35,4 +36,5 @@
     color:var(--secondary);
 }
 .map-bg{
+    font-family: 'Courier New', Courier, monospace;
 }
