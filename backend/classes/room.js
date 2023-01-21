@@ -5,6 +5,12 @@ class Room {
         this.description = description;
         this.items = [];
         this.entities = []; // monsters, whatever idk
+        this.doors = { // set in getRoom
+            n: false,
+            s: false,
+            e: false,
+            w: false
+        }
     }
 
     getPos() {

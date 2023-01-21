@@ -28,8 +28,11 @@
 .map-self{
     color: var(--accent);
 }
-.map-room{
+.map-tile-wall{
     color:var(--primary);
+}
+.map-tile-door{
+    color:var(--secondary);
 }
 .map-bg{
 }

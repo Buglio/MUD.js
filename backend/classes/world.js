@@ -18,13 +18,32 @@ class World {
 
     getRoom(x,y){
         if (this.map[x] && this.map[x][y]) {
-            return this.map[x][y];
+            let room = this.map[x][y]
+            // check if there are doors
+            if (this.map[x][y+1]) { // door up
+                room.doors.n = true
+            }
+            if (this.map[x][y-1]) { // door down
+                room.doors.s = true
+            }
+            if(this.map[x-1]){
+                if (this.map[x-1][y]) { // door left
+                    room.doors.w = true
+                }
+            }
+            if(this.map[x+1]){
+                if (this.map[x+1][y]) { // door right
+                    room.doors.e = true
+                }
+            }
+
+            return room;
         }
         
         return undefined; // SUS
     }
     getStartRoom(){
-        return this.map[0][0];
+        return this.getRoom(0,0);
     }
 }
 
