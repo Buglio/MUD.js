@@ -15,7 +15,6 @@ WALL = 0
 FLOOR = 1
 fill_prob = 0.3
 generations = 5
-map_id = ''.join(random.choices(string.ascii_letters, k=7))
 # PRINT MAP
 def print_map(m):
     for y in m:
@@ -27,9 +26,12 @@ def print_map(m):
 
 # OUTPUT JSON
 def output_json(m):
+    map_id = ''.join(random.choices(string.ascii_letters, k=7))
+
     json_obj = json.dumps(m, indent=4)
     with open(map_id + "_map.json", "w") as outpath:
         outpath.write(json_obj)
+    return map_id
 
 # CELLULAR AUTOMATA GENERATOR
 def gen_map():
@@ -248,5 +250,5 @@ def main():
                 if (room["doors"]["n"] == True or room["doors"]["s"] == True or room["doors"]["e"] == True or room["doors"]["w"] == True):
                     if y not in room_list: room_list[y] = {}
                     room_list[y][x] = room
-    output_json(room_list)
+    map_id = output_json(room_list)
     return map_id

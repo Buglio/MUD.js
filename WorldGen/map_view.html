@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mapi</title>
     <style>
         *{
             font-size: 0px;
         }
-        #main-map{
+        body{
             position: absolute;
             top: 0px;
             left: 0px;
             width: 100vw;
             height: 100vh;
             background-color: black;
+            overflow:hidden;
+            padding:0px;
+            margin: 0px;
+        }
+        #main-map{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vmin;
+            height: 100vmin;
+            background-color: rgb(41, 41, 41);
             display:inline;
         }
         .empty{
@@ -54,6 +65,20 @@
         .room:hover{
             border: 1px solid red;
         }
+        #newbutton{
+            position:absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 15px;
+        }
+        #id{
+            position:absolute;
+            z-index: 10;
+            font-size: 30px;
+            top: 0px;
+            right: 0px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -61,15 +86,18 @@
     <div id="main-map">
 
     </div>
+    <button id='newbutton' onclick="new_map()">New Map</button>
+    <div id="id"></div>
 
 
 
     <!-- Script and API -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        function get_map(){
+        function get_map(id='default'){
+            document.getElementById("id").innerHTML = id;
             document.getElementById("main-map").innerHTML = ""; //could be loading animation
-            $.getJSON('http://coho.home:5000/map', function(data) {
+            $.getJSON('http://coho.home:5000/map?id=' + id, function(data) {
                 let wh = Object.keys(data).length; // assume square
                 for(y = 1; y <= wh; y++){
                     for (x = 1; x <= wh; x++){
@@ -96,7 +124,8 @@
         }
         function new_map(){
             $.getJSON('http://coho.home:5000/newmap', function(data) {
-                get_map();
+                
+                get_map(data.id);
             });
         }
         get_map();  
