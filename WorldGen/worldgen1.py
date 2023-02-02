@@ -6,13 +6,16 @@ import json
 import math
 import random
 
+import string
+import random
+
 # PARAMS
 shape = (20,20)
 WALL = 0
 FLOOR = 1
 fill_prob = 0.3
 generations = 5
-
+map_id = ''.join(random.choices(string.ascii_letters, k=7))
 # PRINT MAP
 def print_map(m):
     for y in m:
@@ -25,7 +28,7 @@ def print_map(m):
 # OUTPUT JSON
 def output_json(m):
     json_obj = json.dumps(m, indent=4)
-    with open("map.json", "w") as outpath:
+    with open(map_id + "_map.json", "w") as outpath:
         outpath.write(json_obj)
 
 # CELLULAR AUTOMATA GENERATOR
@@ -181,11 +184,7 @@ def gen_item_occurance():
     for key in ITEM_LIST:
         for x in range(occurance_rates[ITEM_LIST[key]["rarity"]]):
             occurance_out.append(ITEM_LIST[key]["id"])
-
 gen_item_occurance()
-
-
-
 
 # Item creation
 def gen_items(x,y):
@@ -250,4 +249,4 @@ def main():
                     if y not in room_list: room_list[y] = {}
                     room_list[y][x] = room
     output_json(room_list)
-    return 0
+    return map_id

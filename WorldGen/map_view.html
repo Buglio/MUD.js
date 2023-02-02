@@ -22,9 +22,37 @@
             display:inline-block;
         }
         .room{
-            box-shadow: inset 0 0 2px white;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            border: 1px solid black;
             display:inline-block;
-            background-color: green;
+            background-color: gray;
+            position:relative;
+            margin: 0px;
+            padding: 0px;
+            vertical-align: top;
+            overflow: visible;
+            cursor: pointer;
+        }
+        .room div{
+            display: none;
+            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            padding: 0px;
+            margin: 0px;
+            position:absolute;
+            width: 200px;
+            z-index: 10;
+            text-align: left;
+            padding: 10px;
+            left: 15px;
+        }
+        .room:hover div{
+            display: inline-block;
+        }
+        .room:hover{
+            border: 1px solid red;
         }
     </style>
 </head>
@@ -39,34 +67,39 @@
     <!-- Script and API -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $.getJSON('http://coho.home:5000/map', function(data) {
-            let wh = Object.keys(data).length; // assume square
-            for (const [y, row] of Object.entries(data)) {
-                for (const [x, room] of Object.entries(row)) {
-                    
-                }
-                
-            }
+        function get_map(){
+            document.getElementById("main-map").innerHTML = ""; //could be loading animation
+            $.getJSON('http://coho.home:5000/map', function(data) {
+                let wh = Object.keys(data).length; // assume square
+                for(y = 1; y <= wh; y++){
+                    for (x = 1; x <= wh; x++){
+                        let d = document.createElement("div");
+                        d.style.width = (100 / wh) + "vmin";
+                        d.style.height = (100 / wh) + "vmin";
 
-            for(y = 1; y <= wh; y++){
-                for (x = 1; x <= wh; x++){
-                    let d = document.createElement("div");
-                    d.style.width = (100 / wh) + "vmin";
-                    d.style.height = (100 / wh) + "vmin";
+                        
 
-                    if (data[y] && data[y][x]){
-                        d.className = "room"
+                        if (data[y] && data[y][x]){ 
+                            d.className = "room";
+
+                            let stat = document.createElement("div");
+                            stat.innerHTML = data[y][x].description + "<br>";
+                            stat.innerHTML += "X: " + data[y][x].x + ", Y: " + data[y][x].y + "<br>";
+                            d.appendChild(stat);
+                        }
+                        else { d.className = "empty" }
+                        document.getElementById("main-map").appendChild(d)
                     }
-                    else {
-                        d.className = "empty"
-                    }
-
-
-                    document.getElementById("main-map").appendChild(d)
+                    document.getElementById("main-map").innerHTML += "<br>";
                 }
-                document.getElementById("main-map").innerHTML += "<br>";
-            }
-        });
+            });
+        }
+        function new_map(){
+            $.getJSON('http://coho.home:5000/newmap', function(data) {
+                get_map();
+            });
+        }
+        get_map();  
     </script>
 </body>
 </html>
