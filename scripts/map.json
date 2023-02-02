@@ -1,0 +1,4513 @@
+{
+    "1": {
+        "0": {
+            "x": 0,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "15": {
+            "x": 15,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "2": {
+        "0": {
+            "x": 0,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "7": {
+            "x": 7,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "15": {
+            "x": 15,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "18": {
+            "x": 18,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "19": {
+            "x": 19,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "3": {
+        "0": {
+            "x": 0,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "7": {
+            "x": 7,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "18": {
+            "x": 18,
+            "y": 3,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "4": {
+        "1": {
+            "x": 1,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "5": {
+        "1": {
+            "x": 1,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "6": {
+        "1": {
+            "x": 1,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "7": {
+        "1": {
+            "x": 1,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "8": {
+        "2": {
+            "x": 2,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "18": {
+            "x": 18,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "19": {
+            "x": 19,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "9": {
+        "1": {
+            "x": 1,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "18": {
+            "x": 18,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "10": {
+        "0": {
+            "x": 0,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "1": {
+            "x": 1,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "11": {
+        "5": {
+            "x": 5,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "12": {
+        "4": {
+            "x": 4,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "7": {
+            "x": 7,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "13": {
+        "0": {
+            "x": 0,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "1": {
+            "x": 1,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "7": {
+            "x": 7,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "14": {
+        "0": {
+            "x": 0,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "1": {
+            "x": 1,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "15": {
+        "0": {
+            "x": 0,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "16": {
+        "4": {
+            "x": 4,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "7": {
+            "x": 7,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "17": {
+        "4": {
+            "x": 4,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "7": {
+            "x": 7,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "14": {
+            "x": 14,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "15": {
+            "x": 15,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 17,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "18": {
+        "4": {
+            "x": 4,
+            "y": 18,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 18,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 18,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 18,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 18,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 18,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "19": {
+        "1": {
+            "x": 1,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                "default",
+                "default",
+                "default"
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        }
+    }
+}
