@@ -3,6 +3,8 @@
 import random
 import numpy as np
 import json
+import math
+import random
 
 # PARAMS
 shape = (20,20)
@@ -66,30 +68,133 @@ def gen_description(x,y,doors):
     return "sample description"
 
 # ITEM DEFS (rarity?)
-items = {
-    {
-        1:{
-            "name":"Book of Summoning",
-            "appearance":"A dark green leather-bound book titled ᛒᛟᛟᚲ᛬ᛟᚠ᛬ᛊᚢᛗᛗᛟᚾᛁᛜ.",
-            "id":3001,
-            "description":"The book of summoning.",
-            "sprite":"book_green.png",
-            "volume":.02,
-            "weight":.5
-        },
-        2:{
-
-        },
-        3:{
-
-        }
+ITEM_LIST = {
+    "1":{
+        "name":"Book of Summoning",
+        "appearance":"A dark green leather-bound book titled ᛒᛟᛟᚲ᛬ᛟᚠ᛬ᛊᚢᛗᛗᛟᚾᛁᛜ.",
+        "id":3001,
+        "description":"The book of summoning.",
+        "sprite":"book_green.png",
+        "volume":.02,
+        "weight":.5,
+        "rarity": 5
+    },
+    "2":{
+        "name":"Book of Something else",
+        "appearance":"A dark green leather-bound book titled ᛒᛟᛟᚲ᛬ᛟᚠ᛬ᛊᚢᛗᛗᛟᚾᛁᛜ.",
+        "id":3002,
+        "description":"The book of summoning.",
+        "sprite":"book_green.png",
+        "volume":.02,
+        "weight":.5,
+        "rarity": 5
+    },
+    "3":{
+        "name":"Health Potion",
+        "appearance":"Bottle of red liquid",
+        "id":2001,
+        "description":"Plain ol' potion",
+        "sprite":"potion_red.png",
+        "volume":.02,
+        "weight":1,
+        "max_quantity":8,
+        "rarity": 1
+    },
+    "4":{
+        "name":"Health Potion2",
+        "appearance":"Bottle of red liquid",
+        "id":2002,
+        "description":"Plain ol' potion",
+        "sprite":"potion_red.png",
+        "volume":.02,
+        "weight":1,
+        "max_quantity":8,
+        "rarity": 1
+    },
+    "5":{
+        "name":"Health Potion3",
+        "appearance":"Bottle of red liquid",
+        "id":2003,
+        "description":"Plain ol' potion",
+        "sprite":"potion_red.png",
+        "volume":.02,
+        "weight":1,
+        "max_quantity":8,
+        "rarity": 1
+    },
+    "6":{
+        "name":"Health Potion4",
+        "appearance":"Bottle of red liquid",
+        "id":2004,
+        "description":"Plain ol' potion",
+        "sprite":"potion_red.png",
+        "volume":.02,
+        "weight":1,
+        "max_quantity":8,
+        "rarity": 1
+    },
+    "7":{
+        "name":"Health Potion5",
+        "appearance":"Bottle of red liquid",
+        "id":2005,
+        "description":"Plain ol' potion",
+        "sprite":"potion_red.png",
+        "volume":.02,
+        "weight":1,
+        "max_quantity":8,
+        "rarity": 1
+    },
+    "8":{
+        "name":"Health Potion6",
+        "appearance":"Bottle of red liquid",
+        "id":2006,
+        "description":"Plain ol' potion",
+        "sprite":"potion_red.png",
+        "volume":.02,
+        "weight":1,
+        "max_quantity":8,
+        "rarity": 1
+    },
+    "9":{
+        "name":"Health Potion7",
+        "appearance":"Bottle of red liquid",
+        "id":2007,
+        "description":"Plain ol' potion",
+        "sprite":"potion_red.png",
+        "volume":.02,
+        "weight":1,
+        "max_quantity":8,
+        "rarity": 1
     }
 }
+occurance_out = []
+def gen_item_occurance():
+    
+    occurance_rates = {
+        0: 1,
+        1: 200,
+        2: 40,
+        3: 10,
+        4: 5,
+        5: 1
+    }
+    for key in ITEM_LIST:
+        for x in range(occurance_rates[ITEM_LIST[key]["rarity"]]):
+            occurance_out.append(ITEM_LIST[key]["id"])
+
+gen_item_occurance()
+
+
 
 
 # Item creation
 def gen_items(x,y):
-    return ["default", "default", "default"]
+    NUM_ITEMS = random.randint(2,8)
+    ids_out = []
+    for x in range(NUM_ITEMS):
+        item = occurance_out.pop(random.randint(0,len(occurance_out)-1))
+        ids_out.append(item)
+    return ids_out
 
 # Entity creation
 def gen_entities(x,y):

@@ -1,13 +1,68 @@
 {
+    "0": {
+        "5": {
+            "x": 5,
+            "y": 0,
+            "description": "sample description",
+            "items": [
+                2005,
+                2006,
+                2003,
+                2001,
+                2001,
+                2007,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 0,
+            "description": "sample description",
+            "items": [
+                2001,
+                2001,
+                2002,
+                2007,
+                2007,
+                2002
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
     "1": {
         "0": {
             "x": 0,
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2002,
+                2001,
+                2006,
+                2005,
+                2001,
+                2004
             ],
             "entities": [
                 "default",
@@ -21,14 +76,63 @@
                 "w": false
             }
         },
+        "6": {
+            "x": 6,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                2007,
+                2006,
+                2005,
+                2002
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "7": {
+            "x": 7,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                2002,
+                2003,
+                2005,
+                2005,
+                2007
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
         "9": {
             "x": 9,
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2002,
+                2005,
+                2001,
+                2003,
+                2003,
+                2006
             ],
             "entities": [
                 "default",
@@ -47,9 +151,14 @@
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2002,
+                2002,
+                2004,
+                2006,
+                2001,
+                2006,
+                2001
             ],
             "entities": [
                 "default",
@@ -68,9 +177,14 @@
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2006,
+                2006,
+                2007,
+                2003,
+                2003,
+                2003,
+                2007
             ],
             "entities": [
                 "default",
@@ -89,9 +203,14 @@
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2004,
+                2005,
+                2002,
+                2004,
+                2005,
+                2007,
+                2003
             ],
             "entities": [
                 "default",
@@ -110,9 +229,9 @@
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2004,
+                2005
             ],
             "entities": [
                 "default",
@@ -131,9 +250,13 @@
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2005,
+                2005,
+                2002,
+                2005,
+                2001,
+                2003
             ],
             "entities": [
                 "default",
@@ -152,9 +275,9 @@
             "y": 1,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2001,
+                2002
             ],
             "entities": [
                 "default",
@@ -173,9 +296,56 @@
             "y": 1,
             "description": "sample description",
             "items": [
+                2005,
+                2004,
+                2004
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                2003,
+                2001,
+                2003
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "18": {
+            "x": 18,
+            "y": 1,
+            "description": "sample description",
+            "items": [
+                2006,
+                2005,
+                2005,
+                2002,
+                2007,
+                2007,
+                2006,
+                2002
             ],
             "entities": [
                 "default",
@@ -196,9 +366,34 @@
             "y": 2,
             "description": "sample description",
             "items": [
+                2007,
+                2004,
+                2005,
+                2006,
+                2001
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 2,
+            "description": "sample description",
+            "items": [
+                2003,
+                2002,
+                2001,
+                2007,
+                2003
             ],
             "entities": [
                 "default",
@@ -208,50 +403,8 @@
             "doors": {
                 "n": true,
                 "s": true,
-                "e": false,
-                "w": false
-            }
-        },
-        "5": {
-            "x": 5,
-            "y": 2,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
                 "e": true,
                 "w": false
-            }
-        },
-        "6": {
-            "x": 6,
-            "y": 2,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
             }
         },
         "7": {
@@ -259,9 +412,12 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2002,
+                2004,
+                2002,
+                3001,
+                2001
             ],
             "entities": [
                 "default",
@@ -269,7 +425,7 @@
                 "default"
             ],
             "doors": {
-                "n": false,
+                "n": true,
                 "s": true,
                 "e": true,
                 "w": true
@@ -280,9 +436,13 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2001,
+                2001,
+                2007,
+                2001,
+                2007,
+                2003
             ],
             "entities": [
                 "default",
@@ -291,7 +451,7 @@
             ],
             "doors": {
                 "n": false,
-                "s": true,
+                "s": false,
                 "e": true,
                 "w": true
             }
@@ -301,9 +461,11 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2007,
+                2005,
+                2003,
+                2007
             ],
             "entities": [
                 "default",
@@ -322,9 +484,9 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2006,
+                2004
             ],
             "entities": [
                 "default",
@@ -343,9 +505,8 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2002
             ],
             "entities": [
                 "default",
@@ -364,9 +525,9 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2001,
+                2006
             ],
             "entities": [
                 "default",
@@ -385,9 +546,13 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2006,
+                2001,
+                2006,
+                2006,
+                2003,
+                2007
             ],
             "entities": [
                 "default",
@@ -396,7 +561,7 @@
             ],
             "doors": {
                 "n": true,
-                "s": true,
+                "s": false,
                 "e": true,
                 "w": true
             }
@@ -406,9 +571,11 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2002,
+                2003,
+                2001,
+                2007
             ],
             "entities": [
                 "default",
@@ -427,9 +594,12 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2001,
+                2004,
+                2007,
+                2003,
+                2004
             ],
             "entities": [
                 "default",
@@ -448,9 +618,8 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2007
             ],
             "entities": [
                 "default",
@@ -459,7 +628,7 @@
             ],
             "doors": {
                 "n": true,
-                "s": true,
+                "s": false,
                 "e": true,
                 "w": true
             }
@@ -469,9 +638,10 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2001,
+                2005,
+                2001
             ],
             "entities": [
                 "default",
@@ -479,8 +649,8 @@
                 "default"
             ],
             "doors": {
-                "n": false,
-                "s": true,
+                "n": true,
+                "s": false,
                 "e": true,
                 "w": true
             }
@@ -490,9 +660,10 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2004,
+                2004,
+                2007
             ],
             "entities": [
                 "default",
@@ -500,8 +671,8 @@
                 "default"
             ],
             "doors": {
-                "n": false,
-                "s": true,
+                "n": true,
+                "s": false,
                 "e": false,
                 "w": true
             }
@@ -511,9 +682,13 @@
             "y": 2,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2004,
+                2007,
+                2007,
+                2002,
+                2001,
+                2002
             ],
             "entities": [
                 "default",
@@ -522,84 +697,20 @@
             ],
             "doors": {
                 "n": false,
-                "s": false,
+                "s": true,
                 "e": false,
                 "w": true
             }
         }
     },
     "3": {
-        "0": {
-            "x": 0,
-            "y": 3,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": false,
-                "w": false
-            }
-        },
-        "4": {
-            "x": 4,
-            "y": 3,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "5": {
-            "x": 5,
-            "y": 3,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
         "6": {
             "x": 6,
             "y": 3,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -608,9 +719,9 @@
             ],
             "doors": {
                 "n": true,
-                "s": false,
+                "s": true,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "7": {
@@ -618,9 +729,12 @@
             "y": 3,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2001,
+                2004,
+                2004,
+                2006,
+                2002
             ],
             "entities": [
                 "default",
@@ -630,28 +744,7 @@
             "doors": {
                 "n": true,
                 "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "8": {
-            "x": 8,
-            "y": 3,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
+                "e": false,
                 "w": true
             }
         },
@@ -660,30 +753,10 @@
             "y": 3,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        },
-        "13": {
-            "x": 13,
-            "y": 3,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2006,
+                2004,
+                2007
             ],
             "entities": [
                 "default",
@@ -697,56 +770,16 @@
                 "w": false
             }
         },
-        "16": {
-            "x": 16,
+        "19": {
+            "x": 19,
             "y": 3,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "17": {
-            "x": 17,
-            "y": 3,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "18": {
-            "x": 18,
-            "y": 3,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2006,
+                2005,
+                2006,
+                2006
             ],
             "entities": [
                 "default",
@@ -757,19 +790,42 @@
                 "n": true,
                 "s": false,
                 "e": false,
-                "w": true
+                "w": false
             }
         }
     },
     "4": {
+        "0": {
+            "x": 0,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                2007,
+                2001,
+                2006,
+                2006
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
         "1": {
             "x": 1,
             "y": 4,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2001,
+                2006,
+                2002
             ],
             "entities": [
                 "default",
@@ -779,71 +835,8 @@
             "doors": {
                 "n": false,
                 "s": true,
-                "e": true,
+                "e": false,
                 "w": false
-            }
-        },
-        "2": {
-            "x": 2,
-            "y": 4,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "3": {
-            "x": 3,
-            "y": 4,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "4": {
-            "x": 4,
-            "y": 4,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": true
             }
         },
         "5": {
@@ -851,9 +844,34 @@
             "y": 4,
             "description": "sample description",
             "items": [
+                2005,
+                2005,
+                2001,
+                2002
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 4,
+            "description": "sample description",
+            "items": [
+                2005,
+                2007,
+                2002,
+                2001,
+                2004,
+                2007
             ],
             "entities": [
                 "default",
@@ -867,14 +885,17 @@
                 "w": true
             }
         },
-        "8": {
-            "x": 8,
+        "9": {
+            "x": 9,
             "y": 4,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2001,
+                2003,
+                2001,
+                2002,
+                2001
             ],
             "entities": [
                 "default",
@@ -888,14 +909,18 @@
                 "w": false
             }
         },
-        "9": {
-            "x": 9,
+        "10": {
+            "x": 10,
             "y": 4,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2007,
+                2003,
+                2007,
+                2006,
+                2007,
+                2001
             ],
             "entities": [
                 "default",
@@ -903,7 +928,7 @@
                 "default"
             ],
             "doors": {
-                "n": true,
+                "n": false,
                 "s": true,
                 "e": false,
                 "w": true
@@ -914,9 +939,10 @@
             "y": 4,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2003,
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -935,9 +961,8 @@
             "y": 4,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2002
             ],
             "entities": [
                 "default",
@@ -945,49 +970,7 @@
                 "default"
             ],
             "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        },
-        "16": {
-            "x": 16,
-            "y": 4,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "17": {
-            "x": 17,
-            "y": 4,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
+                "n": false,
                 "s": true,
                 "e": false,
                 "w": true
@@ -1000,51 +983,10 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "2": {
-            "x": 2,
-            "y": 5,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        },
-        "4": {
-            "x": 4,
-            "y": 5,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2005,
+                2003,
+                2005
             ],
             "entities": [
                 "default",
@@ -1058,14 +1000,63 @@
                 "w": false
             }
         },
+        "2": {
+            "x": 2,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                2001,
+                2007,
+                2006,
+                2006,
+                2001,
+                2002,
+                2001
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
         "5": {
             "x": 5,
             "y": 5,
             "description": "sample description",
             "items": [
+                2007,
+                2002,
+                2003,
+                2004
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                2006,
+                2007,
+                2007,
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -1084,9 +1075,11 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2005,
+                2004,
+                2003,
+                2002
             ],
             "entities": [
                 "default",
@@ -1094,7 +1087,7 @@
                 "default"
             ],
             "doors": {
-                "n": true,
+                "n": false,
                 "s": true,
                 "e": true,
                 "w": false
@@ -1105,9 +1098,14 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2002,
+                2002,
+                2002,
+                2004,
+                2003,
+                2004,
+                2004
             ],
             "entities": [
                 "default",
@@ -1126,9 +1124,11 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2007,
+                2003,
+                2005,
+                2003
             ],
             "entities": [
                 "default",
@@ -1136,8 +1136,8 @@
                 "default"
             ],
             "doors": {
-                "n": false,
-                "s": false,
+                "n": true,
+                "s": true,
                 "e": true,
                 "w": true
             }
@@ -1147,9 +1147,11 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2003,
+                2007,
+                2005,
+                2001
             ],
             "entities": [
                 "default",
@@ -1168,9 +1170,11 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2003,
+                2005,
+                2006,
+                2005
             ],
             "entities": [
                 "default",
@@ -1189,9 +1193,8 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2006
             ],
             "entities": [
                 "default",
@@ -1210,9 +1213,14 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2007,
+                2004,
+                2002,
+                2002,
+                2001,
+                2003,
+                2003
             ],
             "entities": [
                 "default",
@@ -1222,7 +1230,33 @@
             "doors": {
                 "n": false,
                 "s": true,
-                "e": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "15": {
+            "x": 15,
+            "y": 5,
+            "description": "sample description",
+            "items": [
+                2006,
+                2003,
+                2005,
+                2002,
+                2006,
+                2006,
+                2003,
+                2004
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
                 "w": true
             }
         },
@@ -1231,116 +1265,12 @@
             "y": 5,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "17": {
-            "x": 17,
-            "y": 5,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        }
-    },
-    "6": {
-        "1": {
-            "x": 1,
-            "y": 6,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "2": {
-            "x": 2,
-            "y": 6,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        },
-        "5": {
-            "x": 5,
-            "y": 6,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "6": {
-            "x": 6,
-            "y": 6,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2004,
+                2005,
+                2003,
+                2001,
+                2001
             ],
             "entities": [
                 "default",
@@ -1349,6 +1279,125 @@
             ],
             "doors": {
                 "n": false,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "6": {
+        "2": {
+            "x": 2,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                2003,
+                2006,
+                2002,
+                2001,
+                2006,
+                2004,
+                2003,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                2003,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                2006,
+                2007,
+                2004,
+                2007,
+                2003,
+                3002,
+                2001
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                2004,
+                2005,
+                2007,
+                2002,
+                2004,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                2005,
+                2005,
+                2004,
+                2002
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
                 "s": true,
                 "e": false,
                 "w": true
@@ -1359,9 +1408,9 @@
             "y": 6,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -1380,9 +1429,13 @@
             "y": 6,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2004,
+                2004,
+                2003,
+                2001,
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -1392,6 +1445,29 @@
             "doors": {
                 "n": true,
                 "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "10": {
+            "x": 10,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                2004,
+                2004,
+                2007,
+                2005,
+                2007
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
                 "e": false,
                 "w": true
             }
@@ -1401,9 +1477,9 @@
             "y": 6,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2002,
+                2003
             ],
             "entities": [
                 "default",
@@ -1422,9 +1498,8 @@
             "y": 6,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2005
             ],
             "entities": [
                 "default",
@@ -1443,9 +1518,13 @@
             "y": 6,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2003,
+                2004,
+                2004,
+                2006,
+                2004,
+                2003
             ],
             "entities": [
                 "default",
@@ -1455,7 +1534,28 @@
             "doors": {
                 "n": true,
                 "s": false,
-                "e": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "15": {
+            "x": 15,
+            "y": 6,
+            "description": "sample description",
+            "items": [
+                2007,
+                2003,
+                2003
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
                 "w": true
             }
         },
@@ -1464,9 +1564,13 @@
             "y": 6,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2003,
+                2003,
+                2006,
+                2002,
+                2006,
+                2001
             ],
             "entities": [
                 "default",
@@ -1477,7 +1581,7 @@
                 "n": true,
                 "s": true,
                 "e": true,
-                "w": false
+                "w": true
             }
         },
         "17": {
@@ -1485,9 +1589,13 @@
             "y": 6,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2005,
+                2003,
+                2002,
+                2002,
+                2007,
+                2005
             ],
             "entities": [
                 "default",
@@ -1495,7 +1603,7 @@
                 "default"
             ],
             "doors": {
-                "n": true,
+                "n": false,
                 "s": true,
                 "e": false,
                 "w": true
@@ -1508,9 +1616,9 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2005,
+                2006
             ],
             "entities": [
                 "default",
@@ -1518,8 +1626,8 @@
                 "default"
             ],
             "doors": {
-                "n": true,
-                "s": false,
+                "n": false,
+                "s": true,
                 "e": true,
                 "w": false
             }
@@ -1529,9 +1637,33 @@
             "y": 7,
             "description": "sample description",
             "items": [
+                2006,
+                2002,
+                2004
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 7,
+            "description": "sample description",
+            "items": [
+                2003,
+                2007,
+                2003,
+                2006,
+                2007,
+                2006
             ],
             "entities": [
                 "default",
@@ -1545,35 +1677,16 @@
                 "w": true
             }
         },
-        "4": {
-            "x": 4,
-            "y": 7,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
-                "e": true,
-                "w": false
-            }
-        },
         "5": {
             "x": 5,
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2005,
+                2001,
+                2003,
+                2005
             ],
             "entities": [
                 "default",
@@ -1584,7 +1697,7 @@
                 "n": true,
                 "s": true,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "6": {
@@ -1592,9 +1705,13 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2003,
+                2006,
+                2007,
+                2004,
+                2004,
+                2001
             ],
             "entities": [
                 "default",
@@ -1603,7 +1720,7 @@
             ],
             "doors": {
                 "n": true,
-                "s": true,
+                "s": false,
                 "e": false,
                 "w": true
             }
@@ -1613,9 +1730,13 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2006,
+                2004,
+                2004,
+                2005,
+                2006,
+                2007
             ],
             "entities": [
                 "default",
@@ -1634,9 +1755,14 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2007,
+                2001,
+                2004,
+                2002,
+                2004,
+                2001,
+                2007
             ],
             "entities": [
                 "default",
@@ -1655,9 +1781,9 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2001,
+                2006
             ],
             "entities": [
                 "default",
@@ -1676,9 +1802,14 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2007,
+                2004,
+                2002,
+                2004,
+                2001,
+                2002,
+                2007
             ],
             "entities": [
                 "default",
@@ -1697,9 +1828,9 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2001,
+                2001
             ],
             "entities": [
                 "default",
@@ -1718,9 +1849,8 @@
             "y": 7,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2003
             ],
             "entities": [
                 "default",
@@ -1736,14 +1866,15 @@
         }
     },
     "8": {
-        "2": {
-            "x": 2,
+        "0": {
+            "x": 0,
             "y": 8,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2005,
+                2005,
+                2004
             ],
             "entities": [
                 "default",
@@ -1751,41 +1882,68 @@
                 "default"
             ],
             "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": false
-            }
-        },
-        "5": {
-            "x": 5,
-            "y": 8,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
+                "n": false,
                 "s": true,
                 "e": true,
                 "w": false
             }
         },
-        "6": {
-            "x": 6,
+        "1": {
+            "x": 1,
             "y": 8,
             "description": "sample description",
             "items": [
+                2002,
+                2007,
+                2005,
+                2004,
+                2003
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                2004,
+                2002,
+                2005,
+                2006
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                2003,
+                2001,
+                2004,
+                2005,
+                2007,
+                2003
             ],
             "entities": [
                 "default",
@@ -1799,14 +1957,42 @@
                 "w": true
             }
         },
+        "5": {
+            "x": 5,
+            "y": 8,
+            "description": "sample description",
+            "items": [
+                2003,
+                2001,
+                2003,
+                2002,
+                2006
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
         "8": {
             "x": 8,
             "y": 8,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2005,
+                2003,
+                2006,
+                2007,
+                2001,
+                2005,
+                2007
             ],
             "entities": [
                 "default",
@@ -1825,9 +2011,10 @@
             "y": 8,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2003,
+                2007,
+                2005
             ],
             "entities": [
                 "default",
@@ -1846,9 +2033,10 @@
             "y": 8,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2006,
+                2001,
+                2003
             ],
             "entities": [
                 "default",
@@ -1867,9 +2055,11 @@
             "y": 8,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2007,
+                2004,
+                2007,
+                2002
             ],
             "entities": [
                 "default",
@@ -1888,9 +2078,11 @@
             "y": 8,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2003,
+                2001,
+                2007,
+                2001
             ],
             "entities": [
                 "default",
@@ -1909,9 +2101,14 @@
             "y": 8,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2005,
+                2001,
+                2003,
+                2003,
+                2006,
+                2002,
+                2006
             ],
             "entities": [
                 "default",
@@ -1921,62 +2118,47 @@
             "doors": {
                 "n": true,
                 "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "18": {
-            "x": 18,
-            "y": 8,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        },
-        "19": {
-            "x": 19,
-            "y": 8,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
                 "e": false,
                 "w": true
             }
         }
     },
     "9": {
-        "1": {
-            "x": 1,
+        "0": {
+            "x": 0,
             "y": 9,
             "description": "sample description",
             "items": [
+                2007,
+                2006,
+                2007,
+                2002,
+                2003,
+                2003,
+                2006,
+                2005
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": false
+            }
+        },
+        "4": {
+            "x": 4,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                2007,
+                2002,
+                2007,
+                2001
             ],
             "entities": [
                 "default",
@@ -1990,77 +2172,16 @@
                 "w": false
             }
         },
-        "2": {
-            "x": 2,
-            "y": 9,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "3": {
-            "x": 3,
-            "y": 9,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "4": {
-            "x": 4,
-            "y": 9,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
         "5": {
             "x": 5,
             "y": 9,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2003,
+                2001,
+                2002,
+                2003
             ],
             "entities": [
                 "default",
@@ -2069,6 +2190,31 @@
             ],
             "doors": {
                 "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 9,
+            "description": "sample description",
+            "items": [
+                2007,
+                2003,
+                2002,
+                2001,
+                2001,
+                2007,
+                2007
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
                 "s": true,
                 "e": false,
                 "w": true
@@ -2079,9 +2225,12 @@
             "y": 9,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2002,
+                2004,
+                2004,
+                2005,
+                2004
             ],
             "entities": [
                 "default",
@@ -2100,9 +2249,12 @@
             "y": 9,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2003,
+                2005,
+                2006,
+                2002,
+                2001
             ],
             "entities": [
                 "default",
@@ -2112,49 +2264,7 @@
             "doors": {
                 "n": true,
                 "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "10": {
-            "x": 10,
-            "y": 9,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "11": {
-            "x": 11,
-            "y": 9,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
-                "e": true,
+                "e": false,
                 "w": true
             }
         },
@@ -2163,9 +2273,8 @@
             "y": 9,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -2176,7 +2285,7 @@
                 "n": true,
                 "s": true,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "13": {
@@ -2184,9 +2293,10 @@
             "y": 9,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2006,
+                2002,
+                2006
             ],
             "entities": [
                 "default",
@@ -2205,9 +2315,9 @@
             "y": 9,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2006,
+                2003
             ],
             "entities": [
                 "default",
@@ -2226,9 +2336,13 @@
             "y": 9,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2004,
+                2006,
+                2003,
+                2007,
+                2002,
+                2004
             ],
             "entities": [
                 "default",
@@ -2238,146 +2352,21 @@
             "doors": {
                 "n": true,
                 "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "18": {
-            "x": 18,
-            "y": 9,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
                 "e": false,
                 "w": true
             }
         }
     },
     "10": {
-        "0": {
-            "x": 0,
-            "y": 10,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
-                "e": true,
-                "w": false
-            }
-        },
-        "1": {
-            "x": 1,
-            "y": 10,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": false
-            }
-        },
-        "2": {
-            "x": 2,
-            "y": 10,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "3": {
-            "x": 3,
-            "y": 10,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
         "4": {
             "x": 4,
             "y": 10,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "5": {
-            "x": 5,
-            "y": 10,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2003,
+                2002,
+                2001
             ],
             "entities": [
                 "default",
@@ -2387,6 +2376,48 @@
             "doors": {
                 "n": true,
                 "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                2002,
+                2002
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                2007,
+                2002,
+                2001,
+                2003
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
                 "e": false,
                 "w": true
             }
@@ -2396,9 +2427,14 @@
             "y": 10,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2007,
+                2005,
+                2001,
+                2004,
+                2004,
+                2007,
+                2004
             ],
             "entities": [
                 "default",
@@ -2417,9 +2453,12 @@
             "y": 10,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2007,
+                2003,
+                2005,
+                2003,
+                2006
             ],
             "entities": [
                 "default",
@@ -2428,7 +2467,7 @@
             ],
             "doors": {
                 "n": true,
-                "s": false,
+                "s": true,
                 "e": false,
                 "w": true
             }
@@ -2438,9 +2477,8 @@
             "y": 10,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2002
             ],
             "entities": [
                 "default",
@@ -2459,9 +2497,8 @@
             "y": 10,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2005
             ],
             "entities": [
                 "default",
@@ -2475,14 +2512,40 @@
                 "w": true
             }
         },
+        "15": {
+            "x": 15,
+            "y": 10,
+            "description": "sample description",
+            "items": [
+                2005,
+                2002,
+                2005,
+                2007,
+                2006,
+                2006,
+                2002,
+                2004
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
         "16": {
             "x": 16,
             "y": 10,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2006,
+                2004
             ],
             "entities": [
                 "default",
@@ -2493,7 +2556,7 @@
                 "n": true,
                 "s": true,
                 "e": true,
-                "w": false
+                "w": true
             }
         },
         "17": {
@@ -2501,9 +2564,8 @@
             "y": 10,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2001
             ],
             "entities": [
                 "default",
@@ -2519,142 +2581,15 @@
         }
     },
     "11": {
-        "5": {
-            "x": 5,
-            "y": 11,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": false
-            }
-        },
-        "8": {
-            "x": 8,
-            "y": 11,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": false
-            }
-        },
-        "12": {
-            "x": 12,
-            "y": 11,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "13": {
-            "x": 13,
-            "y": 11,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        },
-        "16": {
-            "x": 16,
-            "y": 11,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "17": {
-            "x": 17,
-            "y": 11,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": false,
-                "w": true
-            }
-        }
-    },
-    "12": {
         "4": {
             "x": 4,
-            "y": 12,
+            "y": 11,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2004,
+                2001,
+                2003
             ],
             "entities": [
                 "default",
@@ -2662,20 +2597,24 @@
                 "default"
             ],
             "doors": {
-                "n": false,
-                "s": true,
+                "n": true,
+                "s": false,
                 "e": true,
                 "w": false
             }
         },
         "5": {
             "x": 5,
-            "y": 12,
+            "y": 11,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2006,
+                2007,
+                2006,
+                2001,
+                2004,
+                2004
             ],
             "entities": [
                 "default",
@@ -2685,60 +2624,19 @@
             "doors": {
                 "n": true,
                 "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "6": {
-            "x": 6,
-            "y": 12,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "7": {
-            "x": 7,
-            "y": 12,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
+                "e": false,
                 "w": true
             }
         },
         "8": {
             "x": 8,
-            "y": 12,
+            "y": 11,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2003,
+                2003,
+                2001
             ],
             "entities": [
                 "default",
@@ -2749,17 +2647,22 @@
                 "n": true,
                 "s": true,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "9": {
             "x": 9,
-            "y": 12,
+            "y": 11,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2002,
+                2006,
+                2006,
+                2001,
+                2001,
+                2006,
+                2006
             ],
             "entities": [
                 "default",
@@ -2767,62 +2670,23 @@
                 "default"
             ],
             "doors": {
-                "n": false,
+                "n": true,
                 "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "10": {
-            "x": 10,
-            "y": 12,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "11": {
-            "x": 11,
-            "y": 12,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
+                "e": false,
                 "w": true
             }
         },
         "12": {
             "x": 12,
-            "y": 12,
+            "y": 11,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2004,
+                2003,
+                2005,
+                2003,
+                2002
             ],
             "entities": [
                 "default",
@@ -2833,17 +2697,21 @@
                 "n": true,
                 "s": true,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "13": {
             "x": 13,
-            "y": 12,
+            "y": 11,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2007,
+                2001,
+                2005,
+                2007,
+                2006,
+                2004
             ],
             "entities": [
                 "default",
@@ -2859,12 +2727,190 @@
         },
         "14": {
             "x": 14,
-            "y": 12,
+            "y": 11,
             "description": "sample description",
             "items": [
+                2006,
+                2001,
+                2003,
+                2002,
+                2006,
+                2007,
+                2006
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "15": {
+            "x": 15,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                2002,
+                2002,
+                2006,
+                2003,
+                2003,
+                2004,
+                2003,
+                2004
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                2003,
+                2001
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "17": {
+            "x": 17,
+            "y": 11,
+            "description": "sample description",
+            "items": [
+                2001,
+                2005,
+                2004,
+                2004,
+                2002,
+                2004,
+                2002
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        }
+    },
+    "12": {
+        "0": {
+            "x": 0,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2004,
+                2002,
+                2003,
+                2002,
+                2002,
+                2007,
+                2002,
+                2001
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "1": {
+            "x": 1,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2001,
+                2002,
+                2004,
+                2006,
+                2007,
+                2004,
+                2002,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "2": {
+            "x": 2,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2005,
+                2007,
+                2001,
+                2007,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "3": {
+            "x": 3,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2005,
+                2004,
+                2006,
+                2003,
+                2006,
+                2006,
+                2004,
+                2003
             ],
             "entities": [
                 "default",
@@ -2878,14 +2924,137 @@
                 "w": true
             }
         },
+        "5": {
+            "x": 5,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2005,
+                2005,
+                2006,
+                2004,
+                2006,
+                2005,
+                2003
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": false
+            }
+        },
+        "8": {
+            "x": 8,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2001,
+                2004,
+                2004,
+                2001,
+                2001,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2003,
+                2006,
+                2007,
+                2007,
+                2001,
+                2004,
+                2002
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2007,
+                2003,
+                2007
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 12,
+            "description": "sample description",
+            "items": [
+                2005,
+                2005,
+                2005,
+                2003,
+                2003,
+                2006,
+                2002,
+                2006
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
         "16": {
             "x": 16,
             "y": 12,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2007,
+                2005,
+                2007,
+                2002
             ],
             "entities": [
                 "default",
@@ -2904,9 +3073,12 @@
             "y": 12,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2001,
+                2003,
+                2006,
+                2001,
+                2004
             ],
             "entities": [
                 "default",
@@ -2927,9 +3099,13 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2001,
+                2005,
+                2007,
+                2005,
+                2003,
+                2007
             ],
             "entities": [
                 "default",
@@ -2937,7 +3113,7 @@
                 "default"
             ],
             "doors": {
-                "n": false,
+                "n": true,
                 "s": true,
                 "e": true,
                 "w": false
@@ -2948,9 +3124,13 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2001,
+                2004,
+                2001,
+                2005,
+                2006,
+                2001
             ],
             "entities": [
                 "default",
@@ -2958,8 +3138,8 @@
                 "default"
             ],
             "doors": {
-                "n": false,
-                "s": true,
+                "n": true,
+                "s": false,
                 "e": true,
                 "w": false
             }
@@ -2969,9 +3149,13 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2004,
+                2006,
+                2004,
+                2003,
+                2007,
+                2007
             ],
             "entities": [
                 "default",
@@ -2979,8 +3163,8 @@
                 "default"
             ],
             "doors": {
-                "n": false,
-                "s": true,
+                "n": true,
+                "s": false,
                 "e": true,
                 "w": true
             }
@@ -2990,30 +3174,11 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "4": {
-            "x": 4,
-            "y": 13,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2004,
+                2007,
+                2002,
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -3027,14 +3192,39 @@
                 "w": true
             }
         },
+        "4": {
+            "x": 4,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                2002,
+                2001,
+                2005,
+                2003,
+                2004
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
         "5": {
             "x": 5,
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2003,
+                2003,
+                2005,
+                2002
             ],
             "entities": [
                 "default",
@@ -3053,9 +3243,12 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2004,
+                2007,
+                2002,
+                2001,
+                2006
             ],
             "entities": [
                 "default",
@@ -3063,8 +3256,8 @@
                 "default"
             ],
             "doors": {
-                "n": true,
-                "s": false,
+                "n": false,
+                "s": true,
                 "e": true,
                 "w": true
             }
@@ -3074,9 +3267,9 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2006,
+                2002
             ],
             "entities": [
                 "default",
@@ -3084,7 +3277,7 @@
                 "default"
             ],
             "doors": {
-                "n": true,
+                "n": false,
                 "s": false,
                 "e": true,
                 "w": true
@@ -3095,9 +3288,12 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2005,
+                2007,
+                2005,
+                2006,
+                2001
             ],
             "entities": [
                 "default",
@@ -3116,93 +3312,9 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "10": {
-            "x": 10,
-            "y": 13,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "11": {
-            "x": 11,
-            "y": 13,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "12": {
-            "x": 12,
-            "y": 13,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "13": {
-            "x": 13,
-            "y": 13,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2002,
+                2003
             ],
             "entities": [
                 "default",
@@ -3212,18 +3324,46 @@
             "doors": {
                 "n": true,
                 "s": true,
-                "e": true,
+                "e": false,
                 "w": true
             }
         },
-        "14": {
-            "x": 14,
+        "12": {
+            "x": 12,
             "y": 13,
             "description": "sample description",
             "items": [
+                2001,
+                2001,
+                2003,
+                2007,
+                2003
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "13": {
+            "x": 13,
+            "y": 13,
+            "description": "sample description",
+            "items": [
+                2003,
+                2005,
+                2006,
+                2003,
+                2006,
+                2003,
+                2005,
+                2002
             ],
             "entities": [
                 "default",
@@ -3242,9 +3382,10 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2005,
+                2001,
+                2004
             ],
             "entities": [
                 "default",
@@ -3263,9 +3404,10 @@
             "y": 13,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2002,
+                2006,
+                2001
             ],
             "entities": [
                 "default",
@@ -3286,30 +3428,14 @@
             "y": 14,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
-        "1": {
-            "x": 1,
-            "y": 14,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2003,
+                2006,
+                2002,
+                2006,
+                2002,
+                2005,
+                2003
             ],
             "entities": [
                 "default",
@@ -3319,29 +3445,8 @@
             "doors": {
                 "n": true,
                 "s": false,
-                "e": true,
+                "e": false,
                 "w": false
-            }
-        },
-        "2": {
-            "x": 2,
-            "y": 14,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
             }
         },
         "3": {
@@ -3349,9 +3454,11 @@
             "y": 14,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2005,
+                2002,
+                2004,
+                2001
             ],
             "entities": [
                 "default",
@@ -3360,9 +3467,9 @@
             ],
             "doors": {
                 "n": true,
-                "s": true,
+                "s": false,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "4": {
@@ -3370,9 +3477,11 @@
             "y": 14,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2002,
+                2003,
+                2006,
+                2004
             ],
             "entities": [
                 "default",
@@ -3391,9 +3500,34 @@
             "y": 14,
             "description": "sample description",
             "items": [
+                2005,
+                2002,
+                2006,
+                2002
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": true
+            }
+        },
+        "6": {
+            "x": 6,
+            "y": 14,
+            "description": "sample description",
+            "items": [
+                2006,
+                2003,
+                2005,
+                2001,
+                2001,
+                2005
             ],
             "entities": [
                 "default",
@@ -3412,9 +3546,13 @@
             "y": 14,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2006,
+                2002,
+                2007,
+                2007,
+                2003,
+                2002
             ],
             "entities": [
                 "default",
@@ -3423,19 +3561,22 @@
             ],
             "doors": {
                 "n": true,
-                "s": false,
-                "e": false,
+                "s": true,
+                "e": true,
                 "w": false
             }
         },
-        "13": {
-            "x": 13,
+        "9": {
+            "x": 9,
             "y": 14,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2004,
+                2001,
+                2005,
+                2005,
+                2002
             ],
             "entities": [
                 "default",
@@ -3446,7 +3587,7 @@
                 "n": true,
                 "s": true,
                 "e": false,
-                "w": false
+                "w": true
             }
         },
         "16": {
@@ -3454,9 +3595,9 @@
             "y": 14,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2007,
+                2002
             ],
             "entities": [
                 "default",
@@ -3475,9 +3616,9 @@
             "y": 14,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2004,
+                2006
             ],
             "entities": [
                 "default",
@@ -3493,56 +3634,39 @@
         }
     },
     "15": {
-        "0": {
-            "x": 0,
-            "y": 15,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": false,
-                "w": false
-            }
-        },
-        "3": {
-            "x": 3,
-            "y": 15,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": false
-            }
-        },
         "4": {
             "x": 4,
             "y": 15,
             "description": "sample description",
             "items": [
+                2001,
+                2005
+            ],
+            "entities": [
                 "default",
                 "default",
                 "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "5": {
+            "x": 5,
+            "y": 15,
+            "description": "sample description",
+            "items": [
+                2003,
+                2004,
+                2005,
+                2003,
+                2004,
+                2006,
+                2006,
+                2004
             ],
             "entities": [
                 "default",
@@ -3556,14 +3680,14 @@
                 "w": true
             }
         },
-        "9": {
-            "x": 9,
+        "8": {
+            "x": 8,
             "y": 15,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2004,
+                2007
             ],
             "entities": [
                 "default",
@@ -3571,41 +3695,20 @@
                 "default"
             ],
             "doors": {
-                "n": false,
-                "s": true,
-                "e": false,
-                "w": false
-            }
-        },
-        "12": {
-            "x": 12,
-            "y": 15,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
+                "n": true,
                 "s": true,
                 "e": true,
                 "w": false
             }
         },
-        "13": {
-            "x": 13,
+        "9": {
+            "x": 9,
             "y": 15,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2003,
+                2001
             ],
             "entities": [
                 "default",
@@ -3624,9 +3727,14 @@
             "y": 15,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2004,
+                2005,
+                2006,
+                2001,
+                2001,
+                2005,
+                2003
             ],
             "entities": [
                 "default",
@@ -3645,9 +3753,8 @@
             "y": 15,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2006
             ],
             "entities": [
                 "default",
@@ -3668,9 +3775,9 @@
             "y": 16,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2001,
+                2002
             ],
             "entities": [
                 "default",
@@ -3679,7 +3786,7 @@
             ],
             "doors": {
                 "n": true,
-                "s": true,
+                "s": false,
                 "e": true,
                 "w": false
             }
@@ -3689,9 +3796,9 @@
             "y": 16,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2001,
+                2006
             ],
             "entities": [
                 "default",
@@ -3699,7 +3806,7 @@
                 "default"
             ],
             "doors": {
-                "n": false,
+                "n": true,
                 "s": true,
                 "e": true,
                 "w": true
@@ -3710,177 +3817,13 @@
             "y": 16,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "7": {
-            "x": 7,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "8": {
-            "x": 8,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "9": {
-            "x": 9,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "10": {
-            "x": 10,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "11": {
-            "x": 11,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "12": {
-            "x": 12,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "13": {
-            "x": 13,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "14": {
-            "x": 14,
-            "y": 16,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2003,
+                2002,
+                2007,
+                2004,
+                2005,
+                2003
             ],
             "entities": [
                 "default",
@@ -3894,14 +3837,63 @@
                 "w": true
             }
         },
+        "8": {
+            "x": 8,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                2001,
+                2003,
+                2002,
+                2007,
+                2006,
+                2002,
+                2003,
+                2001
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": true,
+                "w": false
+            }
+        },
+        "9": {
+            "x": 9,
+            "y": 16,
+            "description": "sample description",
+            "items": [
+                2002,
+                2006,
+                2007,
+                2005,
+                2004,
+                2004
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": true,
+                "e": false,
+                "w": true
+            }
+        },
         "16": {
             "x": 16,
             "y": 16,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2006
             ],
             "entities": [
                 "default",
@@ -3920,9 +3912,8 @@
             "y": 16,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2005,
+                2004
             ],
             "entities": [
                 "default",
@@ -3938,35 +3929,17 @@
         }
     },
     "17": {
-        "4": {
-            "x": 4,
-            "y": 17,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": true,
-                "e": true,
-                "w": false
-            }
-        },
         "5": {
             "x": 5,
             "y": 17,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2007,
+                2002,
+                2002,
+                2005,
+                2007
             ],
             "entities": [
                 "default",
@@ -3975,9 +3948,9 @@
             ],
             "doors": {
                 "n": true,
-                "s": true,
+                "s": false,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "6": {
@@ -3985,9 +3958,12 @@
             "y": 17,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2007,
+                2004,
+                2004,
+                2005,
+                2004
             ],
             "entities": [
                 "default",
@@ -4006,9 +3982,14 @@
             "y": 17,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2005,
+                2003,
+                2007,
+                2001,
+                2002,
+                2002,
+                2002
             ],
             "entities": [
                 "default",
@@ -4016,7 +3997,7 @@
                 "default"
             ],
             "doors": {
-                "n": true,
+                "n": false,
                 "s": false,
                 "e": true,
                 "w": true
@@ -4027,9 +4008,13 @@
             "y": 17,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2005,
+                2001,
+                2006,
+                2007,
+                2004,
+                2001
             ],
             "entities": [
                 "default",
@@ -4048,93 +4033,13 @@
             "y": 17,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "10": {
-            "x": 10,
-            "y": 17,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "11": {
-            "x": 11,
-            "y": 17,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "12": {
-            "x": 12,
-            "y": 17,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "13": {
-            "x": 13,
-            "y": 17,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2003,
+                2005,
+                2007,
+                2004,
+                2002,
+                2001
             ],
             "entities": [
                 "default",
@@ -4144,49 +4049,7 @@
             "doors": {
                 "n": true,
                 "s": true,
-                "e": true,
-                "w": true
-            }
-        },
-        "14": {
-            "x": 14,
-            "y": 17,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "15": {
-            "x": 15,
-            "y": 17,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
-                "e": true,
+                "e": false,
                 "w": true
             }
         },
@@ -4195,9 +4058,13 @@
             "y": 17,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2005,
+                2002,
+                2006,
+                2006,
+                2006,
+                2006
             ],
             "entities": [
                 "default",
@@ -4208,7 +4075,7 @@
                 "n": true,
                 "s": true,
                 "e": true,
-                "w": true
+                "w": false
             }
         },
         "17": {
@@ -4216,9 +4083,12 @@
             "y": 17,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2006,
+                2004,
+                2001,
+                2005,
+                2006
             ],
             "entities": [
                 "default",
@@ -4234,14 +4104,15 @@
         }
     },
     "18": {
-        "4": {
-            "x": 4,
+        "8": {
+            "x": 8,
             "y": 18,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2004,
+                2007,
+                2004
             ],
             "entities": [
                 "default",
@@ -4255,14 +4126,14 @@
                 "w": false
             }
         },
-        "5": {
-            "x": 5,
+        "9": {
+            "x": 9,
             "y": 18,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2007,
+                2007
             ],
             "entities": [
                 "default",
@@ -4276,56 +4147,19 @@
                 "w": true
             }
         },
-        "8": {
-            "x": 8,
-            "y": 18,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": false,
-                "w": false
-            }
-        },
-        "13": {
-            "x": 13,
-            "y": 18,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": false,
-                "w": false
-            }
-        },
         "16": {
             "x": 16,
             "y": 18,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2001,
+                2004,
+                2004,
+                2005,
+                2007,
+                2005,
+                2005,
+                2007
             ],
             "entities": [
                 "default",
@@ -4344,9 +4178,11 @@
             "y": 18,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2004,
+                2003,
+                2004,
+                2001
             ],
             "entities": [
                 "default",
@@ -4367,9 +4203,8 @@
             "y": 19,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2007,
+                2003
             ],
             "entities": [
                 "default",
@@ -4388,30 +4223,13 @@
             "y": 19,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": false,
-                "s": false,
-                "e": true,
-                "w": true
-            }
-        },
-        "3": {
-            "x": 3,
-            "y": 19,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2002,
+                2006,
+                2003,
+                2001,
+                2007,
+                2002,
+                2007
             ],
             "entities": [
                 "default",
@@ -4430,51 +4248,14 @@
             "y": 19,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": false,
-                "w": false
-            }
-        },
-        "13": {
-            "x": 13,
-            "y": 19,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
-            ],
-            "entities": [
-                "default",
-                "default",
-                "default"
-            ],
-            "doors": {
-                "n": true,
-                "s": false,
-                "e": false,
-                "w": false
-            }
-        },
-        "16": {
-            "x": 16,
-            "y": 19,
-            "description": "sample description",
-            "items": [
-                "default",
-                "default",
-                "default"
+                2003,
+                2004,
+                2002,
+                2006,
+                2006,
+                2005,
+                2003,
+                2006
             ],
             "entities": [
                 "default",
@@ -4488,14 +4269,125 @@
                 "w": false
             }
         },
+        "9": {
+            "x": 9,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                2002,
+                2007
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "11": {
+            "x": 11,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                2006,
+                2004
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "12": {
+            "x": 12,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                2001,
+                2006,
+                2004,
+                2002,
+                2007,
+                2007,
+                2007
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": false,
+                "w": true
+            }
+        },
+        "15": {
+            "x": 15,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                2007,
+                2005
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": false,
+                "s": false,
+                "e": true,
+                "w": false
+            }
+        },
+        "16": {
+            "x": 16,
+            "y": 19,
+            "description": "sample description",
+            "items": [
+                2007,
+                2004,
+                2004
+            ],
+            "entities": [
+                "default",
+                "default",
+                "default"
+            ],
+            "doors": {
+                "n": true,
+                "s": false,
+                "e": true,
+                "w": true
+            }
+        },
         "17": {
             "x": 17,
             "y": 19,
             "description": "sample description",
             "items": [
-                "default",
-                "default",
-                "default"
+                2006,
+                2003,
+                2002,
+                2007,
+                2007,
+                2004,
+                2005,
+                2007
             ],
             "entities": [
                 "default",
