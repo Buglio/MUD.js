@@ -250,4 +250,4 @@ def main():
                     if y not in room_list: room_list[y] = {}
                     room_list[y][x] = room
     output_json(room_list)
-main()
+    return 0
