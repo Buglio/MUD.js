@@ -251,4 +251,8 @@ def main():
                     if y not in room_list: room_list[y] = {}
                     room_list[y][x] = room
     map_id = output_json(room_list)
+<<<<<<< HEAD
     return map_id
+=======
+    return map_id
+>>>>>>> 7fded29d5cdbe6af4678273ea5beffb39764be08
