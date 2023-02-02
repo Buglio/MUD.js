@@ -10,12 +10,11 @@ import string
 import random
 
 # PARAMS
-shape = (20,20)
+shape = (40,40)
 WALL = 0
 FLOOR = 1
 fill_prob = 0.3
 generations = 5
-map_id = ''.join(random.choices(string.ascii_letters, k=7))
 # PRINT MAP
 def print_map(m):
     for y in m:
@@ -27,9 +26,12 @@ def print_map(m):
 
 # OUTPUT JSON
 def output_json(m):
+    map_id = ''.join(random.choices(string.ascii_letters, k=7))
+
     json_obj = json.dumps(m, indent=4)
-    with open(map_id + "_map.json", "w") as outpath:
+    with open("data/" + map_id + "_map.json", "w") as outpath:
         outpath.write(json_obj)
+    return map_id
 
 # CELLULAR AUTOMATA GENERATOR
 def gen_map():
@@ -170,9 +172,8 @@ ITEM_LIST = {
         "rarity": 1
     }
 }
-occurance_out = []
 def gen_item_occurance():
-    
+    occurance_out = []
     occurance_rates = {
         0: 1,
         1: 200,
@@ -184,14 +185,15 @@ def gen_item_occurance():
     for key in ITEM_LIST:
         for x in range(occurance_rates[ITEM_LIST[key]["rarity"]]):
             occurance_out.append(ITEM_LIST[key]["id"])
-gen_item_occurance()
+    random.shuffle(occurance_out)
+    return occurance_out
 
 # Item creation
-def gen_items(x,y):
+def gen_items(x,y,occ):
     NUM_ITEMS = random.randint(2,8)
     ids_out = []
     for x in range(NUM_ITEMS):
-        item = occurance_out.pop(random.randint(0,len(occurance_out)-1))
+        item = occ.pop()
         ids_out.append(item)
     return ids_out
 
@@ -201,7 +203,7 @@ def gen_entities(x,y):
 
 
 # GENERATE AND POPULATE A SINGLE ROOM AT X,Y
-def create_room(x,y,new_map):
+def create_room(x,y,new_map,occ):
 
     # DOOR DETECTION
     if y > 1:
@@ -231,7 +233,7 @@ def create_room(x,y,new_map):
         "x": x,
         "y": y,
         "description": gen_description(x,y,doors),
-        "items": gen_items(x,y),
+        "items": gen_items(x,y,occ),
         "entities": gen_entities(x,y),
         "doors": doors
     }
@@ -244,9 +246,9 @@ def main():
     for y in range(len(new_map)):
         for x in range(len(new_map[y])):
             if new_map[y][x] == 1:
-                room = create_room(x,y,new_map)
+                room = create_room(x,y,new_map,gen_item_occurance())
                 if (room["doors"]["n"] == True or room["doors"]["s"] == True or room["doors"]["e"] == True or room["doors"]["w"] == True):
                     if y not in room_list: room_list[y] = {}
                     room_list[y][x] = room
-    output_json(room_list)
+    map_id = output_json(room_list)
     return map_id

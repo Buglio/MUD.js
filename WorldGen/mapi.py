@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/map')
 def return_map():
     id = request.args.get('id')
-    f = open(id + '_map.json')
+    f = open("data/" + id + '_map.json')
     data = jsonify(json.load(f))
     data.headers.add('Access-Control-Allow-Origin', '*')
     return data 

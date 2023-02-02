@@ -67,9 +67,9 @@
     <!-- Script and API -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        function get_map(){
+        function get_map(id='HblccVh'){
             document.getElementById("main-map").innerHTML = ""; //could be loading animation
-            $.getJSON('http://coho.home:5000/map', function(data) {
+            $.getJSON('http://coho.home:5000/map?id=' + id, function(data) {
                 let wh = Object.keys(data).length; // assume square
                 for(y = 1; y <= wh; y++){
                     for (x = 1; x <= wh; x++){
@@ -96,7 +96,8 @@
         }
         function new_map(){
             $.getJSON('http://coho.home:5000/newmap', function(data) {
-                get_map();
+                console.log(data);
+                get_map(data.id);
             });
         }
         get_map();  
