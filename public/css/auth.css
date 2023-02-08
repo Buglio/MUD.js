@@ -20,7 +20,18 @@ body {
   background-color: var(--background);
   font: 16px/26px 'Courier New', Courier, monospace; 
 }
-
+#logo{
+  width: 94%;
+  text-align: center;
+  margin: 3%;
+}
+#logo img{
+  width:256px;
+  height: 48px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
 .form-wrap {
   background-color: var(--neutral);
   width: 320px;
@@ -146,6 +157,7 @@ body {
 .itemrain div{
   position:absolute ;
   display:block ;
+  image-rendering:auto;
 }
 
 @keyframes fall{

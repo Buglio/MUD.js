@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="./css/auth.css">
     </head>
     <body>
+        <div id="logo">
+            <img src="./img/logo.png">
+        </div>
         <!-- Item rain -->
         <div id='itemrain' class="itemrain"></div>
         
@@ -47,6 +50,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
             const item_urls = [
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
+            './sprites/sparkle.png',
             './sprites/book_green.png',
             './sprites/book_red.png',
             './sprites/potion_lightgreen.png',
@@ -59,7 +77,7 @@
             './sprites/sword_grey.png'
             ]
             jQuery(document).ready(function($) {
-                for (x=0;x<10;x++){
+                for (x=0;x<25;x++){
                     let newDiv = document.createElement("div");
                     let newImg = document.createElement("img");
                     newImg.src = item_urls[x % item_urls.length];
