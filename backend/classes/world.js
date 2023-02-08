@@ -16,6 +16,8 @@ class World {
         this.map[room.x].splice(room.y, 1);
     }
 
+    // TODO: Mad sus, this getter is modifying state
+    // Should be done whenever we create the world (via editor)
     getRoom(x,y){
         if (this.map[x] && this.map[x][y]) {
             let room = this.map[x][y]

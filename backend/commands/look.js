@@ -3,9 +3,11 @@ function process(message_data, user, users, chat, io) {
     let room = user.getCurrentCharacter().room
     message_data.sender = "LOOK";
     message_data.body = room.description;
+    // the room has no items
     if (room.items.length == 0) {
         message_data.body = room.description + " There is nothing in the room.";
     }
+    // the room has items
     else {
         message_data.body += " The room contains ";
         let roomitems = {};
@@ -16,6 +18,8 @@ function process(message_data, user, users, chat, io) {
                 if (i.id in roomitems) { // check if we already have one of that item
                     roomitems[i.id].quantity += i.current_quantity; // add quantity
                 } 
+                // TODO: refactor to getter on the item (is passed a player with passive visibility)
+                // This means the visibility property should be removed from items
                 else { // add new item to output dict
                     let item = {
                         text: i.appearance,
@@ -28,15 +32,50 @@ function process(message_data, user, users, chat, io) {
                 }
             }
         }
-        // build message more better
+        // append name of item and quanitity to message body
         for (const [key, value] of Object.entries(roomitems)) {
             message_data.body += value.text + " (" + value.quantity +"), ";
         }
+        
+        // chop off the last comma and add a period
         message_data.body = message_data.body.slice(0, -2);
         message_data.body += ".";
+        
+        // if there are items but they're not visible
         if (Object.keys(roomitems).length === 0){ 
             message_data.body = room.description + " There is nothing in the room?"; 
         }
+
+        // give information about doors
+        message_data.body += " This room has exits to the ";
+
+        let doors = room.doors;
+        let doors_msg = [];
+        if (doors.n) {
+            doors_msg.push("north");
+        }
+        if (doors.s) {
+            doors_msg.push("south");
+        }
+        if (doors.e) {
+            doors_msg.push("east");
+        }
+        if (doors.w) {
+            doors_msg.push("west");
+        }
+
+        if (doors_msg.length > 1) {
+            doors_msg[doors_msg.length-1] = "and " + doors_msg[doors_msg.length-1];
+        }
+
+        if (doors_msg.length === 2) {
+            message_data.body += doors_msg.join(" ");
+
+        } else {
+            message_data.body += doors_msg.join(", ");
+        }
+
+        message_data.body += "."
     }
     
     chat.push(message_data);
