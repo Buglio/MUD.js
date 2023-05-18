@@ -40,9 +40,9 @@ west1.items.push(items_dict.potion3);
 west1.items.push(items_dict.potion4);
 
 world.addRoom(start_room);
-// world.addRoom(north1);
-// world.addRoom(north2);
-// world.addRoom(west1);
+world.addRoom(north1);
+world.addRoom(north2);
+world.addRoom(west1);
 
 module.exports = {
     world,

@@ -35,7 +35,9 @@ class User {
 
     // Movement
     moveNorth(world){
-        let room = world.getRoom(this.getRoom().x, this.getRoom().y + 1)  
+        let room = world.getRoom(this.getRoom().x, this.getRoom().y - 1)
+        // console.log(world.getRoom(this.getRoom().x, this.getRoom().y + 1));
+        // console.log(world.map);
         if (room) {
             this.setRoom(room);
             return true;
@@ -45,7 +47,7 @@ class User {
         }
     }
     moveSouth(world){
-        let room = world.getRoom(this.getRoom().x, this.getRoom().y - 1)  
+        let room = world.getRoom(this.getRoom().x, this.getRoom().y + 1)  
         if (room) {
             this.setRoom(room);
             return true;

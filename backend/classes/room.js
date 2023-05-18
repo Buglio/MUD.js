@@ -1,16 +1,11 @@
 class Room {
-    constructor(x, y, description) {
+    constructor(x, y, description, items, entities, doors) {
         this.x = x;
         this.y = y;
         this.description = description;
-        this.items = [];
-        this.entities = []; // monsters, whatever idk
-        this.doors = { // set in getRoom
-            n: false,
-            s: false,
-            e: false,
-            w: false
-        }
+        this.items = items;
+        this.entities = entities;
+        this.doors = doors;
     }
 
     getPos() {

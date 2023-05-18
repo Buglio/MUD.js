@@ -1,7 +1,31 @@
+const { Room } = require("./room");
+
 class World {
-    constructor() {
+    constructor(filename) {
+        const loaded_world = require(`../${filename}`);
+
         this.map = {};
+        // this.items = loaded_world.items;
+        // this.entities = loaded_world.entities;
+
+        // load the map
+        this.startingRoomCoords = null;
+        for (let [x, x_rooms] of Object.entries(loaded_world.map)) {
+            for (let [y, room] of Object.entries(x_rooms)) {
+                console.log(x, y);
+                if (this.startingRoomCoords === null) {
+                    this.startingRoomCoords = {x: x, y: y};
+                }
+                if (this.map[x] == undefined) {
+                    this.map[x] = {};
+                }
+                this.map[x][y] = new Room(room.x, room.y, room.description, room.items, room.entities, room.doors);
+            }
+        }
     }
+
+    // loadWorld(filename)
+
     addRoom(room) {
         if (!this.map[room.x]){
             this.map[room.x] = {};
@@ -20,32 +44,13 @@ class World {
     // Should be done whenever we create the world (via editor)
     getRoom(x,y){
         if (this.map[x] && this.map[x][y]) {
-            let room = this.map[x][y]
-            // check if there are doors
-            if (this.map[x][y+1]) { // door up
-                room.doors.n = true
-            }
-            if (this.map[x][y-1]) { // door down
-                room.doors.s = true
-            }
-            if(this.map[x-1]){
-                if (this.map[x-1][y]) { // door left
-                    room.doors.w = true
-                }
-            }
-            if(this.map[x+1]){
-                if (this.map[x+1][y]) { // door right
-                    room.doors.e = true
-                }
-            }
-
-            return room;
+            return this.map[x][y];
         }
         
         return undefined; // SUS
     }
     getStartRoom(){
-        return this.getRoom(0,0);
+        return this.getRoom(this.startingRoomCoords.x, this.startingRoomCoords.y);
     }
 }
 

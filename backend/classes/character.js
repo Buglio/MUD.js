@@ -48,7 +48,7 @@ class Character {
             this.inventory.push(item)
         }
         else{
-            for (x = 0; x < this.inventory.length; x++){
+            for (let x = 0; x < this.inventory.length; x++){
                 console.log(this.inventory[x].id, item.id);
                 if (this.inventory[x].id == item.id){
                     console.log('item already exists in inventory');
