@@ -2,6 +2,8 @@ const express = require("express");
 const socket = require("socket.io");
 const utils = require("./backend/util.js");
 
+require('dotenv').config();
+
 // Objects
 const _user_ = require("./backend/classes/user.js");
 const _character_ = require("./backend/classes/character.js");
