@@ -22,7 +22,7 @@ function process(message_data, user, users, chat, io) {
                 // This means the visibility property should be removed from items
                 else { // add new item to output dict
                     let item = {
-                        text: i.appearance,
+                        text: i.name,
                         quantity: i.current_quantity
                     };
                     if (i.visibility < 0.1){            // TODO: work on this maybe?

@@ -1,12 +1,30 @@
 const { Room } = require("./room");
+const item = require('../classes/item');
 
 class World {
     constructor(filename) {
         const loaded_world = require(`../${filename}`);
 
         this.map = {};
-        // this.items = loaded_world.items;
-        // this.entities = loaded_world.entities;
+        this.items = {};
+        
+        // load the items
+        for (let [itemId,itemObj] of Object.entries(loaded_world.items)){
+            let newItem = new item.Item({
+                "name": itemObj.name,
+                "id": itemId,
+                "appearance": itemObj.appearance,
+                "visibility": itemObj.visibility,
+                "description": itemObj.description,
+                "sprite": itemObj.sprite,
+                "volume": itemObj.volume,
+                "weight": itemObj.weight,
+                "max_quantity": itemObj.max_quantity,
+                "rarity": itemObj.rarity,
+                "is_shark": false
+            });
+            this.items[itemId] = newItem;
+        }
 
         // load the map
         this.startingRoomCoords = null;
@@ -19,7 +37,11 @@ class World {
                 if (this.map[x] == undefined) {
                     this.map[x] = {};
                 }
-                this.map[x][y] = new Room(room.x, room.y, room.description, room.items, room.entities, room.doors);
+                let roomItems = [];
+                for (let item of room.items){
+                    roomItems.push(this.items[item])
+                }
+                this.map[x][y] = new Room(room.x, room.y, room.description, roomItems, room.entities, room.doors);
             }
         }
     }
