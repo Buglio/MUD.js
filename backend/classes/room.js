@@ -15,6 +15,15 @@ class Room {
     getEntities() {
         return this.entities;
     }
+    removeItemFromRoom(id){
+        for (let item of this.items){
+            if (item.id == id){
+                this.items.splice(this.items.indexOf(item), 1);
+                return item
+            }
+        }
+        return null
+    }
 }
 
 module.exports = {
