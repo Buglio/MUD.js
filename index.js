@@ -1,6 +1,5 @@
-const express = require("express");
+const { app } = require("./depends.js");
 const socket = require("socket.io");
-const utils = require("./backend/util.js");
 
 // Objects
 const _user_ = require("./backend/classes/user.js");
@@ -17,38 +16,19 @@ const drop = require("./backend/commands/drop.js");
 // test world
 const world = require("./backend/testWorld.js").world;
 
-// App setup
-const PORT = process.env.PORT || 8088;
-const app = express();
-
-app.set('view engine', 'ejs');
-
-app.get('/', function(req, res) {
-    res.render("index");
-});
-app.get('/man', function(req, res) {
-    res.render("man.ejs");
-});
-app.get('/auth', function(req, res) {
-    res.render("auth.ejs");
-});
-app.get('/tos', function(req, res) {
-    res.render("tos.ejs");
-});
-app.use(express.static(__dirname + '/public'));
-
 // START SERVER
+const PORT = process.env.PORT || 8088;
 const server = app.listen(PORT, function () {
     console.log("----- MUD -----");
     console.log(`listening at http://localhost:${PORT}`);
 });
 
+// Socket Setup
+const io = socket(server);
+
 // Server Data
 var users = {};
 var chat = [];
-
-// Socket Setup
-const io = socket(server);
 
 io.on("connection", function (socket) {
     console.log("--> Creating new Session.");

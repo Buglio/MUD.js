@@ -9,6 +9,7 @@ function findUserFromSocket(users, socket) {
     console.log("Could not find player with socket: " + socket)
     return null
 }
+
 function generateRandomName() {
     var name = '';
     var names = ["Bob", "Joe", "Mary", "Jesse", "Spoon", "Fork", "Spork", "Noodle", "Fred", "Cyrus", "Barb", "Elle", "Justin", "Dustin", "Susie"];
@@ -17,7 +18,19 @@ function generateRandomName() {
     return name;
 }
 
+// Utilities and generators
+function makeid(n) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < n; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
 module.exports = {
     findUserFromSocket,
-    generateRandomName
+    generateRandomName,
+    makeid,
 }

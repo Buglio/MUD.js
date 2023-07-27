@@ -20,6 +20,7 @@ body {
   background-color: var(--background);
   font: 16px/26px 'Courier New', Courier, monospace; 
 }
+
 #logo{
   width: 94%;
   text-align: center;
@@ -70,8 +71,7 @@ body {
 .form-wrap form .input {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  color: inherit;
-  font-family: inherit;
+  color: var(--neutral);
   padding: .8em 0 10px .8em;
   border: 1px solid var(--secondary);
   outline: 0;
