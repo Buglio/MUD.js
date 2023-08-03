@@ -30,7 +30,6 @@ class World {
         this.startingRoomCoords = null;
         for (let [x, x_rooms] of Object.entries(loaded_world.map)) {
             for (let [y, room] of Object.entries(x_rooms)) {
-                console.log(x, y);
                 if (this.startingRoomCoords === null) {
                     this.startingRoomCoords = {x: x, y: y};
                 }
