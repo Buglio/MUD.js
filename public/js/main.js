@@ -1,5 +1,4 @@
 // =============== VARIABLE SETUP =============== //
-
 var GLOBAL = {
     socket: io(),
     chat_log: [], // local chat lot to browser
@@ -72,30 +71,20 @@ function change_username() { // SUS
 }
 
 // =============== INIT/SETUP FUNCTIONS =============== //
-// RUN WHEN BROWSER STARTS
-function on_connect() {
-    var cached_auth = localStorage.getItem(GLOBAL.MUDJS_AUTH_TOKEN);
-    var cached_auth = "hello!";
-    if (cached_auth != null) {
-        GLOBAL.socket.emit("on_check_auth", cached_auth, function (err, result) {
-            console.log("success? "+result);
-
-            if (result === false) {
-                window.location = location.href+"auth";
-            }
-        });
-    }
-    // let new_token = makeid(12); // make random 12 char string
-    // localStorage.setItem(MUDJS_AUTH_TOKEN, new_token)
-}
 
 // RUNS WHEN PLAYER LOGS IN
 function on_login(){
-    if (localStorage.getItem("MUD_playerid") == null){
-        let new_id = makeid(12); // make random 12 char string
-        localStorage.setItem("MUD_playerid", new_id)
-    }
-    GLOBAL.socket.emit("on_login", localStorage.getItem("MUD_playerid"));
+    $.ajax({ // api request using built in user data
+        type: 'GET',
+        url: '/auth/user',
+        success: function(user) { 
+            console.log(user);
+            GLOBAL.socket.emit("on_login", user.userId);
+        },
+        error: function(xhr, status, err) {
+            console.error('DATA: XHR Error.');
+        }
+    });    
 }
 
 $( document ).ready(function() { // When document loads, set up events and keys
