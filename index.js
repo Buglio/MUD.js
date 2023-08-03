@@ -1,10 +1,13 @@
 const { app } = require("./depends.js");
 const socket = require("socket.io");
 
+require('dotenv').config();
+
 // Objects
 const _user_ = require("./backend/classes/user.js");
 const _character_ = require("./backend/classes/character.js");
 const _chat_message_ = require("./backend/classes/chatMessage.js");
+const { World } = require("./backend/classes/world.js");
 
 // Commands
 const say = require("./backend/commands/say.js");
@@ -14,7 +17,8 @@ const grab = require("./backend/commands/grab");
 const drop = require("./backend/commands/drop.js");
 
 // test world
-const world = require("./backend/testWorld.js").world;
+// const world = require("./backend/testWorld.js").world;
+const world = new World("aGrxbWZ_map.json");
 
 // START SERVER
 const PORT = process.env.PORT || 8088;

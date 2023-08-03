@@ -58,6 +58,13 @@ function render_interface(current_char){
                 tooltip.appendChild(name_tooltip);
                 tooltip.appendChild(document.createElement("br"));
 
+                // appearance
+                let appearance_tooltip = document.createElement("span");
+                appearance_tooltip.innerText = inv_item.appearance;
+                appearance_tooltip.style.fontStyle = "italic";
+                tooltip.appendChild(appearance_tooltip);
+                tooltip.appendChild(document.createElement("br"));
+
                 // description
                 let desc_tooltip = document.createElement("span");
                 desc_tooltip.innerText = inv_item.description;
@@ -74,16 +81,17 @@ function render_interface(current_char){
             else { // if item has not been used
                 // name
                 let name_tooltip = document.createElement("span");
-                name_tooltip.innerText = inv_item.appearance;
+                name_tooltip.innerText = inv_item.name + " (Unidentified Item)";
                 name_tooltip.style.textDecoration = "underline";
                 tooltip.appendChild(name_tooltip);
                 tooltip.appendChild(document.createElement("br"));
 
-                // state
-                let used_tooltip = document.createElement("span");
-                used_tooltip.innerText = "Unidentified Item";
-                used_tooltip.style.fontStyle = "italic";
-                tooltip.appendChild(used_tooltip);
+                // appearance
+                let appearance_tooltip = document.createElement("span");
+                appearance_tooltip.innerText = inv_item.appearance;
+                appearance_tooltip.style.fontStyle = "italic";
+                tooltip.appendChild(appearance_tooltip);
+                tooltip.appendChild(document.createElement("br"));
             }
             inv_slot.appendChild(tooltip);
             

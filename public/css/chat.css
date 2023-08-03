@@ -12,7 +12,8 @@
     overflow-y: scroll;
     width: 50vw;
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
+    padding: 2px;
     top:0px;
 }
 #shell_char{
