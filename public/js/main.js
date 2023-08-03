@@ -5,7 +5,8 @@ var GLOBAL = {
     cmd_his: [], // history of all user-entered commands
     his_pos: 0, // the index of the cmd history
     character_creation_mode: false,
-    username: "mudjs", // for chat input
+    user: {},
+    displayname: "",
     localmap: {},
     MUDJS_AUTH_TOKEN: "MUDJS_AUTH_TOKEN"
 }
@@ -33,7 +34,7 @@ GLOBAL.socket.on("user_update", function (user) {
     
     
     
-    if (user.characters.length != 0){ GLOBAL.username = user.characters[user.current_character].name; }
+    if (user.characters.length != 0){ GLOBAL.displayname = user.characters[user.current_character].name; }
     
     //username = user.characters[user.current_character].name;
     if (user.characters.length == 0) { // creating a character if none exist
@@ -49,6 +50,7 @@ GLOBAL.socket.on("user_update", function (user) {
         // character created! start doing stats stuff
         GLOBAL.character_creation_mode = false;
         document.getElementById("input").placeholder = "";
+        GLOBAL.displayname = `${user.characters[user.current_character].name} (${GLOBAL.user.username})`;
         local_chat("Character " + user.characters[user.current_character].name + " was created.");
     }
 });
@@ -67,7 +69,7 @@ function create_character(){
 
 function change_username() { // SUS
     let username = prompt("Please enter your new username:", "Trogdor");
-    GLOBAL.socket.emit("change_username", { username: username, user_id: localStorage.getItem("MUD_playerid") });
+    GLOBAL.socket.emit("change_username", { username: username, user_id: GLOBAL.user.userId });
 }
 
 // =============== INIT/SETUP FUNCTIONS =============== //
@@ -80,6 +82,9 @@ function on_login(){
         success: function(user) { 
             console.log(user);
             GLOBAL.socket.emit("on_login", user.userId);
+            document.getElementById("username").innerHTML = `Account Name: <strong>${user.username}</strong>`;
+            GLOBAL.user = user;
+            GLOBAL.displayname = user.username
         },
         error: function(xhr, status, err) {
             console.error('DATA: XHR Error.');
@@ -97,9 +102,9 @@ $( document ).ready(function() { // When document loads, set up events and keys
         if (e.key === 'Enter' || e.keyCode === 13) {
             GLOBAL.his_pos = 0; // reset history position
             if (GLOBAL.character_creation_mode == true){
-                GLOBAL.username = input_val;
+                GLOBAL.displayname = input_val;
                 chat_update();
-                GLOBAL.socket.emit("create_character", [input_val,localStorage.getItem("MUD_playerid")]);
+                GLOBAL.socket.emit("create_character", [input_val,GLOBAL.user.userId]);
             }else{
                 send_message(input_val);
                 GLOBAL.cmd_his.push(input_val);

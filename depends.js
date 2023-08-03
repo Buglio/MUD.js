@@ -45,6 +45,14 @@ app.get('/auth/user', async function(req, res) {
   let obj = await db.get( "user." + req.user.userId );
   res.send(obj);
 })
+app.get('/auth/logout', (req, res) => {
+  req.logout((err) => {
+    if (err) {
+      console.warn(err);
+    }
+    res.redirect('/');
+  });
+});
 app.post('/auth/register', urlencodedParser, async function(req, res) {
   console.info("REQUESTED REGISTER")
   const { username, email, password, confirmPassword } = req.body;
