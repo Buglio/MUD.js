@@ -112,8 +112,27 @@ app.post('/auth/login', function(req, res, next) {
   next();
 }, passport.authenticate('local', {
   successRedirect: '/',
-  failureRedirect: '/'
-}));
+  failureRedirect: '/',
+  failureFlash: true }), function(req, res) {
+    if (req.body.remember) {
+      req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // Cookie expires after 30 days
+    } else {
+      req.session.cookie.expires = false; // Cookie expires at end of session
+    }
+  res.redirect('/');
+});
+
+// app.post("/login", passport.authenticate('local',
+//     { failureRedirect: '/login',
+//       failureFlash: true }), function(req, res) {
+//         if (req.body.remember) {
+//           req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // Cookie expires after 30 days
+//         } else {
+//           req.session.cookie.expires = false; // Cookie expires at end of session
+//         }
+//       res.redirect('/');
+// });
+
 // db setup
 const db = new QuickDB();
 
