@@ -33,11 +33,12 @@ const io = socket(server);
 // Server Data
 var users = {};
 var chat = [];
+var loggedInUsers = [];
 
 io.on("connection", function (socket) {
     console.log("--> Creating new Session.");
     let user = null; // Initialize user pointer to null
-
+    
     // ===== ACCOUNT AND CONNECTION MANAGEMENT ===== //
     socket.on("disconnect", function () {
         let today = new Date();
@@ -68,6 +69,8 @@ io.on("connection", function (socket) {
     });
 
     socket.on("on_login", function(user_id) {
+        
+
         // try to find an existing user with the given id
         user = users[user_id];
         // if no user with the given id was found, create a new one
@@ -80,34 +83,16 @@ io.on("connection", function (socket) {
                 auth_token = "hello"
             );
             users[user_id] = user;
-            /* When Character is created
-
-            // Create a starting character for the new user
-            user.addCharacter(new _character_.Character(
-                name = "the CHARACTER"
-            ));
-            user.setRoom(world.getRoom(0,0)); // set the new character's current room to origin
-            users[user_id]= user; // add user to users dict
-            user = users[user_id]; // update local user pointer to reference the dict entry
-
-            //add the user to their room
-            //user.room.addUser(user)
-            let today = new Date();
-            let newchat = new _chat_message_.ChatMessage( // generate user connected chat msg
-                color = "yellow",
-                body = "Player " + user.username + " connected.",
-                sender = "SERVER",
-                timestamp = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-            );
-            chat.push(newchat); // push it to server chat history
-            io.emit("chat_update", newchat); // send the msg to all users
-            */
         }
         else{ // adding this so that a reconnecting player with a new socket is not ignored.
+            user.socket.disconnect();
             user.socket = socket;
             users[user_id] = user;
         }
         
+        // add user to logged in users
+        loggedInUsers.push(user_id);
+
         socket.emit("user_update", user.emitUser());
     })
     socket.on("change_username", function(data) {

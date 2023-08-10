@@ -56,7 +56,8 @@ GLOBAL.socket.on("user_update", function (user) {
 });
 
 GLOBAL.socket.on('disconnect', function(){
-    location.reload();
+    // when disconnected, logout
+    window.location.href = "/auth/logout";
 });
 
 // =============== USER/CHARACTER FUNCTIONS =============== //
