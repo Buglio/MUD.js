@@ -155,7 +155,10 @@ passport.use(new LocalStrategy(
 
     // Retrieve user from database
     const users = await db.get("user");
-    const user = Object.values(users).find(user => user.username === username && user.password === password);
+    const user = Object.values(users).find(user => 
+      (user.username === username || user.email === username) 
+      && user.password === password
+    );
 
     if (user) {
       return done(null, user);
