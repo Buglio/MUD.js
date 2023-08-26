@@ -1,12 +1,12 @@
 // =============== VARIABLE SETUP =============== //
-
 var GLOBAL = {
     socket: io(),
     chat_log: [], // local chat lot to browser
     cmd_his: [], // history of all user-entered commands
     his_pos: 0, // the index of the cmd history
     character_creation_mode: false,
-    username: "mudjs", // for chat input
+    user: {},
+    displayname: "",
     localmap: {},
     MUDJS_AUTH_TOKEN: "MUDJS_AUTH_TOKEN"
 }
@@ -34,7 +34,7 @@ GLOBAL.socket.on("user_update", function (user) {
     
     
     
-    if (user.characters.length != 0){ GLOBAL.username = user.characters[user.current_character].name; }
+    if (user.characters.length != 0){ GLOBAL.displayname = user.characters[user.current_character].name; }
     
     //username = user.characters[user.current_character].name;
     if (user.characters.length == 0) { // creating a character if none exist
@@ -50,12 +50,14 @@ GLOBAL.socket.on("user_update", function (user) {
         // character created! start doing stats stuff
         GLOBAL.character_creation_mode = false;
         document.getElementById("input").placeholder = "";
+        GLOBAL.displayname = `${user.characters[user.current_character].name} (${GLOBAL.user.username})`;
         local_chat("Character " + user.characters[user.current_character].name + " was created.");
     }
 });
 
 GLOBAL.socket.on('disconnect', function(){
-    location.reload();
+    // when disconnected, logout
+    window.location.href = "/auth/logout";
 });
 
 // =============== USER/CHARACTER FUNCTIONS =============== //
@@ -68,34 +70,27 @@ function create_character(){
 
 function change_username() { // SUS
     let username = prompt("Please enter your new username:", "Trogdor");
-    GLOBAL.socket.emit("change_username", { username: username, user_id: localStorage.getItem("MUD_playerid") });
+    GLOBAL.socket.emit("change_username", { username: username, user_id: GLOBAL.user.userId });
 }
 
 // =============== INIT/SETUP FUNCTIONS =============== //
-// RUN WHEN BROWSER STARTS
-function on_connect() {
-    var cached_auth = localStorage.getItem(GLOBAL.MUDJS_AUTH_TOKEN);
-    var cached_auth = "hello!";
-    if (cached_auth != null) {
-        GLOBAL.socket.emit("on_check_auth", cached_auth, function (err, result) {
-            console.log("success? "+result);
-
-            if (result === false) {
-                window.location = location.href+"auth";
-            }
-        });
-    }
-    // let new_token = makeid(12); // make random 12 char string
-    // localStorage.setItem(MUDJS_AUTH_TOKEN, new_token)
-}
 
 // RUNS WHEN PLAYER LOGS IN
 function on_login(){
-    if (localStorage.getItem("MUD_playerid") == null){
-        let new_id = makeid(12); // make random 12 char string
-        localStorage.setItem("MUD_playerid", new_id)
-    }
-    GLOBAL.socket.emit("on_login", localStorage.getItem("MUD_playerid"));
+    $.ajax({ // api request using built in user data
+        type: 'GET',
+        url: '/auth/user',
+        success: function(user) { 
+            console.log(user);
+            GLOBAL.socket.emit("on_login", user.userId);
+            document.getElementById("username").innerHTML = `Account Name: <strong>${user.username}</strong>`;
+            GLOBAL.user = user;
+            GLOBAL.displayname = user.username
+        },
+        error: function(xhr, status, err) {
+            console.error('DATA: XHR Error.');
+        }
+    });    
 }
 
 $( document ).ready(function() { // When document loads, set up events and keys
@@ -108,9 +103,9 @@ $( document ).ready(function() { // When document loads, set up events and keys
         if (e.key === 'Enter' || e.keyCode === 13) {
             GLOBAL.his_pos = 0; // reset history position
             if (GLOBAL.character_creation_mode == true){
-                GLOBAL.username = input_val;
+                GLOBAL.displayname = input_val;
                 chat_update();
-                GLOBAL.socket.emit("create_character", [input_val,localStorage.getItem("MUD_playerid")]);
+                GLOBAL.socket.emit("create_character", [input_val,GLOBAL.user.userId]);
             }else{
                 send_message(input_val);
                 GLOBAL.cmd_his.push(input_val);

@@ -23,20 +23,36 @@ app.use(passport.session());
 
 // View routes
 app.get('/', function(req, res) {
-    res.render("index");
+  if (req.isAuthenticated()) {
+      res.render("index")
+  } else {
+    res.render("auth")
+  }
 });
 app.get('/man', function(req, res) {
-    res.render("man.ejs");
+  res.render("man.ejs");
 });
 app.get('/auth', function(req, res) {
-    res.render("auth.ejs");
+  res.render("auth.ejs");
 });
 app.get('/tos', function(req, res) {
-    res.render("tos.ejs");
+  res.render("tos.ejs");
 });
 app.use(express.static(__dirname + '/public'));
 
 // === API routes === //
+app.get('/auth/user', async function(req, res) {
+  let obj = await db.get( "user." + req.user.userId );
+  res.send(obj);
+})
+app.get('/auth/logout', (req, res) => {
+  req.logout((err) => {
+    if (err) {
+      console.warn(err);
+    }
+    res.redirect('/');
+  });
+});
 app.post('/auth/register', urlencodedParser, async function(req, res) {
   console.info("REQUESTED REGISTER")
   const { username, email, password, confirmPassword } = req.body;
@@ -48,10 +64,10 @@ app.post('/auth/register', urlencodedParser, async function(req, res) {
   if (!userId) {
     // Create default user if it doesn't exist
     const newUser = {
-      username: "default",
-      email: "default",
-      password: "password123",
-      id: 0
+      username: "testman",
+      email: "test@test.test",
+      password: "default",
+      userId: 1
     };
     await db.set("user.default", newUser);
   }
@@ -61,7 +77,6 @@ app.post('/auth/register', urlencodedParser, async function(req, res) {
   const users = await db.get("user");
   // Check if user exists in database
   const userExists = Object.values(users).find(u => u.username === username);
-  console.info("USER EXISTS: " + JSON.stringify(userExists))
   if (userExists) {
     return res.send('Username already taken');
   }
@@ -89,8 +104,34 @@ app.post('/auth/register', urlencodedParser, async function(req, res) {
   console.info("REGISTERING USER")
 
   // Redirect to homepage
+  // log user in HERE
   res.redirect('/');
 });
+app.post('/auth/login', function(req, res, next) {
+  console.info('REQUESTED LOGIN');
+  next();
+}, passport.authenticate('local', {
+  successRedirect: '/',
+  failureRedirect: '/',
+  failureFlash: true }), function(req, res) {
+    if (req.body.remember) {
+      req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // Cookie expires after 30 days
+    } else {
+      req.session.cookie.expires = false; // Cookie expires at end of session
+    }
+  res.redirect('/');
+});
+
+// app.post("/login", passport.authenticate('local',
+//     { failureRedirect: '/login',
+//       failureFlash: true }), function(req, res) {
+//         if (req.body.remember) {
+//           req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // Cookie expires after 30 days
+//         } else {
+//           req.session.cookie.expires = false; // Cookie expires at end of session
+//         }
+//       res.redirect('/');
+// });
 
 // db setup
 const db = new QuickDB();
@@ -104,16 +145,20 @@ passport.use(new LocalStrategy(
     if (!userId) {
       // Create default user if it doesn't exist
       const newUser = {
-        name: "default",
-        password: "password123",
-        id: 1
+        username: "testman",
+        email: "test@test.test",
+        password: "default",
+        userId: 1
       };
       await db.set("user.default", newUser);
     }
 
     // Retrieve user from database
     const users = await db.get("user");
-    const user = Object.values(users).find(user => user.username === username && user.password === password);
+    const user = Object.values(users).find(user => 
+      (user.username === username || user.email === username) 
+      && user.password === password
+    );
 
     if (user) {
       return done(null, user);
@@ -123,11 +168,11 @@ passport.use(new LocalStrategy(
   }
 ));
 passport.serializeUser(function(user, done) {
-  done(null, user.id);
+  done(null, user.userId);
 });
 passport.deserializeUser(async function(id, done) {
   const users = await db.get("user");
-  const user = Object.values(users).find(u => u.id === id);
+  const user = Object.values(users).find(u => u.userId === id);
   done(null, user);
 });
 

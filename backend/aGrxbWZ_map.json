@@ -1,0 +1,1687 @@
+{
+    "map": {
+        "2": {
+            "1": {
+                "x": 2,
+                "y": 1,
+                "description": "You are in a small, mossy room.",
+                "items": [
+                    "35",
+                    "38"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": false,
+                    "w": false
+                }
+            },
+            "2": {
+                "x": 2,
+                "y": 2,
+                "description": "You are in a vast, dry room.",
+                "items": [
+                    "92"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "3": {
+                "x": 2,
+                "y": 3,
+                "description": "You are in a small, dry room.Water drips from the dry ceiling.",
+                "items": [
+                    "34",
+                    "93",
+                    "91",
+                    "61"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "6": {
+                "x": 2,
+                "y": 6,
+                "description": "You are in a candle-lit room, the walls and floor are musty stone.Water drips from the unfinished ceiling.",
+                "items": [
+                    "93",
+                    "92"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "7": {
+                "x": 2,
+                "y": 7,
+                "description": "You are in a short well-lit hallway.",
+                "items": [
+                    "18",
+                    "91",
+                    "25",
+                    "92"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            }
+        },
+        "5": {
+            "1": {
+                "x": 5,
+                "y": 1,
+                "description": "You are in a lantern-lit room, the walls and floor are musty stone.",
+                "items": [
+                    "100"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": false
+                }
+            },
+            "2": {
+                "x": 5,
+                "y": 2,
+                "description": "You are in a short poorly-lit hallway.",
+                "items": [
+                    "24",
+                    "37"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "6": {
+                "x": 5,
+                "y": 6,
+                "description": "You are in a cramped, musty room.You hear the sound of footsteps in the distance.",
+                "items": [
+                    "91"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "7": {
+                "x": 5,
+                "y": 7,
+                "description": "You are in a vast, rough room.",
+                "items": [
+                    "92"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            }
+        },
+        "6": {
+            "1": {
+                "x": 6,
+                "y": 1,
+                "description": "You are in a modest, unfinished room.The sound of the room creaking echos in the distance.",
+                "items": [
+                    "94",
+                    "100",
+                    "100"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "2": {
+                "x": 6,
+                "y": 2,
+                "description": "You are in a poorly-lit room, the walls and floor are dry stone.",
+                "items": [
+                    "26"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "3": {
+                "x": 6,
+                "y": 3,
+                "description": "You are in a vast, rough room.Water drips from the dry ceiling.",
+                "items": [
+                    "38",
+                    "15"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": false
+                }
+            },
+            "6": {
+                "x": 6,
+                "y": 6,
+                "description": "You are in a dark room, the walls and floor are musty stone.You hear the sound of croaking in the distance.",
+                "items": [
+                    "97"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "7": {
+                "x": 6,
+                "y": 7,
+                "description": "You are in a long candle-lit hallway.",
+                "items": [
+                    "100",
+                    "34",
+                    "28",
+                    "9"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            }
+        },
+        "7": {
+            "1": {
+                "x": 7,
+                "y": 1,
+                "description": "You are in a large, green room.The sound of the wind echos in the distance.",
+                "items": [
+                    "35",
+                    "91",
+                    "92"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": false,
+                    "w": true
+                }
+            },
+            "2": {
+                "x": 7,
+                "y": 2,
+                "description": "You are in a candle-lit room, the walls and floor are green stone.You hear the sound of growling in the distance.",
+                "items": [
+                    "94"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "3": {
+                "x": 7,
+                "y": 3,
+                "description": "You are in a half-lit room, the walls and floor are mossy stone.You hear the sound of the room creaking in the distance.",
+                "items": [
+                    "28",
+                    "38",
+                    "19",
+                    "38",
+                    "79"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": true,
+                    "e": false,
+                    "w": true
+                }
+            },
+            "4": {
+                "x": 7,
+                "y": 4,
+                "description": "You are in a modest, green room.",
+                "items": [
+                    "18",
+                    "99",
+                    "28",
+                    "67"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": true,
+                    "e": false,
+                    "w": false
+                }
+            },
+            "5": {
+                "x": 7,
+                "y": 5,
+                "description": "You are in a modest, dusty room.The sound of the wind echos in the distance.",
+                "items": [
+                    "27"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": true,
+                    "e": false,
+                    "w": false
+                }
+            },
+            "6": {
+                "x": 7,
+                "y": 6,
+                "description": "You are in a long bright hallway.Water drips from the bloodstained ceiling.",
+                "items": [
+                    "2",
+                    "18"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": true,
+                    "e": false,
+                    "w": true
+                }
+            },
+            "7": {
+                "x": 7,
+                "y": 7,
+                "description": "You are in a short well-lit hallway.The sound of croaking echos in the distance.",
+                "items": [
+                    "28"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            }
+        },
+        "1": {
+            "2": {
+                "x": 1,
+                "y": 2,
+                "description": "You are in a small, unfinished room.",
+                "items": [
+                    "35",
+                    "64",
+                    "19",
+                    "94"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": false
+                }
+            },
+            "3": {
+                "x": 1,
+                "y": 3,
+                "description": "You are in a cramped, rough room.You hear the sound of the wind in the distance.",
+                "items": [
+                    "96",
+                    "19",
+                    "38"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": false
+                }
+            },
+            "6": {
+                "x": 1,
+                "y": 6,
+                "description": "You are in a candle-lit room, the walls and floor are musty stone.You hear the sound of the wind in the distance.",
+                "items": [
+                    "19",
+                    "27",
+                    "37",
+                    "37",
+                    "99"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": false
+                }
+            },
+            "7": {
+                "x": 1,
+                "y": 7,
+                "description": "You are in a cramped, musty room.",
+                "items": [
+                    "91",
+                    "35",
+                    "93"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": false
+                }
+            }
+        },
+        "3": {
+            "2": {
+                "x": 3,
+                "y": 2,
+                "description": "You are in a short candle-lit hallway.",
+                "items": [
+                    "37",
+                    "94",
+                    "100",
+                    "100"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "3": {
+                "x": 3,
+                "y": 3,
+                "description": "You are in a long candle-lit hallway.Water drips from the unfinished ceiling.",
+                "items": [
+                    "28",
+                    "28",
+                    "37",
+                    "28",
+                    "37"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "6": {
+                "x": 3,
+                "y": 6,
+                "description": "You are in a short well-lit hallway.Water drips from the bloodstained ceiling.",
+                "items": [
+                    "62"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "7": {
+                "x": 3,
+                "y": 7,
+                "description": "You are in a large, rough room.The sound of footsteps echos in the distance.",
+                "items": [
+                    "19"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            }
+        },
+        "4": {
+            "2": {
+                "x": 4,
+                "y": 2,
+                "description": "You are in a poorly-lit room, the walls and floor are dusty stone.You hear the sound of growling in the distance.",
+                "items": [
+                    "38",
+                    "19",
+                    "92"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "3": {
+                "x": 4,
+                "y": 3,
+                "description": "You are in a vast, bloodstained room.The sound of the room creaking echos in the distance.",
+                "items": [
+                    "99",
+                    "71"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": false,
+                    "w": true
+                }
+            },
+            "6": {
+                "x": 4,
+                "y": 6,
+                "description": "You are in a large, unfinished room.",
+                "items": [
+                    "25",
+                    "64",
+                    "91"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": true,
+                    "e": true,
+                    "w": true
+                }
+            },
+            "7": {
+                "x": 4,
+                "y": 7,
+                "description": "You are in a small, gray room.",
+                "items": [
+                    "93",
+                    "93",
+                    "19",
+                    "19",
+                    "37"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": true,
+                    "s": false,
+                    "e": true,
+                    "w": true
+                }
+            }
+        },
+        "8": {
+            "2": {
+                "x": 8,
+                "y": 2,
+                "description": "You are in a long half-lit hallway.The sound of croaking echos in the distance.",
+                "items": [
+                    "94"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": false,
+                    "e": false,
+                    "w": true
+                }
+            },
+            "7": {
+                "x": 8,
+                "y": 7,
+                "description": "You are in a large, dusty room.You hear the sound of footsteps in the distance.",
+                "items": [
+                    "19"
+                ],
+                "entities": [],
+                "doors": {
+                    "n": false,
+                    "s": false,
+                    "e": false,
+                    "w": true
+                }
+            }
+        }
+    },
+    "items": {
+        "1": {
+            "name": "Bastard Sword",
+            "id": "1",
+            "appearance": "A two-handed sword with a straight blade",
+            "visibility": "1.0",
+            "description": "A versatile sword that can be used with one or two hands for powerful slashes and thrusts",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "10.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "2": {
+            "name": "Dueling Sword",
+            "id": "2",
+            "appearance": "A slender sword with a tapered blade",
+            "visibility": "1.0",
+            "description": "A lightweight sword designed for quick, precise thrusts and parries",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "4.0",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "3": {
+            "name": "Falchion",
+            "id": "3",
+            "appearance": "A curved sword with a single cutting edge",
+            "visibility": "1.0",
+            "description": "A sword with a broad, curved blade designed for powerful slashes and hacking attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.015",
+            "weight": "7.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "4": {
+            "name": "War Hammer",
+            "id": "4",
+            "appearance": "A heavy hammer with a spiked head",
+            "visibility": "1.0",
+            "description": "A blunt weapon with a spiked head for crushing armor and bones",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "7.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "5": {
+            "name": "Battle Axe",
+            "id": "5",
+            "appearance": "A double-bladed battle axe",
+            "visibility": "1.0",
+            "description": "A large axe with two sharp blades, great for hacking and chopping",
+            "sprite": "unfinished.png",
+            "volume": "0.025",
+            "weight": "8.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "6": {
+            "name": "Flail",
+            "id": "6",
+            "appearance": "A spiked ball attached to a chain",
+            "visibility": "1.0",
+            "description": "A weapon with a spiked ball on a chain designed for crushing skulls and breaking bones",
+            "sprite": "unfinished.png",
+            "volume": "0.025",
+            "weight": "8.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "7": {
+            "name": "Longsword",
+            "id": "7",
+            "appearance": "A long, sharp sword",
+            "visibility": "1.0",
+            "description": "A sword with a long, straight blade",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "6.8",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "8": {
+            "name": "Mace",
+            "id": "8",
+            "appearance": "A heavy spiked mace",
+            "visibility": "1.0",
+            "description": "A blunt weapon with spiked heads for crushing armor and bones",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "7.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "9": {
+            "name": "Spear",
+            "id": "9",
+            "appearance": "A long, pointed spear",
+            "visibility": "1.0",
+            "description": "A polearm with a sharp tip for thrusting and jabbing at enemies from a distance",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "7.0",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "10": {
+            "name": "Katana",
+            "id": "10",
+            "appearance": "A curved Japanese sword",
+            "visibility": "1.0",
+            "description": "A sword with a sharp, curved blade designed for swift and deadly strikes",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "5.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "11": {
+            "name": "Morning Star",
+            "id": "11",
+            "appearance": "A spiked ball attached to a stick",
+            "visibility": "1.0",
+            "description": "A medieval weapon with a spiked ball on a chain, great for crushing armor and skulls",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "8.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "12": {
+            "name": "Rapier",
+            "id": "12",
+            "appearance": "A slender sword with a pointed tip",
+            "visibility": "1.0",
+            "description": "A lightweight sword designed for thrusting attacks, used for quick, precise strikes",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "4.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "13": {
+            "name": "Scimitar",
+            "id": "13",
+            "appearance": "A curved sword with a sharp blade",
+            "visibility": "1.0",
+            "description": "A sword with a curved blade designed for powerful slashes and sweeping attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.015",
+            "weight": "7.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "14": {
+            "name": "War Scythe",
+            "id": "14",
+            "appearance": "A long-handled scythe with a curved blade",
+            "visibility": "1.0",
+            "description": "A polearm with a curved blade designed for slicing and hacking attacks, great for taking down multiple enemies",
+            "sprite": "unfinished.png",
+            "volume": "0.04",
+            "weight": "9.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "15": {
+            "name": "Halberd",
+            "id": "15",
+            "appearance": "A long-handled weapon with an axe head and a spear point",
+            "visibility": "1.0",
+            "description": "A polearm with an axe head and a spear point, great for chopping and thrusting attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "8.5",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "16": {
+            "name": "Claymore",
+            "id": "16",
+            "appearance": "A large two-handed sword with a straight blade",
+            "visibility": "1.0",
+            "description": "A long and heavy sword with a straight blade, used for powerful sweeping attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.025",
+            "weight": "10.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "17": {
+            "name": "Glaive",
+            "id": "17",
+            "appearance": "A long-handled weapon with a curved blade",
+            "visibility": "1.0",
+            "description": "A polearm with a curved blade designed for slicing and chopping attacks, great for taking down multiple enemies",
+            "sprite": "unfinished.png",
+            "volume": "0.035",
+            "weight": "8.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "18": {
+            "name": "Nunchaku",
+            "id": "18",
+            "appearance": "Two sticks connected by a chain",
+            "visibility": "1.0",
+            "description": "A weapon with two sticks connected by a chain, great for quick and agile attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.015",
+            "weight": "3.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "19": {
+            "name": "Sickle",
+            "id": "19",
+            "appearance": "A short-handled curved blade",
+            "visibility": "1.0",
+            "description": "A tool-turned-weapon with a sharp, curved blade designed for slashing attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "2.5",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "20": {
+            "name": "Whip",
+            "id": "20",
+            "appearance": "A long, flexible chain with a handle",
+            "visibility": "1.0",
+            "description": "A weapon with a long, flexible chain and a handle, great for keeping enemies at a distance and for quick strikes",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "4.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "21": {
+            "name": "Shortbow",
+            "id": "21",
+            "appearance": "A small, lightweight bow",
+            "visibility": "1.0",
+            "description": "A lightweight bow designed for quick and precise shots, great for hunting and skirmishes",
+            "sprite": "unfinished.png",
+            "volume": "0.025",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "22": {
+            "name": "Longbow",
+            "id": "22",
+            "appearance": "A tall bow taller than a person",
+            "visibility": "1.0",
+            "description": "A longbow with a tall, narrow frame, designed for powerful, accurate shots from a distance",
+            "sprite": "unfinished.png",
+            "volume": "0.035",
+            "weight": "2.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "23": {
+            "name": "Crossbow",
+            "id": "23",
+            "appearance": "A bow mounted on a stock, with a trigger mechanism for releasing the bowstring",
+            "visibility": "1.0",
+            "description": "A bow mounted on a stock, with a trigger mechanism for releasing the bowstring, great for powerful shots at a slower rate",
+            "sprite": "unfinished.png",
+            "volume": "0.04",
+            "weight": "5.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "24": {
+            "name": "Sling",
+            "id": "24",
+            "appearance": "A weapon that launches stones or other projectiles by means of a flexible pouch or string",
+            "visibility": "1.0",
+            "description": "A weapon that launches stones or other projectiles by means of a flexible pouch or string, great for quick and stealthy attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "0.5",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "25": {
+            "name": "Throwing Axe",
+            "id": "25",
+            "appearance": "A small axe designed for throwing",
+            "visibility": "1.0",
+            "description": "A small axe designed for throwing, great for quick and deadly ranged attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.005",
+            "weight": "0.75",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "26": {
+            "name": "Javelin",
+            "id": "26",
+            "appearance": "A lightweight spear designed for throwing",
+            "visibility": "1.0",
+            "description": "A lightweight spear designed for throwing, great for taking down enemies at a distance",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "27": {
+            "name": "Throwing Knife",
+            "id": "27",
+            "appearance": "A small knife designed for throwing",
+            "visibility": "1.0",
+            "description": "A small knife designed for throwing, great for quick and stealthy ranged attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.005",
+            "weight": "0.25",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "28": {
+            "name": "Blowgun",
+            "id": "28",
+            "appearance": "A small tube used to fire lightweight darts or other projectiles",
+            "visibility": "1.0",
+            "description": "A small tube used to fire lightweight darts or other projectiles, great for silent, long-range attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.005",
+            "weight": "0.1",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "29": {
+            "name": "Composite Bow",
+            "id": "29",
+            "appearance": "A bow made from multiple materials",
+            "visibility": "1.0",
+            "description": "A bow made from multiple materials, designed for powerful, accurate shots from a distance",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "2.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "30": {
+            "name": "Pistol",
+            "id": "30",
+            "appearance": "A handheld firearm with a short barrel",
+            "visibility": "1.0",
+            "description": "A handheld firearm with a short barrel, designed for quick and deadly ranged attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.015",
+            "weight": "1.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "31": {
+            "name": "Composite Crossbow",
+            "id": "31",
+            "appearance": "A crossbow made from multiple materials",
+            "visibility": "1.0",
+            "description": "A crossbow made from multiple materials, designed for powerful shots at a slower rate",
+            "sprite": "unfinished.png",
+            "volume": "0.045",
+            "weight": "5.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "32": {
+            "name": "Blunderbuss",
+            "id": "32",
+            "appearance": "A short-barreled firearm with a wide opening at the muzzle",
+            "visibility": "1.0",
+            "description": "A short-barreled firearm with a wide opening at the muzzle, designed for close-range attacks against multiple targets",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "4.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "33": {
+            "name": "Recurve Bow",
+            "id": "33",
+            "appearance": "A bow with limbs that curve away from the archer when unstrung",
+            "visibility": "1.0",
+            "description": "A bow with limbs that curve away from the archer when unstrung, designed for powerful, accurate shots from a distance",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "2.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "34": {
+            "name": "Slingshot",
+            "id": "34",
+            "appearance": "A Y-shaped frame with rubber straps or bands used to launch small projectiles",
+            "visibility": "1.0",
+            "description": "A Y-shaped frame with rubber straps or bands used to launch small projectiles, great for quick and stealthy attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.005",
+            "weight": "0.25",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "35": {
+            "name": "Boomerang",
+            "id": "35",
+            "appearance": "A flat, curved throwing weapon that returns to the thrower",
+            "visibility": "1.0",
+            "description": "A flat, curved throwing weapon that returns to the thrower, great for quick and deadly ranged attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "0.5",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "36": {
+            "name": "Musket",
+            "id": "36",
+            "appearance": "A long-barreled firearm with a flintlock ignition",
+            "visibility": "1.0",
+            "description": "A long-barreled firearm with a flintlock ignition, designed for accurate shots at a distance",
+            "sprite": "unfinished.png",
+            "volume": "0.025",
+            "weight": "3.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "37": {
+            "name": "Tomahawk",
+            "id": "37",
+            "appearance": "A small axe designed for throwing or melee combat",
+            "visibility": "1.0",
+            "description": "A small axe designed for throwing or melee combat, great for quick and deadly ranged attacks or close-quarters combat",
+            "sprite": "unfinished.png",
+            "volume": "0.005",
+            "weight": "0.75",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "38": {
+            "name": "Dart",
+            "id": "38",
+            "appearance": "A small, pointed missile used as a weapon",
+            "visibility": "1.0",
+            "description": "A small, pointed missile used as a weapon, great for quick and stealthy attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.005",
+            "weight": "0.1",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "39": {
+            "name": "Spear",
+            "id": "39",
+            "appearance": "A long, pointed weapon used for thrusting or throwing",
+            "visibility": "1.0",
+            "description": "A long, pointed weapon used for thrusting or throwing, great for taking down enemies at a distance or in melee combat",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "40": {
+            "name": "Assault Rifle",
+            "id": "40",
+            "appearance": "A selective-fire firearm with a detachable magazine",
+            "visibility": "1.0",
+            "description": "A selective-fire firearm with a detachable magazine, designed for quick and deadly ranged attacks",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "3.5",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "41": {
+            "name": "Staff of Fire",
+            "id": "41",
+            "appearance": "A long wooden staff with a ruby embedded at the top",
+            "visibility": "1.0",
+            "description": "This staff is imbued with the power of fire, allowing the wielder to conjure flames and ignite enemies",
+            "sprite": "unfinished.png",
+            "volume": "0.05",
+            "weight": "2.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "42": {
+            "name": "Sword of Ice",
+            "id": "42",
+            "appearance": "A longsword with a blade made of ice",
+            "visibility": "1.0",
+            "description": "This sword is imbued with the power of ice, allowing the wielder to freeze enemies and create icy terrain",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "43": {
+            "name": "Wand of Lightning",
+            "id": "43",
+            "appearance": "A slender wand with a blue crystal at the tip",
+            "visibility": "1.0",
+            "description": "This wand is imbued with the power of lightning, allowing the wielder to electrocute enemies and power electrical devices",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "0.5",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "44": {
+            "name": "Bow of the Elements",
+            "id": "44",
+            "appearance": "A bow with a string made of woven air and arrows that change elemental properties",
+            "visibility": "1.0",
+            "description": "This bow is imbued with the power of the elements, allowing the wielder to shoot arrows imbued with fire, ice, lightning, and more",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "2.0",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "45": {
+            "name": "Dagger of Shadows",
+            "id": "45",
+            "appearance": "A black dagger that seems to absorb light",
+            "visibility": "1.0",
+            "description": "This dagger is imbued with the power of shadows, allowing the wielder to move unseen and strike with deadly accuracy",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "0.25",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "46": {
+            "name": "Flail of Radiance",
+            "id": "46",
+            "appearance": "A flail with a chain made of pure light and a mace made of shining metal",
+            "visibility": "1.0",
+            "description": "This flail is imbued with the power of radiance, allowing the wielder to strike enemies with blinding light and heal allies",
+            "sprite": "unfinished.png",
+            "volume": "0.05",
+            "weight": "3.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "47": {
+            "name": "Scepter of the Mind",
+            "id": "47",
+            "appearance": "A golden scepter with a purple gem at the top",
+            "visibility": "1.0",
+            "description": "This scepter is imbued with the power of the mind, allowing the wielder to control the thoughts and actions of enemies",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "1.0",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "48": {
+            "name": "Whip of Necromancy",
+            "id": "48",
+            "appearance": "A black whip that seems to drain the life force from enemies",
+            "visibility": "1.0",
+            "description": "This whip is imbued with the power of necromancy, allowing the wielder to summon and control undead creatures",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "49": {
+            "name": "Hammer of Thunder",
+            "id": "49",
+            "appearance": "A massive hammer with a head made of crackling lightning",
+            "visibility": "1.0",
+            "description": "This hammer is imbued with the power of thunder, allowing the wielder to create sonic booms and devastating shockwaves",
+            "sprite": "unfinished.png",
+            "volume": "0.1",
+            "weight": "5.0",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "50": {
+            "name": "Shield of Force",
+            "id": "50",
+            "appearance": "A round shield made of shimmering blue energy",
+            "visibility": "1.0",
+            "description": "This shield is imbued with the power of force, allowing the wielder to block attacks with an impenetrable barrier and push enemies away with a powerful blast",
+            "sprite": "unfinished.png",
+            "volume": "0.05",
+            "weight": "3.0",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "51": {
+            "name": "Spear of Light",
+            "id": "51",
+            "appearance": "A spear with a shaft made of pure light and a pointed tip that glows with divine power",
+            "visibility": "1.0",
+            "description": "This spear is imbued with the power of light, allowing the wielder to smite enemies and heal allies with holy energy",
+            "sprite": "unfinished.png",
+            "volume": "0.05",
+            "weight": "2.5",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "52": {
+            "name": "Mace of Darkness",
+            "id": "52",
+            "appearance": "A mace with spikes made of shadow that seem to absorb light",
+            "visibility": "1.0",
+            "description": "This mace is imbued with the power of darkness, allowing the wielder to drain the life force of enemies and create areas of darkness that block sight",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "53": {
+            "name": "Rapier of Wind",
+            "id": "53",
+            "appearance": "A thin rapier with a blade made of air that shimmers in the breeze",
+            "visibility": "1.0",
+            "description": "This rapier is imbued with the power of wind, allowing the wielder to move with incredible speed and create powerful gusts that knock back enemies",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "0.5",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "54": {
+            "name": "Rod of Earth",
+            "id": "54",
+            "appearance": "A sturdy rod made of stone with intricate runes carved into its surface",
+            "visibility": "1.0",
+            "description": "This rod is imbued with the power of earth, allowing the wielder to create earthquakes and summon golems to do their bidding",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "1.0",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "55": {
+            "name": "Scythe of Death",
+            "id": "55",
+            "appearance": "A curved blade with a black handle that seems to be made of bones",
+            "visibility": "1.0",
+            "description": "This scythe is imbued with the power of death, allowing the wielder to reap the souls of enemies and summon spirits to fight alongside them",
+            "sprite": "unfinished.png",
+            "volume": "0.05",
+            "weight": "2.0",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "56": {
+            "name": "Glaive of Chaos",
+            "id": "56",
+            "appearance": "A two-handed polearm with a blade that seems to shift and change unpredictably",
+            "visibility": "1.0",
+            "description": "This glaive is imbued with the power of chaos, allowing the wielder to cause unpredictable and devastating effects on enemies and the surrounding environment",
+            "sprite": "unfinished.png",
+            "volume": "0.1",
+            "weight": "4.0",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "57": {
+            "name": "Dagger of the Void",
+            "id": "57",
+            "appearance": "A silver dagger with a blade that seems to shimmer and fade in and out of existence",
+            "visibility": "1.0",
+            "description": "This dagger is imbued with the power of the void, allowing the wielder to create portals to other dimensions and manipulate the fabric of reality",
+            "sprite": "unfinished.png",
+            "volume": "0.01",
+            "weight": "0.25",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "58": {
+            "name": "Bow of the Hunt",
+            "id": "58",
+            "appearance": "A wooden bow with intricate carvings of animals and nature",
+            "visibility": "1.0",
+            "description": "This bow is imbued with the power of the hunt, allowing the wielder to track and sense enemies with supernatural senses and shoot arrows that always hit their mark",
+            "sprite": "unfinished.png",
+            "volume": "0.03",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "59": {
+            "name": "Sword of the Elements",
+            "id": "59",
+            "appearance": "A longsword with a blade that seems to be made of a swirling mixture of fire, ice, and lightning",
+            "visibility": "1.0",
+            "description": "This sword is imbued with the power of the elements, allowing the wielder to unleash devastating elemental attacks on enemies and create powerful defensive barriers",
+            "sprite": "unfinished.png",
+            "volume": "0.02",
+            "weight": "1.0",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "60": {
+            "name": "Trident of the Sea",
+            "id": "60",
+            "appearance": "A trident with a shimmering blue shaft and a pointed tip that glows with the power of the ocean",
+            "visibility": "1.0",
+            "description": "This trident is imbued with the power of the sea, allowing the wielder to control water and summon powerful sea creatures to do their bidding",
+            "sprite": "unfinished.png",
+            "volume": "0.05",
+            "weight": "2.5",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "61": {
+            "name": "Health Potion",
+            "id": "61",
+            "appearance": "A small vial of red liquid",
+            "visibility": "1",
+            "description": "Restores 50 health when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "2"
+        },
+        "62": {
+            "name": "Mana Potion",
+            "id": "62",
+            "appearance": "A small vial of blue liquid",
+            "visibility": "1",
+            "description": "Restores 50 mana when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "2"
+        },
+        "63": {
+            "name": "Stamina Potion",
+            "id": "63",
+            "appearance": "A small vial of yellow liquid",
+            "visibility": "1",
+            "description": "Restores 50 stamina when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "2"
+        },
+        "64": {
+            "name": "Antidote",
+            "id": "64",
+            "appearance": "A small vial of green liquid",
+            "visibility": "1",
+            "description": "Cures poison when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "2"
+        },
+        "65": {
+            "name": "Elixir of Strength",
+            "id": "65",
+            "appearance": "A small vial of purple liquid",
+            "visibility": "1",
+            "description": "Grants a temporary boost to strength when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "3"
+        },
+        "66": {
+            "name": "Elixir of Dexterity",
+            "id": "66",
+            "appearance": "A small vial of orange liquid",
+            "visibility": "1",
+            "description": "Grants a temporary boost to dexterity when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "3"
+        },
+        "67": {
+            "name": "Elixir of Intelligence",
+            "id": "67",
+            "appearance": "A small vial of dark blue liquid",
+            "visibility": "1",
+            "description": "Grants a temporary boost to intelligence when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "3"
+        },
+        "68": {
+            "name": "Elixir of Vitality",
+            "id": "68",
+            "appearance": "A small vial of pink liquid",
+            "visibility": "1",
+            "description": "Grants a temporary boost to vitality when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "3"
+        },
+        "69": {
+            "name": "Ghost Elixir",
+            "id": "69",
+            "appearance": "A small vial of transparent liquid",
+            "visibility": "1",
+            "description": "Grants temporary intangibility when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "4"
+        },
+        "70": {
+            "name": "Elixir of Invisibility",
+            "id": "70",
+            "appearance": "A small vial of clear liquid",
+            "visibility": "1",
+            "description": "Grants temporary invisibility when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.25",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "4"
+        },
+        "71": {
+            "name": "Tales of the Duskenwood",
+            "id": "71",
+            "appearance": "A leather-bound tome with intricate silver embossing",
+            "visibility": "1",
+            "description": "An anthology of eerie stories about the haunted Duskenwood",
+            "sprite": "unfinished.png",
+            "volume": "0.5",
+            "weight": "0.7",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "72": {
+            "name": "The Crystal Mage",
+            "id": "72",
+            "appearance": "A dusty old book with a cracked spine",
+            "visibility": "1",
+            "description": "A guide to the art of crystal magic, complete with diagrams and instructions",
+            "sprite": "unfinished.png",
+            "volume": "0.3",
+            "weight": "0.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "73": {
+            "name": "The Book of Shadows",
+            "id": "73",
+            "appearance": "A thick, black-bound book with no discernible title",
+            "visibility": "1",
+            "description": "A compendium of spells and incantations used by dark wizards and witches",
+            "sprite": "unfinished.png",
+            "volume": "0.6",
+            "weight": "0.9",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "74": {
+            "name": "The Silver Prince",
+            "id": "74",
+            "appearance": "A beautifully bound tome with silver filigree",
+            "visibility": "1",
+            "description": "A romantic tale of a prince who falls in love with a mysterious woman in silver",
+            "sprite": "unfinished.png",
+            "volume": "0.4",
+            "weight": "0.6",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "75": {
+            "name": "The Prophecies of the Oracle",
+            "id": "75",
+            "appearance": "A heavy, leather-bound book with gold lettering",
+            "visibility": "1",
+            "description": "A collection of prophecies and predictions made by a powerful oracle",
+            "sprite": "unfinished.png",
+            "volume": "0.7",
+            "weight": "1.2",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "76": {
+            "name": "The Dragon's Hoard",
+            "id": "76",
+            "appearance": "A large, illustrated book with a red cover",
+            "visibility": "1",
+            "description": "A guide to the hoards of dragons, their treasures, and how to obtain them",
+            "sprite": "unfinished.png",
+            "volume": "0.8",
+            "weight": "1.5",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "77": {
+            "name": "The Wizard's Grimoire",
+            "id": "77",
+            "appearance": "A thick, heavy book bound in green leather",
+            "visibility": "1",
+            "description": "A comprehensive guide to the art of wizardry and magic, complete with spells and incantations",
+            "sprite": "unfinished.png",
+            "volume": "0.6",
+            "weight": "1.0",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "78": {
+            "name": "The Lost Kingdoms",
+            "id": "78",
+            "appearance": "A weathered book with a faded map on the cover",
+            "visibility": "1",
+            "description": "A history of the lost kingdoms of the ancient world, with tales of great battles and magical artifacts",
+            "sprite": "unfinished.png",
+            "volume": "0.5",
+            "weight": "0.8",
+            "max_quantity": "1",
+            "rarity": "3"
+        },
+        "79": {
+            "name": "The Tome of Shadows",
+            "id": "79",
+            "appearance": "A black leather-bound book with silver runes",
+            "visibility": "1",
+            "description": "A forbidden book of dark magic, rumored to contain a powerful curse",
+            "sprite": "unfinished.png",
+            "volume": "0.4",
+            "weight": "0.7",
+            "max_quantity": "1",
+            "rarity": "5"
+        },
+        "80": {
+            "name": "The Star Weaver's Almanac",
+            "id": "80",
+            "appearance": "A beautifully illustrated book with a starry cover",
+            "visibility": "1",
+            "description": "A guide to the stars and the art of star weaving, complete with spells and rituals",
+            "sprite": "unfinished.png",
+            "volume": "0.6",
+            "weight": "1.1",
+            "max_quantity": "1",
+            "rarity": "4"
+        },
+        "91": {
+            "name": "Bread",
+            "id": "91",
+            "appearance": "A loaf of bread",
+            "visibility": "1",
+            "description": "A basic food item that restores a small amount of health when consumed",
+            "sprite": "unfinished.png",
+            "volume": "1",
+            "weight": "0.5",
+            "max_quantity": "10",
+            "rarity": "1"
+        },
+        "92": {
+            "name": "Leather Armor",
+            "id": "92",
+            "appearance": "A suit of leather armor",
+            "visibility": "1",
+            "description": "Basic armor made from leather that provides some protection from physical attacks",
+            "sprite": "unfinished.png",
+            "volume": "20",
+            "weight": "10",
+            "max_quantity": "1",
+            "rarity": "1"
+        },
+        "93": {
+            "name": "Rope",
+            "id": "93",
+            "appearance": "A coil of rope",
+            "visibility": "1",
+            "description": "A length of rope that can be used for a variety of purposes, such as climbing or tying things together",
+            "sprite": "unfinished.png",
+            "volume": "1",
+            "weight": "1",
+            "max_quantity": "5",
+            "rarity": "1"
+        },
+        "94": {
+            "name": "Torch",
+            "id": "94",
+            "appearance": "A wooden stick with a flaming end",
+            "visibility": "1",
+            "description": "Provides a source of light and heat when lit",
+            "sprite": "unfinished.png",
+            "volume": "1",
+            "weight": "0.5",
+            "max_quantity": "5",
+            "rarity": "1"
+        },
+        "95": {
+            "name": "Lockpick Set",
+            "id": "95",
+            "appearance": "A set of lockpicks",
+            "visibility": "1",
+            "description": "A collection of tools used to pick locks",
+            "sprite": "unfinished.png",
+            "volume": "0.1",
+            "weight": "0.05",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "96": {
+            "name": "Fishing Rod",
+            "id": "96",
+            "appearance": "A fishing rod with a reel and line",
+            "visibility": "1",
+            "description": "Used for catching fish",
+            "sprite": "unfinished.png",
+            "volume": "5",
+            "weight": "1",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "97": {
+            "name": "Backpack",
+            "id": "97",
+            "appearance": "A sturdy backpack",
+            "visibility": "1",
+            "description": "A bag used to carry items",
+            "sprite": "unfinished.png",
+            "volume": "10",
+            "weight": "2",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "98": {
+            "name": "Map",
+            "id": "98",
+            "appearance": "A map of the local area",
+            "visibility": "1",
+            "description": "Shows the geography and landmarks of the surrounding area",
+            "sprite": "unfinished.png",
+            "volume": "0.5",
+            "weight": "0.1",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "99": {
+            "name": "Bedroll",
+            "id": "99",
+            "appearance": "A roll of fabric used for sleeping",
+            "visibility": "1",
+            "description": "A portable sleeping surface",
+            "sprite": "unfinished.png",
+            "volume": "5",
+            "weight": "2",
+            "max_quantity": "1",
+            "rarity": "2"
+        },
+        "100": {
+            "name": "Water Flask",
+            "id": "100",
+            "appearance": "A metal flask filled with water",
+            "visibility": "1",
+            "description": "Provides hydration when consumed",
+            "sprite": "unfinished.png",
+            "volume": "0.5",
+            "weight": "0.2",
+            "max_quantity": "5",
+            "rarity": "1"
+        }
+    },
+    "entities": {},
+    "meta": {
+        "map_generator": "Cellular Automata Generator (id-1) - v1",
+        "item_generator": "Basic Random Item Gen - v1",
+        "entity_generator": "Entity Gen 1 - v0",
+        "timestring": "17/05/2023 22:01:04",
+        "id": "tJlnhBq"
+    }
+}
