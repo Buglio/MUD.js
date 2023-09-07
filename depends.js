@@ -1,3 +1,4 @@
+var flash = require('express-flash')
 const express =       require("express");
 const passport =      require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -9,7 +10,7 @@ const { makeid } =    require('./backend/util.js');
 // App setup
 const app = express();
 app.set('view engine', 'ejs');
-
+app.use(flash());
 // Middlewares
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(urlencodedParser);
