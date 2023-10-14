@@ -6,6 +6,7 @@ const session =       require('express-session');
 const bodyParser =    require('body-parser');
 const { QuickDB } =   require('quick.db');
 const { makeid } =    require('./backend/util.js');
+require('dotenv').config();
 
 // App setup
 const app = express();
@@ -29,6 +30,9 @@ app.get('/', function(req, res) {
   } else {
     res.render("auth")
   }
+});
+app.get('/error', function(req, res) {
+  res.render("error.ejs");
 });
 app.get('/man', function(req, res) {
   res.render("man.ejs");
@@ -56,57 +60,66 @@ app.get('/auth/logout', (req, res) => {
 });
 app.post('/auth/register', urlencodedParser, async function(req, res) {
   console.info("REQUESTED REGISTER")
-  const { username, email, password, confirmPassword } = req.body;
+  if (process.env.ALLOW_REGISTER == "true"){
+    const { username, email, password, confirmPassword } = req.body;
 
-  // Create default user if it doesn't exist
-  //? is this needed
-  //! apparently!..?
-  const userId = await db.has("user.default");
-  if (!userId) {
     // Create default user if it doesn't exist
+    //? is this needed
+    //! apparently!..?
+    const userId = await db.has("user.default");
+    if (!userId) {
+      // Create default user if it doesn't exist
+      const newUser = {
+        username: "testman",
+        email: "test@test.test",
+        password: "default",
+        userId: 1
+      };
+      await db.set("user.default", newUser);
+    }
+
+    // Check if username or email already exists
+    // Retrieve users from database
+    const users = await db.get("user");
+    // Check if user exists in database
+    const userExists = Object.values(users).find(u => u.username === username);
+    if (userExists) {
+      return res.send('Username already taken');
+    }
+    // check if email exists in database
+    const emailExists = Object.values(users).find(u => u.email === email);
+    if (emailExists) {
+      return res.send('Email already taken');
+    }
+
+    // Check if password and confirm password match
+    if (password !== confirmPassword) {
+      return res.send('Passwords do not match');
+    }
+
+    // Create new user object
+    const newUserId = makeid(10)
     const newUser = {
-      username: "testman",
-      email: "test@test.test",
-      password: "default",
-      userId: 1
+      username: username,
+      email: email,
+      password: password,
+      userId: newUserId
     };
-    await db.set("user.default", newUser);
-  }
+    
+    await db.set("user." + newUserId, newUser);
+    console.info("REGISTERING USER")
 
-  // Check if username or email already exists
-  // Retrieve users from database
-  const users = await db.get("user");
-  // Check if user exists in database
-  const userExists = Object.values(users).find(u => u.username === username);
-  if (userExists) {
-    return res.send('Username already taken');
+    // Redirect to homepage
+    // log user in HERE
+    res.redirect('/');
   }
-  // check if email exists in database
-  const emailExists = Object.values(users).find(u => u.email === email);
-  if (emailExists) {
-    return res.send('Email already taken');
+  else if (process.env.ALLOW_REGISTER == "false"){
+    res.redirect('/error');
   }
-
-  // Check if password and confirm password match
-  if (password !== confirmPassword) {
-    return res.send('Passwords do not match');
+  else{
+    console.error("INTERNAL ERROR");
   }
-
-  // Create new user object
-  const newUserId = makeid(10)
-  const newUser = {
-    username: username,
-    email: email,
-    password: password,
-    userId: newUserId
-  };
   
-  await db.set("user." + newUserId, newUser);
-  console.info("REGISTERING USER")
-
-  // Redirect to homepage
-  // log user in HERE
-  res.redirect('/');
 });
 app.post('/auth/login', function(req, res, next) {
   console.info('REQUESTED LOGIN');

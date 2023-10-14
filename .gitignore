@@ -105,3 +105,4 @@ dist
 
 # Quick.db
 json.sqlite
+._*
